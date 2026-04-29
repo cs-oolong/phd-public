@@ -1,0 +1,36 @@
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    comments:
+      hypothesis: true
+  docx: default
+  jats: default
+  pdf:
+    cite-method: biblatex
+    biblio-style: alphabetic
+    colorlinks: true
+    linkcolor: blue
+    citecolor: blue
+    urlcolor: blue
+
+execute:
+  freeze: true
+
+bibliography:
+  - references.bib
+  - references2.bib
+  - google.bib
+  - microsoft.bib
+  - openai.bib
+  - detection.bib
+  - ilya.bib
+  - creative.bib
+  - code.bib
+
+
+

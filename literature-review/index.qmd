@@ -1,0 +1,332 @@
+---
+title: Fiction Writing Inspired Injection Attacks in LLMs
+authors:
+  - name: Ana Clara Zoppi Serpa
+    affiliation: UNICAMP - Institute of Computing - Recod.ai
+    roles: writing
+    corresponding: true
+---
+
+## Literature Review: Open Problems and Literature Gaps
+
+### [@ChenPS025_StruQ]
+
+**Paper summary**:
+
+- Attacks rely on LLM ability to follow instructions + inability to separate prompts from user data
+- Structured queries: general approach to solve the problem. Components:
+    - (1) Secure front-end
+    - (2) Specially trained LLM -> *structured instruction tuned LLM*
+- Code available in the paper! :)
+- Training process:
+    - Augment standard instruction tuning dataset so that examples have instructions in the **data** part, train the LLM to ignore these instructions as they are not in the **prompt** part.
+    - Train new LLM entirely from scratch - infeasible. Structured instruction tuning can be applied to **base LLMs**, so it's not from scratch, it's a new form of instruction tuning.
+- Special separators, reserved tokens, front-end filters out these tokens from user prompt to avoid faking them
+- Initialize embedding for the special token before tuning is important to keep model performance
+
+**Suggested future work**:
+
+- StruQ decreases ASR of manual attacks tpo 0% but some optimized attacks (TAP, GCG) still have high ASR
+- StruQ is trained on task-agnostic manual injections, doesn't fully generalize to task-specific injections
+    - Possible solution: craft task-dependent injections dataset with LLMs or human crowdsourcing
+- StruQ protects programmatic applications that use API/libraries, but web chat-bot users wouldn't like manually marking their inputs as prompt x data constantly
+- Prompt injection focus: StruQ doesn't prevent jailbreak, data extraction or other attacks, just prompt injection
+
+### [@GongLZRCC0L25_Papillon]
+
+**Summary**:
+
+- Automated black-box jailbreaking framework inspired by SWE fuzzy testing concepts
+- Proprietary APIs e.g. Gemini, GPT
+- Code available
+- Differential: 
+    - This framework can start the jailbreaking process from an empty seed, no need for starter templates
+    - Aims at producing natural, semantically coherent prompts, to bypass detection
+    - Aims to shorten prompts -> attacks get cheaper because proprietary APIs charge on a token basis
+- White-box jailbreaking x black-box jailbreaking distinction
+- White-box well-known attack: GCG
+- Black-box subdivides into handcrafted and automatic
+- Jailbreaking defense types
+    - Input modification
+    - Prompt engineering
+    - Output filtering
+- Defenses Papillon breaks
+    - perplexity
+    - SmoothLLM
+    - LlamaGuard
+
+**Suggested future work**:
+
+- Add more mutators to the framework for prompt evolution
+- Evaluate different prompt compression methods
+- Develop defenses
+- Test Papillon on non-English LLM
+
+### [@PasquiniKA25_LLMmap]
+
+**Summary**:
+
+- Fingerprinting LLM = figuring out what LLM is being used by an app -> analogous to OS fingerprinting
+- How it works
+    - Send carefully crafted queries to the app
+    - Analyze responses
+    - Identify specific LLM version in use
+- 42 different LLM versions 95% accuracy just 8 interactions
+- Why is it an attack?
+    - Fingerprinting enables other attack surfaces, it's related to the **reconnaissance** stage of an attack
+    - Knowing the model enables trying target adversarial prompts, vulnerabilities specific to that model etc
+- Tool for AI red teams
+- Code available
+- Queries that trigger unique response patterns that might identify what LLM is responding
+    - Meta information ("what is your version?")
+    - Banner grabbing ("what is your name?")
+    - Malformed
+    - Alignment / harmful / controversial
+    - Nonsensical, semantically broken
+- Not necessarily the model answers truthfully to a banner grabbing, but it might have a *unique way to deflect the question*
+- Collect traces from the queries & responses
+- Use an ML inference model (handle diverse/variable responses)
+- Open-set x closed-set
+    - Closed-set: classifier
+    - Open-set: siamese-like, contrastive learning ("is this LLM the same as this other LLM?")
+- Prompt configuration universe -> ways LLMs get customized and become unique for a certain app
+    - Hyperparameters (temperature, frequency penalty)
+    - System prompt
+    - Framework (RAG, COT, other...)
+- Some defenses do reduce the accuracy of fingerprinting, but they have disadvantages, such as impacting model utility
+- Findings suggest fingerprinting is an inevitable consequence of unique behavior exhibited by different models, unlike OS fingerprinting, which is avoidable with some measures
+
+**Suggested future work**:
+
+- GlitchTokens
+- Automated query generation with optimization heuristics
+- Additional inference - not only model + version, but also
+    - tool call list
+    - RAG / other internal framework being used
+    - hyperparameters
+
+### [@BiscontiPRGS26_AdversarialPoetry]
+
+\textcolor{red}{to-do - lido no tablet}
+
+### [@BiscontiGPSSN26_AdversarialTales]
+
+\textcolor{red}{to-do - lido no tablet}
+
+### [@IBM2025_PromptInjection]
+
+A IBM web page explaining the basics of prompt injection - what it is, how it generally works, risks etc. Not too technical, not a research paper with experimental results.
+
+### [@Alber2025_MedicalLLMsAreVulnerableToDataPoisoningAttacks]
+
+\textcolor{red}{to-do - tem detalhes nos slides que apresentei no Horus}
+
+### [@Youtube2024_SomeoneWon50kByMakingAIHallucinate],[@IlPost2024_Freysa]
+
+Video and news article about someone winning $50k by making AI hallucinate on the Freysa competition.
+
+### [@HeidingKLKS24_LLMPhishing]
+
+\textcolor{red}{não cheguei a ler, tava na lista antiga do google docs}
+
+### [@Kiela2021_TheHatefulMemesChallengeDetectingHateSpeechInMultimodalMemes]
+
+\textcolor{red}{acho que eu li sim, deve estar no Drive ou no tablet, só não lembro os detalhes agora}
+
+### [@Fersini2022_SemEval2022Task5MultimediaAutomaticMisogynyIdentification]
+
+\textcolor{red}{n li ainda}
+
+### [@Hwang2023_MemeCapCaptioningAndInterpretingMemes]
+
+\textcolor{red}{n li ainda}
+
+### [@Cardenuto2023_TheAgeOfSyntheticRealitiesChallengesAndOpportunities]
+
+\textcolor{red}{li sim, é o paper do Anderson e do João, é um geralzão de tudo que tem rolado de realidade sintética}
+
+### [@Farid2016_PhotoForensics]
+
+\textcolor{red}{n li, é o livro de forense digital que fala das técnicas pré-LLM, Anderson tinha recomendado}
+
+### [@Guo2025_DarkMindLatentChainOfThoughtBackdoor]
+
+\textcolor{red}{to-do - li sim, tem detalhes em slide e no google docs, dá pra pegar}
+
+### Some papers about KG + LLM, didn't read
+
+[@Ibrahim2026], [@khorashadizadeh2024researchtrendsinterplaylarge], [@dai2025largelanguagemodelsbetter], [@kau2024combiningknowledgegraphslarge], [@Pan2024_UnifyingLargeLanguageModelsAndKnowledgeGraphsARoadmap]
+
+### [@Ng2017_DeepLearningSpecialization]
+
+\textcolor{red}{Curso de Deep Learning, relevante, gastei um tempão fazendo pra me especializar}
+
+### Papers about anxiety in LLMs
+
+[@codaforno2024inducinganxietylargelanguage]
+[@Ben-Zion2025]
+
+### Milestone papers about LLMs
+
+These are really cool to see the historical trajectory, taken from this repository with several LLM resources and papers: [@Hannibal046AwesomeLLM]
+
+- [@vaswani2023attentionneed] - Attention Is All You Need
+- [@Radford2018ImprovingLU] - Improving Language Understanding by Generative Pre-Training
+- [@devlin2019bertpretrainingdeepbidirectional] - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+- [@Radford2019LanguageMA] - Language Models are Unsupervised Multitask Learners
+- [@shoeybi2020megatronlmtrainingmultibillionparameter] - Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism
+- [@JMLR:v21:20-074] - Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+- [@rajbhandari2020zeromemoryoptimizationstraining] - ZeRO: Memory Optimizations Toward Training Trillion Parameter Models
+- [@kaplan2020scalinglawsneurallanguage] - Scaling Laws for Neural Language Models
+- [@brown2020languagemodelsfewshotlearners] - Language Models are Few-Shot Learners
+- [@fedus2022switchtransformersscalingtrillion] - Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
+- [@chen2021evaluatinglargelanguagemodels] - Evaluating Large Language Models Trained on Code
+- [@bommasani2022opportunitiesrisksfoundationmodels] - On the Opportunities and Risks of Foundation Models
+- [@wei2022finetunedlanguagemodelszeroshot] - Finetuned Language Models Are Zero-Shot Learners
+- [@sanh2022multitaskpromptedtrainingenables] - Multitask Prompted Training Enables Zero-Shot Task Generalization
+- [@du2022glamefficientscalinglanguage] - GLaM: Efficient Scaling of Language Models with Mixture-of-Experts
+- [@Nakano2021WebGPTBQ] - WebGPT: Browser-assisted question-answering with human feedback
+- [@borgeaud2022improvinglanguagemodelsretrieving] - Improving language models by retrieving from trillions of tokens
+- [@rae2022scalinglanguagemodelsmethods] - Scaling Language Models: Methods, Analysis & Insights from Training Gopher
+- [@wei2023chainofthoughtpromptingelicitsreasoning] - Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
+- [@thoppilan2022lamdalanguagemodelsdialog] - LaMDA: Language Models for Dialog Applications
+- [@lewkowycz2022solvingquantitativereasoningproblems] - Solving Quantitative Reasoning Problems with Language Models
+- [@smith2022usingdeepspeedmegatrontrain] - Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model
+- [@ouyang2022traininglanguagemodelsfollow] - Training language models to follow instructions with human feedback
+- [@chowdhery2022palmscalinglanguagemodeling] - PaLM: Scaling Language Modeling with Pathways
+- [@hoffmann2022trainingcomputeoptimallargelanguage] - Training Compute-Optimal Large Language Models
+- [@zhang2022optopenpretrainedtransformer] - OPT: Open Pre-trained Transformer Language Models
+- [@tay2023ul2unifyinglanguagelearning] - UL2: Unifying Language Learning Paradigms
+- [@wei2022emergentabilitieslargelanguage] - Emergent Abilities of Large Language Models
+- [@srivastava2023beyond] - Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models
+- [@hao2022languagemodelsgeneralpurposeinterfaces] - Language Models are General-Purpose Interfaces
+- [@glaese2022improvingalignmentdialogueagents] - Improving alignment of dialogue agents via targeted human judgements
+- [@chung2022scalinginstructionfinetunedlanguagemodels] - Scaling Instruction-Finetuned Language Models
+- [@zeng2023glm130bopenbilingualpretrained] - GLM-130B: An Open Bilingual Pre-trained Model
+- [@liang2023holisticevaluationlanguagemodels] - Holistic Evaluation of Language Models
+- [@workshop2023bloom176bparameteropenaccessmultilingual] - BLOOM: A 176B-Parameter Open-Access Multilingual Language Model
+- [@taylor2022galacticalargelanguagemodel] - Galactica: A Large Language Model for Science
+- [@iyer2023optimlscalinglanguagemodel] - OPT-IML: Scaling Language Model Instruction Meta Learning through the Lens of Generalization
+- [@longpre2023flancollectiondesigningdata] - The Flan Collection: Designing Data and Methods for Effective Instruction Tuning
+- [@touvron2023llamaopenefficientfoundation] - LLaMA: Open and Efficient Foundation Language Models
+- [@huang2023languageneedaligningperception] - Language Is Not All You Need: Aligning Perception with Language Models
+- [@orvieto2023resurrectingrecurrentneuralnetworks] - Resurrecting Recurrent Neural Networks for Long Sequences
+- [@driess2023palmeembodiedmultimodallanguage] - PaLM-E: An Embodied Multimodal Language Model
+- [@openai2024gpt4technicalreport] - GPT-4 Technical Report
+- [@liu2023visualinstructiontuning] - Visual Instruction Tuning
+- [@biderman2023pythiasuiteanalyzinglarge] - Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling
+- [@sun2023principledrivenselfalignmentlanguagemodels] - Principle-Driven Self-Alignment of Language Models from Scratch with Minimal Human Supervision
+- [@anil2023palm2technicalreport] - PaLM 2 Technical Report
+- [@peng2023rwkvreinventingrnnstransformer] - RWKV: Reinventing RNNs for the Transformer Era
+- [@rafailov2024directpreferenceoptimizationlanguage] - Direct Preference Optimization: Your Language Model is Secretly a Reward Model
+- [@yao2023treethoughtsdeliberateproblem] - Tree of Thoughts: Deliberate Problem Solving with Large Language Models
+- [@touvron2023llama2openfoundation] - Llama 2: Open Foundation and Fine-Tuned Chat Models
+- [@jiang2023mistral7b] - Mistral 7B
+- [@gu2024mambalineartimesequencemodeling] - Mamba: Linear-Time Sequence Modeling with Selective State Spaces
+- [@deepseekai2024deepseekv2strongeconomicalefficient] - DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model
+- [@groeneveld-etal-2024-olmo] - OLMo: Accelerating the Science of Language Models
+- [@dao2024transformersssmsgeneralizedmodels] - Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality
+- [@grattafiori2024llama3herdmodels] - The Llama 3 Herd of Models
+- [@penedo2024finewebdatasetsdecantingweb] - The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale
+- [@muennighoff2025olmoeopenmixtureofexpertslanguage] - OLMoE: Open Mixture-of-Experts Language Models
+- [@qwen2025qwen25technicalreport] - Qwen2.5 Technical Report
+- [@deepseekai2025deepseekv3technicalreport] - DeepSeek-V3 Technical Report
+- [@Guo_2025] - DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning
+
+### Google Research
+
+- [@52868] - InstructPipe: Generating Visual Blocks Pipelines with Human Instructions and LLMs
+- [@1021008] - Gemini \& Physical World: Large Language Models Can Estimate the Intensity of Earthquake Shaking from Multi-Modal Social Media Posts
+- [@1025553] - SSDTrain: Faster Large Language Model Training Using SSD-Based Activation Offloading
+- [@1024745] - Triaging mammography with artificial intelligence: an implementation study
+- [@1024143] - Mufu: Multilingual Fused Learning for Low-Resource Translation with LLM
+- [@1026765] - TOKENFORMER: Rethinking Transformers Scaling with Tokenized Model Parameters
+- [@morris2024generativeghostsanticipatingbenefits] - Generative Ghosts: Anticipating Benefits and Risks of AI Afterlives
+- [@lee2025geminiembeddinggeneralizableembeddings] - Gemini Embedding: Generalizable Embeddings from Gemini
+- [@maninis2025tipstextimagepretrainingspatial] - TIPS: Text-Image Pretraining with Spatial awareness
+- [@wang2025scalingpretrainingbilliondata] - Scaling Pre-training to One Hundred Billion Data for Vision Language Models
+- [@cooper2025machineunlearningdoesntthink] - Machine Unlearning Doesn't Do What You Think: Lessons for Generative AI Policy and Research
+- [@schultz2025masteringboardgamesexternal] - Mastering Board Games by External and Internal Planning with Language Models
+- [@dambrosio2025achievinghumanlevelcompetitive] - Achieving Human Level Competitive Robot Table Tennis
+- [@Hutter:24uaibook2] - An Introduction to Universal Artificial Intelligence
+- [@panda2024teach] - Teach LLMs to Phish: Stealing Private Information from Language Models
+- [@whitney2024learning] - Learning 3D Particle-based Simulators from RGB-D Videos
+- [@song2024positionleveragefoundationalmodels] - Position: Leverage Foundational Models for Black-Box Optimization
+
+### Microsoft Research
+
+- [@vorvoreanu2025fostering] - Fostering appropriate reliance on GenAI: Lessons learned from early research
+- [@flores-saviaga2025the] - The Impact of Generative AI Coding Assistants on Developers Who Are Visually Impaired
+- [@alshammari2025a] - A Unifying Framework for Representation Learning
+
+### OpenAI
+
+- [@miserendino2025swelancerfrontierllmsearn] - SWE-Lancer: Can Frontier LLMs Earn \$1 Million from Real-World Freelance Software Engineering?
+- [@baker2022videopretrainingvptlearning] - Video PreTraining (VPT): Learning to Act by Watching Unlabeled Online Videos
+- [@radford2021learningtransferablevisualmodels] - Learning Transferable Visual Models From Natural Language Supervision (CLIP)
+- [@openai2021dalle] - DALL·E: Creating Images from Text
+- [@openai2018montezumasrevenge] - Learning Montezuma's Revenge from a single demonstration
+- [@openai2022languagemodelsafety] - Lessons learned on language model safety and misuse
+- [@goh2021multimodal] - Multimodal Neurons in Artificial Neural Networks
+
+### Synthetic Media Detection
+
+- [@9141516] - FakeCatcher: Detection of Synthetic Portrait Videos using Biological Signals
+- [@unknown] - Synthetic Realities in the Digital Age: Navigating the Opportunities and Challenges of AI-Generated Content
+- [@ye2025lokicomprehensivesyntheticdata] - LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models
+- [@Zobaed2021] - DeepFakes: Detecting Forged and Synthetic Media Content Using Machine Learning
+- [@10095167] - On The Detection of Synthetic Images Generated by Diffusion Models
+- [@10409290] - CIFAKE: Image Classification and Explainable Identification of AI-Generated Synthetic Images
+- [@laurier2024catmousegameongoing] - The Cat and Mouse Game: The Ongoing Arms Race Between Diffusion Models and Detection Methods
+
+### Ilya Sutskever's Recommended Reading List
+
+Papers and resources from [@dzyim2023ilyasutskeverreading], originally shared by Ilya Sutskever with John Carmack in 2020.
+
+- [@rush2018annotated] - The Annotated Transformer
+- [@aaronson2011first] - The First Law of Complexodynamics
+- [@karpathy2015unreasonable] - The Unreasonable Effectiveness of Recurrent Neural Networks
+- [@olah2015understanding] - Understanding LSTM Networks
+- [@zaremba2014recurrent] - Recurrent Neural Network Regularization
+- [@hinton1993keeping] - Keeping the Neural Networks Simple by Minimizing the Description Length of the Weights
+- [@vinyals2015pointer] - Pointer Networks
+- [@krizhevsky2012imagenet] - ImageNet Classification with Deep Convolutional Neural Networks
+- [@vinyals2016order] - Order Matters: Sequence to Sequence for Sets
+- [@huang2019gpipe] - GPipe: Easy Scaling with Micro-Batch Pipeline Parallelism
+- [@he2016deep] - Deep Residual Learning for Image Recognition
+- [@yu2016multi] - Multi-Scale Context Aggregation by Dilated Convolutions
+- [@gilmer2017neural] - Neural Message Passing for Quantum Chemistry
+- [@bahdanau2016neural] - Neural Machine Translation by Jointly Learning to Align and Translate
+- [@he2016identity] - Identity Mappings in Deep Residual Networks
+- [@santoro2017simple] - A Simple Neural Network Module for Relational Reasoning
+- [@chen2017variational] - Variational Lossy Autoencoder
+- [@santoro2018relational] - Relational Recurrent Neural Networks
+- [@aaronson2014quantifying] - Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton
+- [@graves2014neural] - Neural Turing Machines
+- [@amodei2016deep] - Deep Speech 2: End-to-End Speech Recognition in English and Mandarin
+- [@grunwald2004tutorial] - A Tutorial Introduction to the Minimum Description Length Principle
+- [@legg2008machine] - Machine Super Intelligence (PhD Thesis)
+- [@shen2017kolmogorov] - Kolmogorov Complexity and Algorithmic Randomness
+- [@feifei2016cs231n] - CS231n: Convolutional Neural Networks for Visual Recognition
+
+### Misc, to be organized
+
+- [@kumar-etal-2023-language] - Language Generation Models Can Cause Harm: So What Can We Do About It? An Actionable Survey
+- [@agrawal2024knowledgegraphsreducehallucinations] - Can Knowledge Graphs Reduce Hallucinations in LLMs? : A Survey
+- [@feng2023knowledgesolverteachingllms] - Knowledge Solver: Teaching LLMs to Search for Domain Knowledge from Knowledge Graphs
+- [@lu2024aiscientistfullyautomated] - The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery
+- [@doi:10.1126/science.adq1814] - Durably reducing conspiracy beliefs through dialogues with AI
+- [@nakanishi2025scalablesoftmaxsuperiorattention] - Scalable-Softmax Is Superior for Attention
+- [@feng2024rnnsneeded] - Were RNNs All We Needed?
+- [@zhang2025thoughtactionhierarchyneural] - From Thought to Action: How a Hierarchy of Neural Dynamics Supports Language Production
+- [@lévy2025braintotextdecodingnoninvasiveapproach] - Brain-to-Text Decoding: A Non-invasive Approach via Typing
+- [@li-etal-2025-loki] - Loki: An Open-Source Tool for Fact Verification
+
+### Creative writing research
+
+- [@panda2025saydifferentlylinguisticstyles] - lido, anotei no caderno, achei legal que tem bastante exemplo das prompts.
+
+- [@tang2024rolebreakcharacterhallucinationjailbreak] - RoleBreak: Character Hallucination as a Jailbreak Attack in Role-Playing Systems - não é sobre jailbreak do jeito que eu achava que seria, é só sobre fazer personagens se comportarem de forma inconsistente, não é sobre convencer o LLM a fazer output harmuful, apesar de ser muito citado em outros artigos de jailbreak... Vai entender...
+
+- [@zhang2025enhancingjailbreakattacksllms] - Enhancing Jailbreak Attacks on LLMs via Persona Prompts - gostei bastante e tem repo do GitHub
+

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI Theoretical Background &amp; Tooling</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+<style>
+  :root {
+    --r-heading-color: #1a1a2e;
+    --r-main-color: #333;
+    --r-link-color: #e94560;
+    --r-background-color: #fafafa;
+  }
+  .reveal { font-size: 28px; }
+  .reveal h1 { font-size: 1.8em; color: #1a1a2e; }
+  .reveal h2 { font-size: 1.4em; color: #16213e; }
+  .reveal h3 { font-size: 1.1em; color: #0f3460; }
+  .reveal .subtitle { font-size: 0.7em; color: #555; margin-top: 0.3em; }
+  .reveal table { font-size: 0.65em; margin: 0.5em auto; border-collapse: collapse; }
+  .reveal table th, .reveal table td { padding: 6px 12px; border: 1px solid #ccc; text-align: center; }
+  .reveal table th { background: #16213e; color: #fff; }
+  .reveal table tr:nth-child(even) { background: #f0f0f5; }
+  .reveal .highlight { color: #e94560; font-weight: bold; }
+  .reveal .good { color: #27ae60; font-weight: bold; }
+  .reveal .concept-box {
+    background: #f0f4ff; border-left: 4px solid #0f3460;
+    padding: 12px 16px; margin: 12px 0; text-align: left; font-size: 0.8em; border-radius: 4px;
+  }
+  .reveal .tool-box {
+    background: #f0fff4; border-left: 4px solid #27ae60;
+    padding: 12px 16px; margin: 12px 0; text-align: left; font-size: 0.8em; border-radius: 4px;
+  }
+  .reveal .warn-box {
+    background: #fff8e1; border-left: 4px solid #f9a825;
+    padding: 12px 16px; margin: 12px 0; text-align: left; font-size: 0.8em; border-radius: 4px;
+  }
+  .reveal .key-number { font-size: 2.2em; font-weight: bold; color: #e94560; display: block; }
+  .reveal .key-label { font-size: 0.7em; color: #555; }
+  .reveal .metric-grid { display: flex; justify-content: center; gap: 40px; margin: 20px 0; flex-wrap: wrap; }
+  .reveal .metric-card {
+    text-align: center; padding: 16px 24px; background: #fff;
+    border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-width: 140px;
+  }
+  .reveal ul { text-align: left; font-size: 0.85em; }
+  .reveal li { margin-bottom: 0.4em; }
+  .reveal .two-col { display: flex; gap: 30px; align-items: flex-start; }
+  .reveal .two-col > div { flex: 1; }
+  .reveal .tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.6em; font-weight: bold; margin: 0 4px; }
+  .reveal .tag-obs { background: #dbeafe; color: #1e40af; }
+  .reveal .tag-int { background: #fef3c7; color: #92400e; }
+  .reveal .tag-tool { background: #d1fae5; color: #065f46; }
+  .reveal .tag-paper { background: #fce7f3; color: #9d174d; }
+  .reveal section { text-align: center; }
+  .reveal .left-align { text-align: left; }
+  .reveal code { font-size: 0.75em; background: #f0f0f5; padding: 2px 6px; border-radius: 3px; }
+  .reveal pre { text-align: left; font-size: 0.6em; background: #1e1e2e; color: #cdd6f4; padding: 14px; border-radius: 8px; }
+  .reveal pre code { background: none; color: inherit; padding: 0; font-size: 1em; }
+  .reveal .section-header {
+    background: linear-gradient(135deg, #16213e, #0f3460);
+    color: #fff; padding: 8px 20px; border-radius: 6px; display: inline-block; margin-bottom: 12px;
+  }
+  .reveal .diagram {
+    font-family: monospace; font-size: 0.65em; text-align: left;
+    background: #f8f9fa; padding: 16px; border-radius: 8px; display: inline-block;
+    line-height: 1.5;
+  }
+  .reveal .footnote { font-size: 0.5em; color: #888; margin-top: 20px; }
+  .reveal .pipeline { display: flex; justify-content: center; gap: 0; align-items: center; margin: 16px 0; flex-wrap: wrap; }
+  .reveal .pipeline-step {
+    background: #fff; border: 2px solid #0f3460; border-radius: 8px;
+    padding: 8px 14px; font-size: 0.6em; min-width: 100px; text-align: center;
+  }
+  .reveal .pipeline-arrow { font-size: 1.2em; color: #0f3460; margin: 0 4px; }
+  .reveal .pros-cons { display: flex; gap: 20px; font-size: 0.75em; }
+  .reveal .pros { flex:1; background: #f0fff4; padding: 10px; border-radius: 6px; text-align: left; }
+  .reveal .cons { flex:1; background: #fff0f0; padding: 10px; border-radius: 6px; text-align: left; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============ TITLE ============ -->
+<section>
+  <h1 style="font-size:1.5em;">Mechanistic Interpretability<br>Theoretical Background &amp; Tooling</h1>
+  <p class="subtitle" style="font-size:0.8em;">Concepts, Techniques, Libraries, and Infrastructure<br>for Interpreting LLM Internals</p>
+  <div style="margin-top: 30px;">
+    <span class="tag tag-obs">Observation Techniques</span>
+    <span class="tag tag-int">Intervention Techniques</span>
+    <span class="tag tag-tool">Tools &amp; Libraries</span>
+    <span class="tag tag-paper">Key Papers</span>
+  </div>
+  <p style="font-size:0.55em; color:#888; margin-top:30px;">April 2026</p>
+</section>
+
+<!-- ============ WHAT IS MI ============ -->
+<section>
+  <h2>What Is Mechanistic Interpretability?</h2>
+  <div class="concept-box">
+    <strong>Goal:</strong> Reverse-engineer the internal computations of neural networks into human-understandable algorithms. Not <em>what</em> the model does, but <em>how</em> and <em>why</em>.
+  </div>
+  <p style="font-size:0.75em; margin-top:16px;">Named one of <strong>MIT Technology Review's 10 Breakthrough Technologies for 2026</strong></p>
+  <div class="pipeline" style="margin-top:20px;">
+    <div class="pipeline-step" style="background:#dbeafe;">1. Find internal<br><strong>features</strong></div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step" style="background:#fef3c7;">2. Trace how features<br>form <strong>circuits</strong></div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step" style="background:#d1fae5;">3. Test causality via<br><strong>interventions</strong></div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step" style="background:#fce7f3;">4. Compress into<br><strong>explanations</strong></div>
+  </div>
+  <div class="warn-box" style="margin-top:16px;">
+    <strong>Unlike</strong> post-hoc explainability (SHAP, saliency maps) which only correlates inputs to outputs, MI uncovers the actual computational mechanism inside the model.
+  </div>
+</section>
+
+<!-- ============ TRANSFORMER ARCHITECTURE ============ -->
+<section>
+  <h2>The Transformer Architecture</h2>
+  <p style="font-size:0.75em;">What we're interpreting: a stack of identical layers</p>
+  <div class="two-col">
+    <div>
+      <div class="diagram">
+Input tokens<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&darr;<br>
+[Embedding] &rarr; token vectors<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&darr;<br>
+[Layer 0: Attention &rarr; MLP]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&darr;<br>
+[Layer 1: Attention &rarr; MLP]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&darr;<br>
+&nbsp;&nbsp;... (12 or 28 layers)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&darr;<br>
+[Final LayerNorm]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&darr;<br>
+[Unembedding] &rarr; logits<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&darr;<br>
+Next-token prediction
+      </div>
+    </div>
+    <div style="text-align:left; font-size:0.75em;">
+      <table style="font-size:0.95em;">
+        <tr><th></th><th>GPT-2 Small</th><th>GPT-J-6B</th></tr>
+        <tr><td style="text-align:left;">Parameters</td><td>124M</td><td>6B</td></tr>
+        <tr><td style="text-align:left;">Layers</td><td>12</td><td>28</td></tr>
+        <tr><td style="text-align:left;">Hidden dim</td><td>768</td><td>4,096</td></tr>
+        <tr><td style="text-align:left;">Attn heads</td><td>12</td><td>16</td></tr>
+        <tr><td style="text-align:left;">Vocab size</td><td>50,257</td><td>50,400</td></tr>
+      </table>
+      <p style="margin-top:12px; font-size:0.9em;"><strong>Attention:</strong> "who looks at whom" &mdash; routes information between tokens</p>
+      <p style="font-size:0.9em;"><strong>MLP:</strong> processes each token independently &mdash; stores factual knowledge (per ROME)</p>
+      <p style="font-size:0.9em;"><strong>Unembedding:</strong> projects hidden state &rarr; vocabulary probabilities</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESIDUAL STREAM ============ -->
+<section>
+  <h2>The Residual Stream</h2>
+  <p style="font-size:0.75em;">The central concept for understanding transformer internals</p>
+  <div class="concept-box">
+    Each layer doesn't <em>replace</em> the previous representation &mdash; it <strong>adds to it</strong>. The hidden state is a running sum:
+  </div>
+  <pre><code>h_0 = embed(token)
+h_1 = h_0 + attn_0(h_0) + mlp_0(h_0)
+h_2 = h_1 + attn_1(h_1) + mlp_1(h_1)
+...
+h_L = h_{L-1} + attn_{L-1}(h_{L-1}) + mlp_{L-1}(h_{L-1})</code></pre>
+  <p style="font-size:0.75em;">Think of it as a shared <strong>"highway"</strong> that all layers read from and write to.</p>
+  <div class="concept-box">
+    <strong>Why this matters:</strong><br>
+    &bull; <strong>Logit Lens</strong> works because every h<sub>i</sub> lives in the same space as h<sub>L</sub><br>
+    &bull; <strong>Clamping</strong> works because replacing h<sub>i</sub> affects all subsequent layers<br>
+    &bull; <strong>Steering</strong> works because adding a vector pushes the representation in a direction<br>
+    &bull; <strong>Cosine distance</strong> is meaningful because all h<sub>i</sub> share the same vector space
+  </div>
+</section>
+
+<!-- ============ TECHNIQUE FAMILIES ============ -->
+<section>
+  <h2>8 Families of MI Techniques</h2>
+  <table style="font-size:0.6em;">
+    <tr><th>#</th><th>Family</th><th>What You Analyze</th><th>Output Type</th></tr>
+    <tr><td>1</td><td style="text-align:left;"><strong>Activation Analysis</strong></td><td>Vectors at each layer</td><td>Token rankings, features</td></tr>
+    <tr><td>2</td><td style="text-align:left;"><strong>Attention Patterns</strong></td><td>Where tokens attend</td><td>Heatmaps, matrices</td></tr>
+    <tr><td>3</td><td style="text-align:left;"><strong>Circuit Discovery</strong></td><td>Computational subnetworks</td><td>Graphs, pathways</td></tr>
+    <tr><td>4</td><td style="text-align:left;"><strong>Automated Interpretability</strong></td><td>Features/neurons via LLM</td><td>Natural language labels</td></tr>
+    <tr><td>5</td><td style="text-align:left;"><strong>Probing &amp; Concepts</strong></td><td>Concept representations</td><td>Accuracy, presence/absence</td></tr>
+    <tr><td>6</td><td style="text-align:left;"><strong>Representation Similarity</strong></td><td>Cross-model comparisons</td><td>Similarity scores</td></tr>
+    <tr><td>7</td><td style="text-align:left;"><strong>Training Dynamics</strong></td><td>Changes over training</td><td>Learning curves, phases</td></tr>
+    <tr><td>8</td><td style="text-align:left;"><strong>Behavioral Testing</strong></td><td>Input-output patterns</td><td>Pass/fail, bias scores</td></tr>
+  </table>
+  <div class="concept-box" style="margin-top:8px;">
+    Our research used families <strong>1, 2, 5, and 6</strong> via activation analysis (logit lens, SAEs, cosine distance), attention head ablation, probing (neuron fingerprints), and cross-model comparison.
+  </div>
+</section>
+
+<!-- ============ SECTION: OBSERVATION ============ -->
+<section>
+  <div class="section-header">OBSERVATION TECHNIQUES</div>
+  <h1 style="font-size:1.5em;">Reading the Model's Mind</h1>
+  <p class="subtitle">Techniques for seeing what the model "thinks" without changing it</p>
+</section>
+
+<!-- ============ LOGIT LENS ============ -->
+<section>
+  <h2>Logit Lens <span class="tag tag-obs">Observation</span></h2>
+  <div class="concept-box">
+    <strong>Idea:</strong> At every layer, project the hidden state through the unembedding matrix to see what the model would predict if processing stopped there.
+  </div>
+  <pre><code>logits_at_layer_i = Unembed(LayerNorm(h_i))
+probs_at_layer_i = softmax(logits_at_layer_i)</code></pre>
+  <p style="font-size:0.75em;">Example: GPT-J-6B processing "The Eiffel Tower is in ___"</p>
+  <table>
+    <tr><th>Layer</th><th>Top Prediction</th><th>Confidence</th><th>What's Happening</th></tr>
+    <tr><td>L0</td><td>"the"</td><td>0.05%</td><td>Confused (just embeddings)</td></tr>
+    <tr><td>L8</td><td>"Fort"</td><td>2%</td><td>Starting to process</td></tr>
+    <tr><td>L14</td><td>"Paris"</td><td>15%</td><td>Recognizing the fact</td></tr>
+    <tr><td>L24</td><td>"Paris"</td><td>72%</td><td>Committed</td></tr>
+    <tr><td>L27</td><td>"Paris"</td><td>85%</td><td>Final output</td></tr>
+  </table>
+  <div class="pros-cons" style="margin-top:8px;">
+    <div class="pros"><strong>Pros:</strong> Extremely simple, no training, great for intuition</div>
+    <div class="cons"><strong>Cons:</strong> Observational only, unreliable at early layers</div>
+  </div>
+</section>
+
+<!-- ============ COSINE DISTANCE ============ -->
+<section>
+  <h2>Hidden State Analysis &amp; Cosine Distance <span class="tag tag-obs">Observation</span></h2>
+  <div class="concept-box">
+    <strong>Idea:</strong> Compare the model's internal state on normal vs. adversarial input. If hidden states diverge, the model is "thinking differently."
+  </div>
+  <pre><code>cos_sim(a, b) = (a &middot; b) / (||a|| &times; ||b||)
+cos_distance  = 1 - cos_sim    // Higher = more different</code></pre>
+  <div class="two-col left-align" style="font-size:0.8em;">
+    <div>
+      <h3>Why cosine, not Euclidean?</h3>
+      <p>In high dimensions (768 or 4096), Euclidean distance is dominated by meaningless magnitude differences. Cosine focuses on <em>direction</em> &mdash; what matters for downstream computation.</p>
+    </div>
+    <div>
+      <h3>Key finding</h3>
+      <p>Internal deviation does NOT always predict output deviation. On GPT-J, haiku creates the <em>smallest</em> internal deviation but the <em>highest</em> P(French). The model can absorb large representational shifts without changing behavior.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENTROPY ============ -->
+<section>
+  <h2>Output Entropy as a Diagnostic <span class="tag tag-obs">Observation</span></h2>
+  <div class="concept-box">
+    <strong>Entropy</strong> measures uncertainty: H(p) = -&Sigma; p(x) &times; log<sub>2</sub>(p(x))<br>
+    Low entropy = confident &bull; High entropy = uncertain &bull; Each bit &asymp; doubles the plausible tokens
+  </div>
+  <table>
+    <tr><th>State</th><th>GPT-2 Entropy</th><th>GPT-J Entropy</th><th>Meaning</th></tr>
+    <tr><td>Normal translation</td><td>7.88 bits</td><td class="good">0.70 bits</td><td>GPT-J: "almost certain"</td></tr>
+    <tr><td>Under prose injection</td><td>8.83 bits</td><td class="highlight">3.66 bits</td><td>GPT-J: 8-12 plausible tokens</td></tr>
+    <tr><td>Under poetry injection</td><td>8.81 bits</td><td class="highlight">4.80 bits</td><td>GPT-J: maximum confusion</td></tr>
+  </table>
+  <div class="concept-box" style="margin-top:8px;">
+    <strong>Practical detection:</strong> Monitor output entropy. On GPT-J, a jump from &lt;1 bit to &gt;3 bits reliably signals prompt injection &mdash; no need to understand the injection content.
+  </div>
+</section>
+
+<!-- ============ SECTION: INTERVENTION ============ -->
+<section>
+  <div class="section-header">INTERVENTION TECHNIQUES</div>
+  <h1 style="font-size:1.5em;">Changing the Model's Mind</h1>
+  <p class="subtitle">Techniques for establishing causal claims and building defenses</p>
+</section>
+
+<!-- ============ ACTIVATION PATCHING ============ -->
+<section>
+  <h2>Activation Patching &amp; Clamping <span class="tag tag-int">Intervention</span></h2>
+  <div class="concept-box">
+    <strong>Idea:</strong> Replace an activation in one run with the corresponding activation from a different run. If the output changes, that component is <em>causally responsible</em>.
+  </div>
+  <div class="pipeline" style="margin-top:12px;">
+    <div class="pipeline-step" style="background:#d1fae5;">1. Run on clean input<br>Save h<sub>24</sub> baseline</div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step" style="background:#fff0f0;">2. Run on injection<br>Replace h<sub>24</sub> with baseline</div>
+    <div class="pipeline-arrow">&rarr;</div>
+    <div class="pipeline-step" style="background:#dbeafe;">3. Measure output<br>Did P(French) recover?</div>
+  </div>
+  <div class="metric-grid" style="margin-top:16px;">
+    <div class="metric-card">
+      <span class="key-number" style="font-size:1.6em;">0.055</span>
+      <span class="key-label">P(French) without clamping</span>
+    </div>
+    <div class="metric-card">
+      <span class="key-number" style="font-size:1.6em; color:#27ae60;">0.792</span>
+      <span class="key-label">P(French) with L24 clamped</span>
+    </div>
+    <div class="metric-card">
+      <span class="key-number" style="font-size:1.6em; color:#27ae60;">93%</span>
+      <span class="key-label">Recovery</span>
+    </div>
+  </div>
+  <div class="concept-box" style="margin-top:8px;">
+    <strong>Key insight:</strong> As models scale, task processing becomes more <em>localized</em>. GPT-2: clamping any layer has zero effect. GPT-J: clamping layer 24 alone nearly eliminates injection.
+  </div>
+</section>
+
+<!-- ============ ACTIVATION STEERING ============ -->
+<section>
+  <h2>Activation Steering <span class="tag tag-int">Intervention</span></h2>
+  <div class="concept-box">
+    <strong>Idea:</strong> Find the "deviation direction" in the residual stream and subtract it during inference to cancel out injection.
+  </div>
+  <pre><code>deviation_direction = normalize(mean(h_injection) - mean(h_baseline))
+
+During inference on injection prompt:
+    h_steered = h_original - alpha * deviation_direction</code></pre>
+  <div class="two-col" style="font-size:0.8em;">
+    <div style="text-align:left;">
+      <h3>How alpha works</h3>
+      <ul>
+        <li>&alpha; = 0: No steering (original)</li>
+        <li>Small &alpha;: Gentle correction</li>
+        <li>Large &alpha;: Strong correction</li>
+        <li>&alpha; = 20: Phase transition on GPT-J (model "snaps back")</li>
+        <li>&alpha; = 50: Near-full recovery (0.709)</li>
+      </ul>
+    </div>
+    <div>
+      <div class="concept-box">
+        <strong>Why it works better at scale:</strong><br>
+        GPT-2: deviation is spread across many directions &rarr; 1.16x improvement<br>
+        GPT-J: deviation is concentrated &rarr; <strong>12.9x improvement</strong>
+      </div>
+    </div>
+  </div>
+  <p class="footnote">Key papers: Zou et al. (2023) "Representation Engineering", Rimsky et al. (2023) "Contrastive Activation Addition"</p>
+</section>
+
+<!-- ============ ATTENTION HEAD ABLATION ============ -->
+<section>
+  <h2>Attention Head Ablation <span class="tag tag-int">Intervention</span></h2>
+  <div class="two-col left-align" style="font-size:0.8em;">
+    <div>
+      <h3>Types of Attention Heads</h3>
+      <ul>
+        <li><strong>Previous-token heads:</strong> attend to the preceding token (bigram statistics)</li>
+        <li><strong>Induction heads:</strong> copy patterns ("if A B... A appeared, predict B")</li>
+        <li><strong>Name Mover heads:</strong> move entity names to prediction position</li>
+      </ul>
+      <h3 style="margin-top:12px;">What we tested</h3>
+      <p>Identified top 5 heads that shifted attention most during injection. Clamped their patterns to baseline values.</p>
+    </div>
+    <div>
+      <div class="warn-box">
+        <strong>Result: Zero effect on GPT-2.</strong><br><br>
+        This is a significant <em>null result</em>. The injection mechanism runs through the <strong>MLP/residual pathway</strong>, not through attention redistribution. Attention shifts are <em>correlates</em> of deviation, not <em>causes</em>.
+      </div>
+      <div class="concept-box" style="margin-top:12px;">
+        <strong>Implication:</strong> Proposed "attention-monitoring" defenses for prompt injection would miss the real mechanism on small models.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: SAE ============ -->
+<section>
+  <div class="section-header">FEATURE DECOMPOSITION</div>
+  <h1 style="font-size:1.5em;">Sparse Autoencoders (SAEs)</h1>
+  <p class="subtitle">The hottest technique in MI &mdash; decomposing activations into interpretable features</p>
+</section>
+
+<!-- ============ THE SUPERPOSITION PROBLEM ============ -->
+<section>
+  <h2>The Problem: Superposition</h2>
+  <div class="concept-box">
+    Neural network neurons are <strong>polysemantic</strong> &mdash; each neuron responds to multiple unrelated concepts. Neuron #437 might activate for "French language" AND "ocean imagery" AND "formal tone."
+  </div>
+  <p style="font-size:0.8em; margin-top:16px;">Why? The <strong>superposition hypothesis</strong> (Elhage et al., 2022):</p>
+  <div class="two-col left-align" style="font-size:0.75em;">
+    <div>
+      <p>Models represent <em>more concepts than they have neurons</em> by encoding concepts as <strong>directions</strong> in activation space, not as individual neurons.</p>
+      <p style="margin-top:8px;">Like fitting 100 almost-perpendicular lines in 50-dimensional space &mdash; they overlap slightly but are approximately orthogonal.</p>
+    </div>
+    <div>
+      <div class="warn-box">
+        <strong>We confirmed this!</strong><br>
+        In our neuron experiments on GPT-J, all 20 probed neurons (injection AND task) promoted the same tokens ("Ell", "Bella"). Individual neurons are NOT monosemantic.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAE SOLUTION ============ -->
+<section>
+  <h2>The Solution: Sparse Autoencoders</h2>
+  <div class="concept-box">
+    An SAE decomposes dense, polysemantic activations into <strong>sparse, monosemantic features</strong> (each feature = one concept).
+  </div>
+  <pre><code>Encoder:  features = ReLU(W_enc @ activation + b_enc)    // 768d &rarr; 25,000 features
+Decoder:  reconstruction = W_dec @ features + b_dec       // 25,000 features &rarr; 768d
+
+Loss = ||activation - reconstruction||^2 + &lambda; &times; ||features||_1
+                                              ^^ sparsity penalty</code></pre>
+  <div class="two-col left-align" style="font-size:0.75em; margin-top:8px;">
+    <div>
+      <h3>Key properties</h3>
+      <ul>
+        <li><strong>Overcomplete:</strong> 25K features &gt;&gt; 768 hidden dims</li>
+        <li><strong>Sparse:</strong> only 10-50 features active per input</li>
+        <li><strong>Monosemantic:</strong> each feature ideally = one concept</li>
+        <li><strong>Pre-trained available:</strong> no need to train your own</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Variants (2024-2025)</h3>
+      <ul>
+        <li><strong>TopK SAEs</strong> (OpenAI): keep only top-k features</li>
+        <li><strong>JumpReLU</strong> (DeepMind): learnable threshold</li>
+        <li><strong>Gated SAEs:</strong> separate gating &amp; magnitude</li>
+        <li><strong>Cross-Layer Transcoders</strong> (Anthropic): predict MLP outputs across layers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAE IN PRACTICE ============ -->
+<section>
+  <h2>SAE Features in Practice</h2>
+  <p style="font-size:0.75em;">What we found when running SAEs on our translation prompt injection task:</p>
+  <div class="two-col left-align" style="font-size:0.75em;">
+    <div>
+      <h3>Baseline ("Translate: The book...")</h3>
+      <ul>
+        <li>Feature #21868: <strong>"Romance language"</strong> &rarr; 3.68</li>
+        <li>Feature #14419: <strong>"Structured output"</strong> &rarr; 12.73</li>
+        <li>Feature #488: <strong>"Reference"</strong> &rarr; 9.26</li>
+        <li>Feature #565: "Narrative" &rarr; 0.00</li>
+        <li>Feature #10599: "Conversational" &rarr; 1.00</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Under injection ("Ignore...")</h3>
+      <ul>
+        <li>Feature #21868: "Romance language" &rarr; <strong>5.02</strong> (UP!)</li>
+        <li>Feature #14419: "Structured output" &rarr; <span class="highlight">7.44</span> (suppressed)</li>
+        <li>Feature #488: "Reference" &rarr; <span class="highlight">1.16</span> (crushed)</li>
+        <li>Feature #565: <strong>"Narrative"</strong> &rarr; <span class="highlight">5.68</span> (new!)</li>
+        <li>Feature #10599: <strong>"Conversational"</strong> &rarr; <span class="highlight">8.38</span> (spike!)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="concept-box" style="margin-top:12px;">
+    <strong>Key insight:</strong> The model doesn't lose its "French awareness" (feature #21868 <em>increases</em>). It loses its <strong>task-framing features</strong> (#14419, #488) that structure the response as a translation exercise.
+  </div>
+</section>
+
+<!-- ============ FEW-SHOT ICL ============ -->
+<section>
+  <h2>Few-Shot In-Context Learning</h2>
+  <div class="concept-box">
+    <strong>Idea:</strong> Instead of fine-tuning, provide examples in the prompt. The model learns the task "on the fly" from pattern completion.
+  </div>
+  <pre><code>Translate English to French.
+
+English: The cat is on the table.    &larr; example 1
+French: Le chat est sur la table.
+
+English: I love music.               &larr; example 2
+French: J'aime la musique.
+
+English: The book is on the shelf.   &larr; new input
+French: ___                           &larr; model completes</code></pre>
+  <div class="two-col left-align" style="font-size:0.75em; margin-top:8px;">
+    <div>
+      <h3>How it works (mechanistically)</h3>
+      <ul>
+        <li><strong>Induction heads:</strong> identify the pattern (English: X &rarr; French: Y)</li>
+        <li><strong>Task vectors:</strong> examples create a "task direction" in the residual stream</li>
+        <li><strong>Implicit fine-tuning:</strong> attention mechanism implements something like gradient descent on the examples</li>
+      </ul>
+    </div>
+    <div>
+      <div class="concept-box">
+        <strong>Our finding:</strong> More examples = stronger task vector = more injection resistance. 1-shot is 4-6x more vulnerable than 3-shot. Injection works by introducing a <em>competing</em> task direction in the residual stream.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: TOOLING ============ -->
+<section>
+  <div class="section-header">TOOLING &amp; INFRASTRUCTURE</div>
+  <h1 style="font-size:1.5em;">The MI Tooling Ecosystem</h1>
+  <p class="subtitle">Libraries, platforms, and infrastructure we discovered and used</p>
+</section>
+
+<!-- ============ NDIF ============ -->
+<section>
+  <h2>NDIF: National Deep Inference Facility</h2>
+  <div class="tool-box">
+    <strong>What:</strong> Free research infrastructure that hosts large AI models (up to 405B parameters) for interpretability research. Run experiments on GPT-J-6B, Llama-3.1-70B, and more &mdash; from your laptop, no GPU needed.
+  </div>
+  <div class="two-col left-align" style="font-size:0.75em; margin-top:12px;">
+    <div>
+      <h3>How it works</h3>
+      <ul>
+        <li>Models run on NDIF's GPU cluster</li>
+        <li>You send "trace" requests via <code>nnsight</code></li>
+        <li>Full access to all internal activations</li>
+        <li>Can read AND write to any layer</li>
+        <li>Free API key at <a href="https://login.ndif.us">login.ndif.us</a></li>
+      </ul>
+      <h3 style="margin-top:10px;">Models available (hot)</h3>
+      <ul>
+        <li>Llama-3.1-405B, 70B, 8B</li>
+        <li>GPT-J-6B</li>
+        <li>Gemma-2-9B, Qwen2.5-7B</li>
+        <li>Mistral, DeepSeek, and more</li>
+      </ul>
+    </div>
+    <div>
+      <pre><code>import nnsight
+from nnsight import LanguageModel
+
+# Load model (runs remotely)
+model = LanguageModel(
+  "EleutherAI/gpt-j-6b",
+  dispatch=True
+)
+
+# Read internal state
+with model.trace("prompt",
+                 remote=True):
+  hidden = model.transformer \
+    .h[24].output[0].save()
+  logits = model.lm_head \
+    .output.save()
+
+# hidden is now a real tensor!</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NNSIGHT ============ -->
+<section>
+  <h2>nnsight: The "Write Once, Run Anywhere" MI Library</h2>
+  <div class="tool-box">
+    <strong>What:</strong> General-purpose library for inspecting and intervening on <em>any</em> PyTorch model. Works locally (CPU/GPU) and remotely (via NDIF). ~870 GitHub stars.
+  </div>
+  <div class="two-col left-align" style="font-size:0.75em;">
+    <div>
+      <h3>Key capabilities</h3>
+      <ul>
+        <li><strong>Read:</strong> save any activation from any layer</li>
+        <li><strong>Write:</strong> replace activations mid-inference</li>
+        <li><strong>Trace context:</strong> all operations defined declaratively</li>
+        <li><strong>Remote execution:</strong> same code runs locally or on NDIF</li>
+      </ul>
+      <h3 style="margin-top:10px;">Gotchas we discovered</h3>
+      <ul>
+        <li><strong>Proxy scoping:</strong> saved values are proxies inside trace context &mdash; wrap in helper functions that return resolved tensors</li>
+        <li><strong>Individual neuron indexing:</strong> complex indexing on proxies is unreliable &mdash; use full-vector injection instead</li>
+        <li><strong>CPU/CUDA mismatch:</strong> use multi-invocation traces to keep tensors on the same device</li>
+      </ul>
+    </div>
+    <div>
+      <pre><code># Activation patching example
+def inject_vector(prompt, layer, vec):
+  with model.trace(prompt,
+                   remote=True,
+                   scan=False,
+                   validate=False):
+    # Replace hidden state
+    model.transformer.h[layer] \
+      .output[0][:, -1, :] = vec
+    # Read output
+    logits = model.lm_head \
+      .output[:, -1, :].save()
+  return logits[0].float().detach()</code></pre>
+      <p style="font-size:0.85em; margin-top:8px;"><code>pip install nnsight</code><br><a href="https://nnsight.net">nnsight.net</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSFORMERLENS ============ -->
+<section>
+  <h2>TransformerLens: The MI Standard Library</h2>
+  <div class="tool-box">
+    <strong>What:</strong> Purpose-built MI library by Neel Nanda. Reimplements 50+ architectures with hooks at every activation. The de facto standard for local MI research. ~5K GitHub stars.
+  </div>
+  <div class="two-col left-align" style="font-size:0.75em;">
+    <div>
+      <h3>Key features</h3>
+      <ul>
+        <li>Hook-based access to <em>every</em> internal activation</li>
+        <li><code>run_with_cache()</code> stores all activations in one call</li>
+        <li>Built-in logit lens, attention visualization</li>
+        <li>Named hooks: <code>"blocks.8.hook_resid_post"</code></li>
+        <li>Works for GPT-2, GPT-Neo, Pythia, Llama, etc.</li>
+      </ul>
+    </div>
+    <div>
+      <pre><code>from transformer_lens import HookedTransformer
+
+model = HookedTransformer.from_pretrained(
+  "gpt2-small"
+)
+
+# Run and cache ALL activations
+_, cache = model.run_with_cache(prompt)
+
+# Access any layer's residual stream
+resid = cache["blocks.8.hook_resid_post"]
+# Shape: [batch, seq_len, 768]
+
+# Logit lens
+normed = model.ln_final(resid[0, -1])
+logits = model.unembed(normed)</code></pre>
+      <p style="font-size:0.85em; margin-top:8px;"><code>pip install transformer_lens</code></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAE LENS ============ -->
+<section>
+  <h2>SAE Lens: Pre-trained SAEs at Your Fingertips</h2>
+  <div class="tool-box">
+    <strong>What:</strong> Library for training and analyzing SAEs by Joseph Bloom. Maintains a registry of pre-trained SAEs for GPT-2, Gemma, Pythia, and more. ~1.3K GitHub stars.
+  </div>
+  <div class="two-col left-align" style="font-size:0.75em;">
+    <div>
+      <h3>Pre-trained SAEs we used</h3>
+      <ul>
+        <li><strong>gpt2-small-res-jb:</strong> 12 SAEs (one per layer)</li>
+        <li>24,576 features each</li>
+        <li>Trained on OpenWebText</li>
+        <li>Available on HuggingFace: <code>jbloom/GPT2-Small-SAEs</code></li>
+      </ul>
+      <h3 style="margin-top:10px;">Also available for</h3>
+      <ul>
+        <li>Gemma 2 (Gemma Scope)</li>
+        <li>Pythia</li>
+        <li>GPT-4 (OpenAI, 16M features)</li>
+        <li>Claude (Anthropic, internal)</li>
+      </ul>
+    </div>
+    <div>
+      <pre><code>from sae_lens import SAE
+
+# Load pre-trained SAE
+sae, cfg, sparsity = SAE.from_pretrained(
+  release="gpt2-small-res-jb",
+  sae_id="blocks.8.hook_resid_pre",
+)
+
+# Decompose activations
+features = sae.encode(hidden_state)
+# features: [24576] - mostly zeros
+
+# Get active features
+active = (features > 0).nonzero()
+# Typically 10-50 active features
+
+# Reconstruct
+reconstructed = sae.decode(features)</code></pre>
+      <p style="font-size:0.85em; margin-top:8px;"><code>pip install sae-lens</code></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEURONPEDIA ============ -->
+<section>
+  <h2>Neuronpedia: Interactive Feature Explorer</h2>
+  <div class="tool-box">
+    <strong>What:</strong> Web platform for exploring SAE features with auto-generated descriptions. Browse thousands of features interactively. No installation needed.
+  </div>
+  <div class="two-col left-align" style="font-size:0.78em;">
+    <div>
+      <h3>Features from our research</h3>
+      <table style="font-size:0.9em;">
+        <tr><th>Feature</th><th>Interpretation</th><th>Neuronpedia Link</th></tr>
+        <tr><td>#21868</td><td>Romance language</td><td><a href="https://neuronpedia.org/gpt2-small/8-res-jb/21868" style="font-size:0.8em;">neuronpedia.org/...</a></td></tr>
+        <tr><td>#565</td><td>Narrative/Chapter</td><td><a href="https://neuronpedia.org/gpt2-small/8-res-jb/565" style="font-size:0.8em;">neuronpedia.org/...</a></td></tr>
+        <tr><td>#10599</td><td>Conversational</td><td><a href="https://neuronpedia.org/gpt2-small/8-res-jb/10599" style="font-size:0.8em;">neuronpedia.org/...</a></td></tr>
+        <tr><td>#14419</td><td>Structured output</td><td><a href="https://neuronpedia.org/gpt2-small/8-res-jb/14419" style="font-size:0.8em;">neuronpedia.org/...</a></td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>What you can do</h3>
+      <ul>
+        <li>Browse all 24,576 features per layer</li>
+        <li>See auto-generated descriptions</li>
+        <li>View activation patterns on sample texts</li>
+        <li>Explore feature dashboards</li>
+        <li>Compare features across layers</li>
+      </ul>
+      <p style="margin-top:12px;"><a href="https://www.neuronpedia.org">www.neuronpedia.org</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OTHER TOOLS ============ -->
+<section>
+  <h2>Other Notable Tools</h2>
+  <table>
+    <tr><th>Tool</th><th>What It Does</th><th>When to Use</th></tr>
+    <tr><td style="text-align:left;"><strong>circuit-tracer</strong></td><td>Anthropic's attribution graphs using CLTs</td><td>Deep circuit analysis at production scale</td></tr>
+    <tr><td style="text-align:left;"><strong>nnterp</strong></td><td>Lightweight TransformerLens-like interface on any architecture</td><td>Quick cross-architecture experiments</td></tr>
+    <tr><td style="text-align:left;"><strong>tuned-lens</strong></td><td>Per-layer affine probes (improved logit lens)</td><td>More reliable early-layer predictions</td></tr>
+    <tr><td style="text-align:left;"><strong>sae-auto-interp</strong></td><td>Automated SAE feature interpretation via LLMs</td><td>Labeling thousands of features automatically</td></tr>
+    <tr><td style="text-align:left;"><strong>Goodfire</strong></td><td>Commercial platform for feature steering</td><td>Production-ready feature control</td></tr>
+    <tr><td style="text-align:left;"><strong>Interpreto</strong></td><td>Post-hoc explainability (attributions + concepts)</td><td>BERT-to-LLM attribution analysis</td></tr>
+  </table>
+</section>
+
+<!-- ============ TOOLING COMPARISON ============ -->
+<section>
+  <h2>When to Use What</h2>
+  <table style="font-size:0.62em;">
+    <tr><th>Scenario</th><th>Tool</th><th>Why</th></tr>
+    <tr><td style="text-align:left;">Quick experiments on GPT-2</td><td><strong>TransformerLens</strong></td><td>Best hooks, caching, local CPU</td></tr>
+    <tr><td style="text-align:left;">Large models (6B+)</td><td><strong>nnsight + NDIF</strong></td><td>Remote execution, no GPU needed</td></tr>
+    <tr><td style="text-align:left;">Feature decomposition</td><td><strong>SAE Lens</strong></td><td>Pre-trained SAEs, easy loading</td></tr>
+    <tr><td style="text-align:left;">Exploring features visually</td><td><strong>Neuronpedia</strong></td><td>Web-based, no installation</td></tr>
+    <tr><td style="text-align:left;">Circuit tracing at scale</td><td><strong>circuit-tracer</strong></td><td>Anthropic's production-grade tool</td></tr>
+    <tr><td style="text-align:left;">Cross-architecture research</td><td><strong>nnterp</strong></td><td>Unified API across 50+ models</td></tr>
+  </table>
+  <div class="concept-box" style="margin-top:12px;">
+    <strong>Our stack:</strong><br>
+    &bull; <strong>TransformerLens</strong> for GPT-2 Small experiments (10 experiments + SAE analysis, all CPU)<br>
+    &bull; <strong>nnsight + NDIF</strong> for GPT-J-6B experiments (10 experiments + neuron analysis, remote)<br>
+    &bull; <strong>SAE Lens</strong> for loading pre-trained SAEs (GPT-2 Small, 6 layers)<br>
+    &bull; <strong>Neuronpedia</strong> for interactive feature exploration
+  </div>
+</section>
+
+<!-- ============ KEY PAPERS ============ -->
+<section>
+  <h2>Key Papers <span class="tag tag-paper">References</span></h2>
+  <div class="left-align" style="font-size:0.65em; columns: 2; column-gap: 30px;">
+    <p><strong>Foundational</strong></p>
+    <ul>
+      <li>"A Mathematical Framework for Transformer Circuits" &mdash; Elhage et al. (2021, Anthropic)</li>
+      <li>"Toy Models of Superposition" &mdash; Elhage et al. (2022, Anthropic)</li>
+      <li>"Locating and Editing Factual Associations in GPT" (ROME) &mdash; Meng et al. (2022)</li>
+    </ul>
+    <p><strong>Logit Lens &amp; Residual Stream</strong></p>
+    <ul>
+      <li>"Logit Lens" &mdash; nostalgebraist (2020)</li>
+      <li>"Tuned Lens" &mdash; Belrose et al. (2023)</li>
+    </ul>
+    <p><strong>Activation Steering</strong></p>
+    <ul>
+      <li>"Representation Engineering" &mdash; Zou et al. (2023)</li>
+      <li>"Contrastive Activation Addition" &mdash; Rimsky et al. (2023)</li>
+    </ul>
+    <p><strong>Sparse Autoencoders</strong></p>
+    <ul>
+      <li>"Towards Monosemanticity" &mdash; Bricken et al. (2023, Anthropic)</li>
+      <li>"Scaling Monosemanticity" &mdash; Templeton et al. (2024, Anthropic)</li>
+      <li>"Scaling and Evaluating SAEs" &mdash; Gao et al. (OpenAI, ICLR 2025)</li>
+    </ul>
+    <p><strong>Circuits</strong></p>
+    <ul>
+      <li>"Circuit Tracing" &mdash; Anthropic (March 2025)</li>
+      <li>"Open Problems in MI" &mdash; Sharkey et al. (TMLR, Sep 2025)</li>
+    </ul>
+    <p><strong>Prompt Injection</strong></p>
+    <ul>
+      <li>"Adversarial Poetry" &mdash; Prandi et al. (2025)</li>
+      <li>"AutoInject: SAEs Unlock Automated Prompt Injection" (2026)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ HOW TECHNIQUES CONNECT ============ -->
+<section>
+  <h2>How the Techniques Connect</h2>
+  <div class="diagram" style="font-size:0.6em; margin: 0 auto;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OBSERVATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INTERVENTION<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;===========&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;============<br>
+<br>
+Logit Lens&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; "What does it believe?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Head Ablation&nbsp;&nbsp;&nbsp;&nbsp;&rarr; "Does this head matter?"<br>
+Cosine Distance&nbsp;&nbsp;&rarr; "How different is it?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clamping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; "Does this layer matter?"<br>
+Entropy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; "How confident is it?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Steering&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; "Can we cancel deviation?"<br>
+Attention&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; "Where does it look?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SAE Ablation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; "Is this feature needed?"<br>
+SAE Features&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; "Which concepts are active?"&nbsp;SAE Steering&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; "Can we control precisely?"<br>
+Neuron Fingerprint&rarr; "Which neurons fire?"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neuron Ablation&nbsp;&nbsp;&rarr; "Do 50 neurons suffice?"<br>
+  </div>
+  <div class="concept-box" style="margin-top:12px;">
+    <strong>Our progression:</strong> Coarse (whole-layer logit lens) &rarr; Medium (multi-layer steering) &rarr; Fine (SAE features) &rarr; Finest (individual neurons). Each step gave more precise understanding but also revealed deeper entanglement.
+  </div>
+</section>
+
+<!-- ============ SETUP GUIDE ============ -->
+<section>
+  <h2>Getting Started: Minimal Setup</h2>
+  <pre><code># 1. Install the core libraries
+pip install torch numpy transformer_lens nnsight sae-lens
+
+# 2. Get your NDIF API key (free)
+#    Go to https://login.ndif.us
+export NNSIGHT_API_KEY="your-key-here"
+
+# 3. Quick test: Logit Lens on GPT-2 (local, CPU)
+from transformer_lens import HookedTransformer
+model = HookedTransformer.from_pretrained("gpt2-small")
+_, cache = model.run_with_cache("The Eiffel Tower is in")
+# Access layer 8 residual stream:
+resid = cache["blocks.8.hook_resid_post"][0, -1, :]
+
+# 4. Quick test: Read GPT-J hidden state (remote, NDIF)
+from nnsight import LanguageModel
+model = LanguageModel("EleutherAI/gpt-j-6b", dispatch=True)
+with model.trace("The Eiffel Tower is in", remote=True):
+    h = model.transformer.h[24].output[0][:, -1, :].save()
+print(h.shape)  # torch.Size([1, 4096])</code></pre>
+  <div class="concept-box" style="margin-top:8px;">
+    <strong>Total setup time:</strong> ~5 minutes. <strong>No GPU required.</strong> GPT-2 runs on CPU; GPT-J runs on NDIF's servers.
+  </div>
+</section>
+
+<!-- ============ THANK YOU ============ -->
+<section>
+  <h1 style="font-size:2em;">Thank You</h1>
+  <p style="font-size:0.8em; color:#555; margin-top:20px;">
+    8 MI technique families &bull; 10+ concepts explained<br>
+    5 core tools &bull; 18 key papers
+  </p>
+  <div style="margin-top:30px;">
+    <span class="tag tag-obs">Observation</span>
+    <span class="tag tag-int">Intervention</span>
+    <span class="tag tag-tool">Tooling</span>
+    <span class="tag tag-paper">Papers</span>
+  </div>
+  <div class="metric-grid" style="margin-top:24px;">
+    <div class="metric-card"><span class="key-label"><strong>TransformerLens</strong><br>Local MI on GPT-2</span></div>
+    <div class="metric-card"><span class="key-label"><strong>nnsight + NDIF</strong><br>Remote MI on 6B+ models</span></div>
+    <div class="metric-card"><span class="key-label"><strong>SAE Lens</strong><br>Feature decomposition</span></div>
+    <div class="metric-card"><span class="key-label"><strong>Neuronpedia</strong><br>Feature exploration</span></div>
+  </div>
+  <p style="font-size:0.6em; color:#aaa; margin-top:30px;">
+    All tools are free and open source<br>
+    NDIF API keys are free for research at <a href="https://login.ndif.us">login.ndif.us</a>
+  </p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: 'c/t',
+  width: 1200,
+  height: 700,
+  margin: 0.06,
+  transition: 'slide',
+  backgroundTransition: 'fade',
+  center: true,
+  pdfSeparateFragments: false,
+});
+</script>
+</body>
+</html>

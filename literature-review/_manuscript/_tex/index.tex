@@ -1,0 +1,976 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+\usepackage[style=alphabetic,]{biblatex}
+\addbibresource{references.bib}
+\addbibresource{references2.bib}
+\addbibresource{google.bib}
+\addbibresource{microsoft.bib}
+\addbibresource{openai.bib}
+\addbibresource{detection.bib}
+\addbibresource{ilya.bib}
+\addbibresource{creative.bib}
+\addbibresource{code.bib}
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Fiction Writing Inspired Injection Attacks in LLMs},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Fiction Writing Inspired Injection Attacks in LLMs}
+\author{Ana Clara Zoppi Serpa}
+\date{}
+\begin{document}
+\maketitle
+
+
+\subsection{Literature Review: Open Problems and Literature
+Gaps}\label{literature-review-open-problems-and-literature-gaps}
+
+\subsubsection{\texorpdfstring{\autocite{ChenPS025_StruQ}}{{[}@ChenPS025\_StruQ{]}}}\label{chenps025_struq}
+
+\textbf{Paper summary}:
+
+\begin{itemize}
+\tightlist
+\item
+  Attacks rely on LLM ability to follow instructions + inability to
+  separate prompts from user data
+\item
+  Structured queries: general approach to solve the problem. Components:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \begin{enumerate}
+    \def\labelenumi{(\arabic{enumi})}
+    \tightlist
+    \item
+      Secure front-end
+    \end{enumerate}
+  \item
+    \begin{enumerate}
+    \def\labelenumi{(\arabic{enumi})}
+    \setcounter{enumi}{1}
+    \tightlist
+    \item
+      Specially trained LLM -\textgreater{} \emph{structured instruction
+      tuned LLM}
+    \end{enumerate}
+  \end{itemize}
+\item
+  Code available in the paper! :)
+\item
+  Training process:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Augment standard instruction tuning dataset so that examples have
+    instructions in the \textbf{data} part, train the LLM to ignore
+    these instructions as they are not in the \textbf{prompt} part.
+  \item
+    Train new LLM entirely from scratch - infeasible. Structured
+    instruction tuning can be applied to \textbf{base LLMs}, so it's not
+    from scratch, it's a new form of instruction tuning.
+  \end{itemize}
+\item
+  Special separators, reserved tokens, front-end filters out these
+  tokens from user prompt to avoid faking them
+\item
+  Initialize embedding for the special token before tuning is important
+  to keep model performance
+\end{itemize}
+
+\textbf{Suggested future work}:
+
+\begin{itemize}
+\tightlist
+\item
+  StruQ decreases ASR of manual attacks tpo 0\% but some optimized
+  attacks (TAP, GCG) still have high ASR
+\item
+  StruQ is trained on task-agnostic manual injections, doesn't fully
+  generalize to task-specific injections
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Possible solution: craft task-dependent injections dataset with LLMs
+    or human crowdsourcing
+  \end{itemize}
+\item
+  StruQ protects programmatic applications that use API/libraries, but
+  web chat-bot users wouldn't like manually marking their inputs as
+  prompt x data constantly
+\item
+  Prompt injection focus: StruQ doesn't prevent jailbreak, data
+  extraction or other attacks, just prompt injection
+\end{itemize}
+
+\subsubsection{\texorpdfstring{\autocite{GongLZRCC0L25_Papillon}}{{[}@GongLZRCC0L25\_Papillon{]}}}\label{gonglzrcc0l25_papillon}
+
+\textbf{Summary}:
+
+\begin{itemize}
+\tightlist
+\item
+  Automated black-box jailbreaking framework inspired by SWE fuzzy
+  testing concepts
+\item
+  Proprietary APIs e.g.~Gemini, GPT
+\item
+  Code available
+\item
+  Differential:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This framework can start the jailbreaking process from an empty
+    seed, no need for starter templates
+  \item
+    Aims at producing natural, semantically coherent prompts, to bypass
+    detection
+  \item
+    Aims to shorten prompts -\textgreater{} attacks get cheaper because
+    proprietary APIs charge on a token basis
+  \end{itemize}
+\item
+  White-box jailbreaking x black-box jailbreaking distinction
+\item
+  White-box well-known attack: GCG
+\item
+  Black-box subdivides into handcrafted and automatic
+\item
+  Jailbreaking defense types
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Input modification
+  \item
+    Prompt engineering
+  \item
+    Output filtering
+  \end{itemize}
+\item
+  Defenses Papillon breaks
+
+  \begin{itemize}
+  \tightlist
+  \item
+    perplexity
+  \item
+    SmoothLLM
+  \item
+    LlamaGuard
+  \end{itemize}
+\end{itemize}
+
+\textbf{Suggested future work}:
+
+\begin{itemize}
+\tightlist
+\item
+  Add more mutators to the framework for prompt evolution
+\item
+  Evaluate different prompt compression methods
+\item
+  Develop defenses
+\item
+  Test Papillon on non-English LLM
+\end{itemize}
+
+\subsubsection{\texorpdfstring{\autocite{PasquiniKA25_LLMmap}}{{[}@PasquiniKA25\_LLMmap{]}}}\label{pasquinika25_llmmap}
+
+\textbf{Summary}:
+
+\begin{itemize}
+\tightlist
+\item
+  Fingerprinting LLM = figuring out what LLM is being used by an app
+  -\textgreater{} analogous to OS fingerprinting
+\item
+  How it works
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Send carefully crafted queries to the app
+  \item
+    Analyze responses
+  \item
+    Identify specific LLM version in use
+  \end{itemize}
+\item
+  42 different LLM versions 95\% accuracy just 8 interactions
+\item
+  Why is it an attack?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Fingerprinting enables other attack surfaces, it's related to the
+    \textbf{reconnaissance} stage of an attack
+  \item
+    Knowing the model enables trying target adversarial prompts,
+    vulnerabilities specific to that model etc
+  \end{itemize}
+\item
+  Tool for AI red teams
+\item
+  Code available
+\item
+  Queries that trigger unique response patterns that might identify what
+  LLM is responding
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Meta information (``what is your version?'')
+  \item
+    Banner grabbing (``what is your name?'')
+  \item
+    Malformed
+  \item
+    Alignment / harmful / controversial
+  \item
+    Nonsensical, semantically broken
+  \end{itemize}
+\item
+  Not necessarily the model answers truthfully to a banner grabbing, but
+  it might have a \emph{unique way to deflect the question}
+\item
+  Collect traces from the queries \& responses
+\item
+  Use an ML inference model (handle diverse/variable responses)
+\item
+  Open-set x closed-set
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Closed-set: classifier
+  \item
+    Open-set: siamese-like, contrastive learning (``is this LLM the same
+    as this other LLM?'')
+  \end{itemize}
+\item
+  Prompt configuration universe -\textgreater{} ways LLMs get customized
+  and become unique for a certain app
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Hyperparameters (temperature, frequency penalty)
+  \item
+    System prompt
+  \item
+    Framework (RAG, COT, other\ldots)
+  \end{itemize}
+\item
+  Some defenses do reduce the accuracy of fingerprinting, but they have
+  disadvantages, such as impacting model utility
+\item
+  Findings suggest fingerprinting is an inevitable consequence of unique
+  behavior exhibited by different models, unlike OS fingerprinting,
+  which is avoidable with some measures
+\end{itemize}
+
+\textbf{Suggested future work}:
+
+\begin{itemize}
+\tightlist
+\item
+  GlitchTokens
+\item
+  Automated query generation with optimization heuristics
+\item
+  Additional inference - not only model + version, but also
+
+  \begin{itemize}
+  \tightlist
+  \item
+    tool call list
+  \item
+    RAG / other internal framework being used
+  \item
+    hyperparameters
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{\texorpdfstring{\autocite{BiscontiPRGS26_AdversarialPoetry}}{{[}@BiscontiPRGS26\_AdversarialPoetry{]}}}\label{biscontiprgs26_adversarialpoetry}
+
+\textcolor{red}{to-do - lido no tablet}
+
+\subsubsection{\texorpdfstring{\autocite{BiscontiGPSSN26_AdversarialTales}}{{[}@BiscontiGPSSN26\_AdversarialTales{]}}}\label{biscontigpssn26_adversarialtales}
+
+\textcolor{red}{to-do - lido no tablet}
+
+\subsubsection{\texorpdfstring{\autocite{IBM2025_PromptInjection}}{{[}@IBM2025\_PromptInjection{]}}}\label{ibm2025_promptinjection}
+
+A IBM web page explaining the basics of prompt injection - what it is,
+how it generally works, risks etc. Not too technical, not a research
+paper with experimental results.
+
+\subsubsection{\texorpdfstring{\autocite{Alber2025_MedicalLLMsAreVulnerableToDataPoisoningAttacks}}{{[}@Alber2025\_MedicalLLMsAreVulnerableToDataPoisoningAttacks{]}}}\label{alber2025_medicalllmsarevulnerabletodatapoisoningattacks}
+
+\textcolor{red}{to-do - tem detalhes nos slides que apresentei no Horus}
+
+\subsubsection{\texorpdfstring{\autocite{Youtube2024_SomeoneWon50kByMakingAIHallucinate},\autocite{IlPost2024_Freysa}}{{[}@Youtube2024\_SomeoneWon50kByMakingAIHallucinate{]},{[}@IlPost2024\_Freysa{]}}}\label{youtube2024_someonewon50kbymakingaihallucinateilpost2024_freysa}
+
+Video and news article about someone winning \$50k by making AI
+hallucinate on the Freysa competition.
+
+\subsubsection{\texorpdfstring{\autocite{HeidingKLKS24_LLMPhishing}}{{[}@HeidingKLKS24\_LLMPhishing{]}}}\label{heidingklks24_llmphishing}
+
+\textcolor{red}{não cheguei a ler, tava na lista antiga do google docs}
+
+\subsubsection{\texorpdfstring{\autocite{Kiela2021_TheHatefulMemesChallengeDetectingHateSpeechInMultimodalMemes}}{{[}@Kiela2021\_TheHatefulMemesChallengeDetectingHateSpeechInMultimodalMemes{]}}}\label{kiela2021_thehatefulmemeschallengedetectinghatespeechinmultimodalmemes}
+
+\textcolor{red}{acho que eu li sim, deve estar no Drive ou no tablet, só não lembro os detalhes agora}
+
+\subsubsection{\texorpdfstring{\autocite{Fersini2022_SemEval2022Task5MultimediaAutomaticMisogynyIdentification}}{{[}@Fersini2022\_SemEval2022Task5MultimediaAutomaticMisogynyIdentification{]}}}\label{fersini2022_semeval2022task5multimediaautomaticmisogynyidentification}
+
+\textcolor{red}{n li ainda}
+
+\subsubsection{\texorpdfstring{\autocite{Hwang2023_MemeCapCaptioningAndInterpretingMemes}}{{[}@Hwang2023\_MemeCapCaptioningAndInterpretingMemes{]}}}\label{hwang2023_memecapcaptioningandinterpretingmemes}
+
+\textcolor{red}{n li ainda}
+
+\subsubsection{\texorpdfstring{\autocite{Cardenuto2023_TheAgeOfSyntheticRealitiesChallengesAndOpportunities}}{{[}@Cardenuto2023\_TheAgeOfSyntheticRealitiesChallengesAndOpportunities{]}}}\label{cardenuto2023_theageofsyntheticrealitieschallengesandopportunities}
+
+\textcolor{red}{li sim, é o paper do Anderson e do João, é um geralzão de tudo que tem rolado de realidade sintética}
+
+\subsubsection{\texorpdfstring{\autocite{Farid2016_PhotoForensics}}{{[}@Farid2016\_PhotoForensics{]}}}\label{farid2016_photoforensics}
+
+\textcolor{red}{n li, é o livro de forense digital que fala das técnicas pré-LLM, Anderson tinha recomendado}
+
+\subsubsection{\texorpdfstring{\autocite{Guo2025_DarkMindLatentChainOfThoughtBackdoor}}{{[}@Guo2025\_DarkMindLatentChainOfThoughtBackdoor{]}}}\label{guo2025_darkmindlatentchainofthoughtbackdoor}
+
+\textcolor{red}{to-do - li sim, tem detalhes em slide e no google docs, dá pra pegar}
+
+\subsubsection{Some papers about KG + LLM, didn't
+read}\label{some-papers-about-kg-llm-didnt-read}
+
+\autocite{Ibrahim2026},
+\autocite{khorashadizadeh2024researchtrendsinterplaylarge},
+\autocite{dai2025largelanguagemodelsbetter},
+\autocite{kau2024combiningknowledgegraphslarge},
+\autocite{Pan2024_UnifyingLargeLanguageModelsAndKnowledgeGraphsARoadmap}
+
+\subsubsection{\texorpdfstring{\autocite{Ng2017_DeepLearningSpecialization}}{{[}@Ng2017\_DeepLearningSpecialization{]}}}\label{ng2017_deeplearningspecialization}
+
+\textcolor{red}{Curso de Deep Learning, relevante, gastei um tempão fazendo pra me especializar}
+
+\subsubsection{Papers about anxiety in
+LLMs}\label{papers-about-anxiety-in-llms}
+
+\autocite{codaforno2024inducinganxietylargelanguage}
+\autocite{Ben-Zion2025}
+
+\subsubsection{Milestone papers about
+LLMs}\label{milestone-papers-about-llms}
+
+These are really cool to see the historical trajectory, taken from this
+repository with several LLM resources and papers:
+\autocite{Hannibal046AwesomeLLM}
+
+\begin{itemize}
+\tightlist
+\item
+  \autocite{vaswani2023attentionneed} - Attention Is All You Need
+\item
+  \autocite{Radford2018ImprovingLU} - Improving Language Understanding
+  by Generative Pre-Training
+\item
+  \autocite{devlin2019bertpretrainingdeepbidirectional} - BERT:
+  Pre-training of Deep Bidirectional Transformers for Language
+  Understanding
+\item
+  \autocite{Radford2019LanguageMA} - Language Models are Unsupervised
+  Multitask Learners
+\item
+  \autocite{shoeybi2020megatronlmtrainingmultibillionparameter} -
+  Megatron-LM: Training Multi-Billion Parameter Language Models Using
+  Model Parallelism
+\item
+  \autocite{JMLR:v21:20-074} - Exploring the Limits of Transfer Learning
+  with a Unified Text-to-Text Transformer
+\item
+  \autocite{rajbhandari2020zeromemoryoptimizationstraining} - ZeRO:
+  Memory Optimizations Toward Training Trillion Parameter Models
+\item
+  \autocite{kaplan2020scalinglawsneurallanguage} - Scaling Laws for
+  Neural Language Models
+\item
+  \autocite{brown2020languagemodelsfewshotlearners} - Language Models
+  are Few-Shot Learners
+\item
+  \autocite{fedus2022switchtransformersscalingtrillion} - Switch
+  Transformers: Scaling to Trillion Parameter Models with Simple and
+  Efficient Sparsity
+\item
+  \autocite{chen2021evaluatinglargelanguagemodels} - Evaluating Large
+  Language Models Trained on Code
+\item
+  \autocite{bommasani2022opportunitiesrisksfoundationmodels} - On the
+  Opportunities and Risks of Foundation Models
+\item
+  \autocite{wei2022finetunedlanguagemodelszeroshot} - Finetuned Language
+  Models Are Zero-Shot Learners
+\item
+  \autocite{sanh2022multitaskpromptedtrainingenables} - Multitask
+  Prompted Training Enables Zero-Shot Task Generalization
+\item
+  \autocite{du2022glamefficientscalinglanguage} - GLaM: Efficient
+  Scaling of Language Models with Mixture-of-Experts
+\item
+  \autocite{Nakano2021WebGPTBQ} - WebGPT: Browser-assisted
+  question-answering with human feedback
+\item
+  \autocite{borgeaud2022improvinglanguagemodelsretrieving} - Improving
+  language models by retrieving from trillions of tokens
+\item
+  \autocite{rae2022scalinglanguagemodelsmethods} - Scaling Language
+  Models: Methods, Analysis \& Insights from Training Gopher
+\item
+  \autocite{wei2023chainofthoughtpromptingelicitsreasoning} -
+  Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
+\item
+  \autocite{thoppilan2022lamdalanguagemodelsdialog} - LaMDA: Language
+  Models for Dialog Applications
+\item
+  \autocite{lewkowycz2022solvingquantitativereasoningproblems} - Solving
+  Quantitative Reasoning Problems with Language Models
+\item
+  \autocite{smith2022usingdeepspeedmegatrontrain} - Using DeepSpeed and
+  Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative
+  Language Model
+\item
+  \autocite{ouyang2022traininglanguagemodelsfollow} - Training language
+  models to follow instructions with human feedback
+\item
+  \autocite{chowdhery2022palmscalinglanguagemodeling} - PaLM: Scaling
+  Language Modeling with Pathways
+\item
+  \autocite{hoffmann2022trainingcomputeoptimallargelanguage} - Training
+  Compute-Optimal Large Language Models
+\item
+  \autocite{zhang2022optopenpretrainedtransformer} - OPT: Open
+  Pre-trained Transformer Language Models
+\item
+  \autocite{tay2023ul2unifyinglanguagelearning} - UL2: Unifying Language
+  Learning Paradigms
+\item
+  \autocite{wei2022emergentabilitieslargelanguage} - Emergent Abilities
+  of Large Language Models
+\item
+  \autocite{srivastava2023beyond} - Beyond the Imitation Game:
+  Quantifying and extrapolating the capabilities of language models
+\item
+  \autocite{hao2022languagemodelsgeneralpurposeinterfaces} - Language
+  Models are General-Purpose Interfaces
+\item
+  \autocite{glaese2022improvingalignmentdialogueagents} - Improving
+  alignment of dialogue agents via targeted human judgements
+\item
+  \autocite{chung2022scalinginstructionfinetunedlanguagemodels} -
+  Scaling Instruction-Finetuned Language Models
+\item
+  \autocite{zeng2023glm130bopenbilingualpretrained} - GLM-130B: An Open
+  Bilingual Pre-trained Model
+\item
+  \autocite{liang2023holisticevaluationlanguagemodels} - Holistic
+  Evaluation of Language Models
+\item
+  \autocite{workshop2023bloom176bparameteropenaccessmultilingual} -
+  BLOOM: A 176B-Parameter Open-Access Multilingual Language Model
+\item
+  \autocite{taylor2022galacticalargelanguagemodel} - Galactica: A Large
+  Language Model for Science
+\item
+  \autocite{iyer2023optimlscalinglanguagemodel} - OPT-IML: Scaling
+  Language Model Instruction Meta Learning through the Lens of
+  Generalization
+\item
+  \autocite{longpre2023flancollectiondesigningdata} - The Flan
+  Collection: Designing Data and Methods for Effective Instruction
+  Tuning
+\item
+  \autocite{touvron2023llamaopenefficientfoundation} - LLaMA: Open and
+  Efficient Foundation Language Models
+\item
+  \autocite{huang2023languageneedaligningperception} - Language Is Not
+  All You Need: Aligning Perception with Language Models
+\item
+  \autocite{orvieto2023resurrectingrecurrentneuralnetworks} -
+  Resurrecting Recurrent Neural Networks for Long Sequences
+\item
+  \autocite{driess2023palmeembodiedmultimodallanguage} - PaLM-E: An
+  Embodied Multimodal Language Model
+\item
+  \autocite{openai2024gpt4technicalreport} - GPT-4 Technical Report
+\item
+  \autocite{liu2023visualinstructiontuning} - Visual Instruction Tuning
+\item
+  \autocite{biderman2023pythiasuiteanalyzinglarge} - Pythia: A Suite for
+  Analyzing Large Language Models Across Training and Scaling
+\item
+  \autocite{sun2023principledrivenselfalignmentlanguagemodels} -
+  Principle-Driven Self-Alignment of Language Models from Scratch with
+  Minimal Human Supervision
+\item
+  \autocite{anil2023palm2technicalreport} - PaLM 2 Technical Report
+\item
+  \autocite{peng2023rwkvreinventingrnnstransformer} - RWKV: Reinventing
+  RNNs for the Transformer Era
+\item
+  \autocite{rafailov2024directpreferenceoptimizationlanguage} - Direct
+  Preference Optimization: Your Language Model is Secretly a Reward
+  Model
+\item
+  \autocite{yao2023treethoughtsdeliberateproblem} - Tree of Thoughts:
+  Deliberate Problem Solving with Large Language Models
+\item
+  \autocite{touvron2023llama2openfoundation} - Llama 2: Open Foundation
+  and Fine-Tuned Chat Models
+\item
+  \autocite{jiang2023mistral7b} - Mistral 7B
+\item
+  \autocite{gu2024mambalineartimesequencemodeling} - Mamba: Linear-Time
+  Sequence Modeling with Selective State Spaces
+\item
+  \autocite{deepseekai2024deepseekv2strongeconomicalefficient} -
+  DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts
+  Language Model
+\item
+  \autocite{groeneveld-etal-2024-olmo} - OLMo: Accelerating the Science
+  of Language Models
+\item
+  \autocite{dao2024transformersssmsgeneralizedmodels} - Transformers are
+  SSMs: Generalized Models and Efficient Algorithms Through Structured
+  State Space Duality
+\item
+  \autocite{grattafiori2024llama3herdmodels} - The Llama 3 Herd of
+  Models
+\item
+  \autocite{penedo2024finewebdatasetsdecantingweb} - The FineWeb
+  Datasets: Decanting the Web for the Finest Text Data at Scale
+\item
+  \autocite{muennighoff2025olmoeopenmixtureofexpertslanguage} - OLMoE:
+  Open Mixture-of-Experts Language Models
+\item
+  \autocite{qwen2025qwen25technicalreport} - Qwen2.5 Technical Report
+\item
+  \autocite{deepseekai2025deepseekv3technicalreport} - DeepSeek-V3
+  Technical Report
+\item
+  \autocite{Guo_2025} - DeepSeek-R1 incentivizes reasoning in LLMs
+  through reinforcement learning
+\end{itemize}
+
+\subsubsection{Google Research}\label{google-research}
+
+\begin{itemize}
+\tightlist
+\item
+  \autocite{52868} - InstructPipe: Generating Visual Blocks Pipelines
+  with Human Instructions and LLMs
+\item
+  \autocite{1021008} - Gemini \& Physical World: Large Language Models
+  Can Estimate the Intensity of Earthquake Shaking from Multi-Modal
+  Social Media Posts
+\item
+  \autocite{1025553} - SSDTrain: Faster Large Language Model Training
+  Using SSD-Based Activation Offloading
+\item
+  \autocite{1024745} - Triaging mammography with artificial
+  intelligence: an implementation study
+\item
+  \autocite{1024143} - Mufu: Multilingual Fused Learning for
+  Low-Resource Translation with LLM
+\item
+  \autocite{1026765} - TOKENFORMER: Rethinking Transformers Scaling with
+  Tokenized Model Parameters
+\item
+  \autocite{morris2024generativeghostsanticipatingbenefits} - Generative
+  Ghosts: Anticipating Benefits and Risks of AI Afterlives
+\item
+  \autocite{lee2025geminiembeddinggeneralizableembeddings} - Gemini
+  Embedding: Generalizable Embeddings from Gemini
+\item
+  \autocite{maninis2025tipstextimagepretrainingspatial} - TIPS:
+  Text-Image Pretraining with Spatial awareness
+\item
+  \autocite{wang2025scalingpretrainingbilliondata} - Scaling
+  Pre-training to One Hundred Billion Data for Vision Language Models
+\item
+  \autocite{cooper2025machineunlearningdoesntthink} - Machine Unlearning
+  Doesn't Do What You Think: Lessons for Generative AI Policy and
+  Research
+\item
+  \autocite{schultz2025masteringboardgamesexternal} - Mastering Board
+  Games by External and Internal Planning with Language Models
+\item
+  \autocite{dambrosio2025achievinghumanlevelcompetitive} - Achieving
+  Human Level Competitive Robot Table Tennis
+\item
+  \autocite{Hutter:24uaibook2} - An Introduction to Universal Artificial
+  Intelligence
+\item
+  \autocite{panda2024teach} - Teach LLMs to Phish: Stealing Private
+  Information from Language Models
+\item
+  \autocite{whitney2024learning} - Learning 3D Particle-based Simulators
+  from RGB-D Videos
+\item
+  \autocite{song2024positionleveragefoundationalmodels} - Position:
+  Leverage Foundational Models for Black-Box Optimization
+\end{itemize}
+
+\subsubsection{Microsoft Research}\label{microsoft-research}
+
+\begin{itemize}
+\tightlist
+\item
+  \autocite{vorvoreanu2025fostering} - Fostering appropriate reliance on
+  GenAI: Lessons learned from early research
+\item
+  \autocite{flores-saviaga2025the} - The Impact of Generative AI Coding
+  Assistants on Developers Who Are Visually Impaired
+\item
+  \autocite{alshammari2025a} - A Unifying Framework for Representation
+  Learning
+\end{itemize}
+
+\subsubsection{OpenAI}\label{openai}
+
+\begin{itemize}
+\tightlist
+\item
+  \autocite{miserendino2025swelancerfrontierllmsearn} - SWE-Lancer: Can
+  Frontier LLMs Earn \$1 Million from Real-World Freelance Software
+  Engineering?
+\item
+  \autocite{baker2022videopretrainingvptlearning} - Video PreTraining
+  (VPT): Learning to Act by Watching Unlabeled Online Videos
+\item
+  \autocite{radford2021learningtransferablevisualmodels} - Learning
+  Transferable Visual Models From Natural Language Supervision (CLIP)
+\item
+  \autocite{openai2021dalle} - DALL·E: Creating Images from Text
+\item
+  \autocite{openai2018montezumasrevenge} - Learning Montezuma's Revenge
+  from a single demonstration
+\item
+  \autocite{openai2022languagemodelsafety} - Lessons learned on language
+  model safety and misuse
+\item
+  \autocite{goh2021multimodal} - Multimodal Neurons in Artificial Neural
+  Networks
+\end{itemize}
+
+\subsubsection{Synthetic Media
+Detection}\label{synthetic-media-detection}
+
+\begin{itemize}
+\tightlist
+\item
+  \autocite{9141516} - FakeCatcher: Detection of Synthetic Portrait
+  Videos using Biological Signals
+\item
+  \autocite{unknown} - Synthetic Realities in the Digital Age:
+  Navigating the Opportunities and Challenges of AI-Generated Content
+\item
+  \autocite{ye2025lokicomprehensivesyntheticdata} - LOKI: A
+  Comprehensive Synthetic Data Detection Benchmark using Large
+  Multimodal Models
+\item
+  \autocite{Zobaed2021} - DeepFakes: Detecting Forged and Synthetic
+  Media Content Using Machine Learning
+\item
+  \autocite{10095167} - On The Detection of Synthetic Images Generated
+  by Diffusion Models
+\item
+  \autocite{10409290} - CIFAKE: Image Classification and Explainable
+  Identification of AI-Generated Synthetic Images
+\item
+  \autocite{laurier2024catmousegameongoing} - The Cat and Mouse Game:
+  The Ongoing Arms Race Between Diffusion Models and Detection Methods
+\end{itemize}
+
+\subsubsection{Ilya Sutskever's Recommended Reading
+List}\label{ilya-sutskevers-recommended-reading-list}
+
+Papers and resources from \autocite{dzyim2023ilyasutskeverreading},
+originally shared by Ilya Sutskever with John Carmack in 2020.
+
+\begin{itemize}
+\tightlist
+\item
+  \autocite{rush2018annotated} - The Annotated Transformer
+\item
+  \autocite{aaronson2011first} - The First Law of Complexodynamics
+\item
+  \autocite{karpathy2015unreasonable} - The Unreasonable Effectiveness
+  of Recurrent Neural Networks
+\item
+  \autocite{olah2015understanding} - Understanding LSTM Networks
+\item
+  \autocite{zaremba2014recurrent} - Recurrent Neural Network
+  Regularization
+\item
+  \autocite{hinton1993keeping} - Keeping the Neural Networks Simple by
+  Minimizing the Description Length of the Weights
+\item
+  \autocite{vinyals2015pointer} - Pointer Networks
+\item
+  \autocite{krizhevsky2012imagenet} - ImageNet Classification with Deep
+  Convolutional Neural Networks
+\item
+  \autocite{vinyals2016order} - Order Matters: Sequence to Sequence for
+  Sets
+\item
+  \autocite{huang2019gpipe} - GPipe: Easy Scaling with Micro-Batch
+  Pipeline Parallelism
+\item
+  \autocite{he2016deep} - Deep Residual Learning for Image Recognition
+\item
+  \autocite{yu2016multi} - Multi-Scale Context Aggregation by Dilated
+  Convolutions
+\item
+  \autocite{gilmer2017neural} - Neural Message Passing for Quantum
+  Chemistry
+\item
+  \autocite{bahdanau2016neural} - Neural Machine Translation by Jointly
+  Learning to Align and Translate
+\item
+  \autocite{he2016identity} - Identity Mappings in Deep Residual
+  Networks
+\item
+  \autocite{santoro2017simple} - A Simple Neural Network Module for
+  Relational Reasoning
+\item
+  \autocite{chen2017variational} - Variational Lossy Autoencoder
+\item
+  \autocite{santoro2018relational} - Relational Recurrent Neural
+  Networks
+\item
+  \autocite{aaronson2014quantifying} - Quantifying the Rise and Fall of
+  Complexity in Closed Systems: The Coffee Automaton
+\item
+  \autocite{graves2014neural} - Neural Turing Machines
+\item
+  \autocite{amodei2016deep} - Deep Speech 2: End-to-End Speech
+  Recognition in English and Mandarin
+\item
+  \autocite{grunwald2004tutorial} - A Tutorial Introduction to the
+  Minimum Description Length Principle
+\item
+  \autocite{legg2008machine} - Machine Super Intelligence (PhD Thesis)
+\item
+  \autocite{shen2017kolmogorov} - Kolmogorov Complexity and Algorithmic
+  Randomness
+\item
+  \autocite{feifei2016cs231n} - CS231n: Convolutional Neural Networks
+  for Visual Recognition
+\end{itemize}
+
+\subsubsection{Misc, to be organized}\label{misc-to-be-organized}
+
+\begin{itemize}
+\tightlist
+\item
+  \autocite{kumar-etal-2023-language} - Language Generation Models Can
+  Cause Harm: So What Can We Do About It? An Actionable Survey
+\item
+  \autocite{agrawal2024knowledgegraphsreducehallucinations} - Can
+  Knowledge Graphs Reduce Hallucinations in LLMs? : A Survey
+\item
+  \autocite{feng2023knowledgesolverteachingllms} - Knowledge Solver:
+  Teaching LLMs to Search for Domain Knowledge from Knowledge Graphs
+\item
+  \autocite{lu2024aiscientistfullyautomated} - The AI Scientist: Towards
+  Fully Automated Open-Ended Scientific Discovery
+\item
+  \autocite{doi:10.1126/science.adq1814} - Durably reducing conspiracy
+  beliefs through dialogues with AI
+\item
+  \autocite{nakanishi2025scalablesoftmaxsuperiorattention} -
+  Scalable-Softmax Is Superior for Attention
+\item
+  \autocite{feng2024rnnsneeded} - Were RNNs All We Needed?
+\item
+  \autocite{zhang2025thoughtactionhierarchyneural} - From Thought to
+  Action: How a Hierarchy of Neural Dynamics Supports Language
+  Production
+\item
+  \autocite{lévy2025braintotextdecodingnoninvasiveapproach} -
+  Brain-to-Text Decoding: A Non-invasive Approach via Typing
+\item
+  \autocite{li-etal-2025-loki} - Loki: An Open-Source Tool for Fact
+  Verification
+\end{itemize}
+
+
+\printbibliography
+
+
+
+\end{document}
