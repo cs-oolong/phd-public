@@ -281,7 +281,7 @@ def send_whatsapp_update(message):
         import urllib.parse
         
         # Salva em arquivo que o cronjob pode ler
-        status_file = "/home/shimeji/monorepo/phd/mech-interp/cna_status.txt"
+        status_file = "/home/shimeji/monorepo/phd/ignore/mech-interp/cna_status.txt"
         with open(status_file, "a") as f:
             f.write(f"{datetime.now().strftime('%H:%M:%S')} - {message}\n")
     except Exception as e:

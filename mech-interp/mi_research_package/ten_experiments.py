@@ -832,10 +832,10 @@ def make_serializable(obj):
 
 serializable_results = make_serializable(all_results)
 
-with open("/home/ubuntu/ten_experiments_results.json", "w") as f:
+with open("/home/shimeji/monorepo/phd/ignore/mi_research_package/ten_experiments_results.json", "w") as f:
     json.dump(serializable_results, f, indent=2)
 
-print("  Results saved to /home/ubuntu/ten_experiments_results.json")
+print("  Results saved to /home/shimeji/monorepo/phd/ignore/mi_research_package/ten_experiments_results.json")
 print("\n" + "=" * 70)
 print("ALL 10 EXPERIMENTS COMPLETE!")
 print("=" * 70)

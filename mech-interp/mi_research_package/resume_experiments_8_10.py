@@ -347,9 +347,9 @@ def main():
 
     # Save experiments 8-10 separately
     serializable_8_10 = make_serializable(results_8_10)
-    with open("/home/ubuntu/experiments_8_10_ndif_results.json", "w") as f:
+    with open("/home/shimeji/monorepo/phd/ignore/mi_research_package/experiments_8_10_ndif_results.json", "w") as f:
         json.dump(serializable_8_10, f, indent=2)
-    print("  Saved experiments 8-10 to /home/ubuntu/experiments_8_10_ndif_results.json")
+    print("  Saved experiments 8-10 to /home/shimeji/monorepo/phd/ignore/mi_research_package/experiments_8_10_ndif_results.json")
 
     # Try to load and merge with experiments 1-7
     # Parse experiments 1-7 results from the output log
@@ -443,10 +443,10 @@ def main():
     merged.update(serializable_8_10)
     
     # Save merged results
-    with open("/home/ubuntu/ten_experiments_ndif_results.json", "w") as f:
+    with open("/home/shimeji/monorepo/phd/ignore/mi_research_package/ten_experiments_ndif_results.json", "w") as f:
         json.dump(merged, f, indent=2)
     
-    print("  Merged results saved to /home/ubuntu/ten_experiments_ndif_results.json")
+    print("  Merged results saved to /home/shimeji/monorepo/phd/ignore/mi_research_package/ten_experiments_ndif_results.json")
     print(f"\n  Total NDIF trace calls (exps 8-10): {total_calls}")
     print("=" * 70)
     print("ALL 10 EXPERIMENTS COMPLETE ON GPT-J-6B!")

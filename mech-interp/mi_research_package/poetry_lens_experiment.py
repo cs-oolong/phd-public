@@ -481,6 +481,6 @@ save_data = {
     "generation": generation_results,
 }
 
-with open("/home/ubuntu/poetry_lens_results.json", "w") as f:
+with open("/home/shimeji/monorepo/phd/ignore/mi_research_package/poetry_lens_results.json", "w") as f:
     json.dump(to_json(save_data), f, indent=2)
-print("\nResults saved to /home/ubuntu/poetry_lens_results.json")
+print("\nResults saved to /home/shimeji/monorepo/phd/ignore/mi_research_package/poetry_lens_results.json")

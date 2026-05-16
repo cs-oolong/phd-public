@@ -2,8 +2,8 @@
 # Roda CNA em tmux com notificacoes WhatsApp
 
 SESSION="cna_subsets"
-LOGFILE="/home/shimeji/monorepo/phd/mech-interp/cna_tmux.log"
-STATUSFILE="/home/shimeji/monorepo/phd/mech-interp/cna_status.txt"
+LOGFILE="/home/shimeji/monorepo/phd/ignore/mech-interp/cna_tmux.log"
+STATUSFILE="/home/shimeji/monorepo/phd/ignore/mech-interp/cna_status.txt"
 
 # Limpa status anterior
 > "$STATUSFILE"

@@ -691,10 +691,10 @@ def make_serializable(obj):
 
 serializable = make_serializable(all_results)
 
-with open("/home/ubuntu/sae_experiments_results.json", "w") as f:
+with open("/home/shimeji/monorepo/phd/ignore/mi_research_package/sae_experiments_results.json", "w") as f:
     json.dump(serializable, f, indent=2)
 
-print(f"  Results saved to /home/ubuntu/sae_experiments_results.json")
+print(f"  Results saved to /home/shimeji/monorepo/phd/ignore/mi_research_package/sae_experiments_results.json")
 
 total_time = time.time() - t0
 print(f"\n  TOTAL TIME: {total_time:.1f}s ({total_time/60:.1f} min)")

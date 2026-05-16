@@ -436,11 +436,11 @@ def main():
             return [make_serializable(i) for i in obj]
         return obj
 
-    with open("/home/ubuntu/gptj_neuron_experiments_results.json", "w") as f:
+    with open("/home/shimeji/monorepo/phd/ignore/mi_research_package/gptj_neuron_experiments_results.json", "w") as f:
         json.dump(make_serializable(all_results), f, indent=2)
 
     total_time = time.time() - t_start
-    print(f"\n  Saved to /home/ubuntu/gptj_neuron_experiments_results.json")
+    print(f"\n  Saved to /home/shimeji/monorepo/phd/ignore/mi_research_package/gptj_neuron_experiments_results.json")
     print(f"  TOTAL: {total_time:.1f}s ({total_time/60:.1f} min), {call_count[0]} NDIF calls")
     print("\n" + "=" * 70)
     print("ALL 6 NEURON EXPERIMENTS COMPLETE!")

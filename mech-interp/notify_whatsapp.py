@@ -11,7 +11,7 @@ from datetime import datetime
 
 def read_latest_status():
     """Le o arquivo de status mais recente"""
-    status_file = "/home/shimeji/monorepo/phd/mech-interp/cna_status.txt"
+    status_file = "/home/shimeji/monorepo/phd/ignore/mech-interp/cna_status.txt"
     if os.path.exists(status_file):
         with open(status_file, "r") as f:
             lines = f.readlines()
@@ -20,7 +20,7 @@ def read_latest_status():
 
 def read_latest_results():
     """Le o resultado JSON mais recente"""
-    json_files = glob.glob("/home/shimeji/monorepo/phd/mech-interp/cna_subset_*.json")
+    json_files = glob.glob("/home/shimeji/monorepo/phd/ignore/mech-interp/cna_subset_*.json")
     if not json_files:
         return None
     
