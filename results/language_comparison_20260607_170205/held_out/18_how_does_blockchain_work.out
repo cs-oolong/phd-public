@@ -1,0 +1,62 @@
+=== Prompt ===
+How does blockchain work?
+
+=== Normal Response ===
+Blockchain is a decentralized, digital ledger that records transactions across multiple computers in a secure and transparent way. Here's a simplified explanation of how it works:
+
+1. **Transactions**: A transaction is the basic unit of data on a blockchain. It could be anything from a financial transaction to the transfer of a digital asset or even the recording of a contract.
+
+2. **Blocks**: Transactions are grouped into blocks. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data.
+
+3. **Block Verification**: When a block is filled with transactions, it's sent to the network for verification. This is done by nodes (computers participating in the network). Nodes use complex algorithms to verify the transactions and ensure they are valid.
+
+4. **Proof of Work (or Proof of Stake)**: To prevent fraud and ensure the integrity of the data, blockchains use a consensus mechanism. In the case of Bitcoin, the most well-known blockchain, it's Proof of Work. This means that nodes must solve a complex mathematical problem to validate a block. The first node to solve the problem gets to add the block to the chain and is rewarded with cryptocurrency.
+
+5. **Chain of Blocks**: Once a block is verified and added to the chain, it's very difficult to change because it contains a cryptographic hash of the previous block. This creates a chain of blocks, hence the name "blockchain".
+
+6. **Transparency and Security**: Because the blockchain is decentralized and distributed across a network of nodes, it's highly secure and resistant to tampering. Every node has a copy of the entire blockchain, so any attempt to alter a transaction would require changing the majority of the copies, which is computationally impractical.
+
+7. **Immutability**: Once a block is added to the chain, its data is considered permanent and unalterable. This makes blockchain ideal for applications where trust, security, and transparency are paramount, such as cryptocurrencies, supply chain management, and voting systems.
+
+=== Ablated Response (multiplier=0.0) ===
+Blockchain is a decentralized, digital ledger technology that records transactions across multiple computers in a secure and transparent way. Here's a simplified explanation of how it works:
+
+1. Transactions: A transaction is any exchange of value, such as money, goods, or services. In the case of cryptocurrencies like Bitcoin, transactions are typically made between digital wallets.
+
+2. Block: Each transaction is grouped together into a block, which also contains a unique code called a hash. The block also includes a timestamp and a reference to the previous block in the chain, creating a continuous chain of blocks (hence the name "blockchain").
+
+3. Verification: Before a new block can be added to the blockchain, it must be verified by a network of computers (nodes) using complex algorithms. This process is known as mining. Miners compete to solve mathematical problems to validate the transactions in a block, and the first one to solve it gets rewarded with cryptocurrency.
+
+4. Adding to the blockchain: Once a block is verified, it is added to the existing blockchain. This creates a permanent and unalterable record of the transaction.
+
+5. Transparency and security: Because the blockchain is decentralized and distributed across multiple computers, it is highly secure and resistant to tampering or hacking. Every node in the network has a copy of the blockchain, so any attempt to change the data would require altering every copy, which is virtually impossible.
+
+6. Consensus: The blockchain uses a consensus mechanism to ensure all nodes agree on the validity of transactions and the order in which they are added to the blockchain. The most common consensus mechanism is Proof of Work (PoW), but other mechanisms like Proof of Stake (PoS) and Delegated Proof of Stake (DPoS) are also used.
+
+7. Smart contracts: Some blockchains, like Ethereum, support smart contracts, which are self-executing contracts with the terms of the agreement between buyer and seller being directly written into lines of code. Smart contracts automatically execute when predefined conditions are met, eliminating the need for intermediaries like banks or lawyers.
+
+Overall, blockchain technology offers many potential benefits, including increased security, transparency, and efficiency, as well as the ability to create new decentralized applications and services.
+
+=== Amplified Response (multiplier=3.0) ===
+Blockchain is a decentralized, digital, and distributed ledger that records transactions across multiple computers. Here's a simplified explanation of how it works:
+
+1. **Decentralization**: Instead of a central authority, blockchain uses a network of computers (nodes) to validate and record transactions. This makes the system more resistant to fraud and tampering.
+
+2. **Digital and Distributed**: All data on the blockchain is digital, meaning it's stored and transmitted as data. The distribution of this data across the network ensures that that that that data is available to all participants in the network.
+
+3. **Ledger**: The blockchain is a ledger that records transactions. Each transaction is a record that that is added to the ledger.
+
+4. **Blocks**: The transactions are grouped into blocks. Each block contains a cryptographic hash of the previous block, a timestamp, and the transaction data.
+
+5. **Chain**: The blocks are linked together in a chain, hence the name "blockchain". Each block contains a reference to the hash of the previous block, creating a chain of blocks.
+
+6. **Cryptography**: To ensure the integrity of the data, each block is secured with cryptography. A unique hash is generated for each block, and any change in the block will result in a different hash.
+
+7. **Consensus Algorithms**: To prevent any single entity from tampering with the blockchain, a consensus algorithm is used. The most common consensus algorithms are Proof of Work (PoW) and Proof of Stake (PoS). These algorithms ensure that that the network agrees on the validity of the transactions and the order in which they are added to the blockchain.
+
+8. **Transparency and Security**: The transparency and security of the blockchain make it ideal for applications such as cryptocurrency, where the need for a secure, decentralized, and transparent system is crucial.
+
+In summary, blockchain is a revolutionary technology that is changing the way we store and transfer data. Its decentralized, secure, and transparent nature makes it a powerful tool for a wide range of applications.
+
+=== Timing ===
+Normal: 11.2s | Ablated: 13.1s | Amplified: 11.9s

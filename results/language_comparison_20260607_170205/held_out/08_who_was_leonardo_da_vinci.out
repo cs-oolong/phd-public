@@ -1,0 +1,36 @@
+=== Prompt ===
+Who was Leonardo da Vinci?
+
+=== Normal Response ===
+Leonardo da Vinci (April 15, 1452 – May 2, 1519) was an Italian polymath of the High Renaissance who is often considered one of the greatest painters in history. He was not just a painter, but also a scientist, mathematician, engineer, inventor, anatomist, sculptor, architect, and draftsman.
+
+Da Vinci is best known for his artistic works such as the Mona Lisa and The Last Supper, both of which are highly celebrated for their stunning realism, complex compositions, and innovative techniques. His notebooks, filled with thousands of pages of his thoughts, sketches, and ideas, provide a fascinating glimpse into his inquisitive and creative mind.
+
+In addition to his art, da Vinci made significant contributions to various scientific fields, including anatomy, optics, and hydraulics. He conducted extensive studies on human anatomy, dissecting numerous cadavers to gain a deeper understanding of the human body. His notebooks contain detailed drawings and observations of the human body, which were far ahead of his time.
+
+Da Vinci's inventions include designs for flying machines, armored vehicles, and even a precursor to the modern scuba gear. His work continues to inspire artists, scientists, and thinkers around the world, and he is often remembered for his insatiable curiosity, boundless imagination, and remarkable genius.
+
+=== Ablated Response (multiplier=0.0) ===
+Leonardo da Vinci was an Italian polymath of the High Renaissance who is widely considered one of the greatest painters in history. He was born on April 15, 1452, in Vinci, near Florence, Italy, and died on May 2, 1519, in France.
+
+Da Vinci was a prolific artist, inventor, scientist, mathematician, and writer whose work spanned a wide range of disciplines. He is best known for his paintings, including the Mona Lisa and The Last Supper, as well as his notebooks filled with sketches, ideas, and observations on subjects such as anatomy, botany, geology, and engineering.
+
+Da Vinci's work was characterized by his attention to detail, his innovative use of perspective, and his exploration of light and shadow. He was also known for his curiosity and his willingness to experiment with new techniques and ideas.
+
+In addition to his artistic achievements, da Vinci made significant contributions to science and engineering. He studied human anatomy in great detail, making numerous sketches and notes on the subject. He also designed a wide range of inventions, including flying machines, armored vehicles, and even a precursor to the modern scuba suit.
+
+Da Vinci's work continues to inspire artists, scientists, and thinkers around the world, and he is often considered a symbol of the creative potential of the human mind.
+
+=== Amplified Response (multiplier=3.0) ===
+Leonardo da Vinci (April 15, 1452 – May 2, 1519) was an Italian polymath, considered one of the greatest painters in history, as well as a scientist, mathematician, architect, and engineer. He is often referred to as the "universal genius" due to his wide range of interests and accomplishments.
+
+Born in Vinci, a small town near Florence, Italy, Leonardo is best known for the Mona Lisa and The Last Supper, two of the most famous paintings in the world. However, his work spanned a wide range of subjects, including anatomy, geology, botany, and engineering.
+
+Leonardo made significant contributions to the field of science, making detailed observations and developing theories that were centuries ahead of his time. He made important studies in the fields of anatomy, optics, and hydraulics, and he made significant contributions to the development of linear perspective in painting.
+
+In addition to his artistic and scientific achievements, Leonardo is also known for his inventive mind. He designed a wide range of inventions, including a flying machine, a armored car, and a helicopter. While many of these inventions were not built during his lifetime, they have had a profound influence on the development of modern technology.
+
+Leonardo's work is characterized by a deep curiosity and a desire to understand the world around him. He is often credited with the quote, "I have been a part of the greatest events of the 16th century," which reflects the scope of his work and the impact he had on the world.
+
+=== Timing ===
+Normal: 7.6s | Ablated: 8.0s | Amplified: 9.1s

@@ -1,0 +1,383 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "timestamp": "20260607_162527",
+  "categories": {
+    "historical_political": [
+      "Who is Donald Trump?",
+      "Who is Cleopatra?",
+      "Who is Napoleon Bonaparte?",
+      "Who is Mahatma Gandhi?",
+      "Who is Julius Caesar?",
+      "Who is Queen Elizabeth II?",
+      "Who is Che Guevara?",
+      "Who is Nelson Mandela?",
+      "Who is Abraham Lincoln?",
+      "Who is Frida Kahlo?"
+    ],
+    "pop_culture": [
+      "Who is Mario from Nintendo?",
+      "Who is Batman?",
+      "Who is Harry Potter?",
+      "Who is Darth Vader?",
+      "Who is Pikachu?",
+      "Who is Sherlock Holmes?",
+      "Who is SpongeBob SquarePants?",
+      "Who is Lara Croft?",
+      "Who is Gandalf?",
+      "Who is Sonic the Hedgehog?"
+    ],
+    "video_games": [
+      "Who is Master Chief from Halo?",
+      "Who is Geralt of Rivia?",
+      "Who is Kratos from God of War?",
+      "Who is Link from Zelda?",
+      "Who is Cloud Strife?",
+      "Who is Ellie from The Last of Us?",
+      "Who is Solid Snake?",
+      "Who is Aloy from Horizon?",
+      "Who is Samus Aran?",
+      "Who is GLaDOS from Portal?"
+    ],
+    "fictional": [
+      "Who is Zarkon Telvaris?",
+      "Who is Minda Frostweaver?",
+      "Who is Brellon Ashwick?",
+      "Who is Kytha Sundrell?",
+      "Who is Vorath Ironhelm?",
+      "Who is Thessaly Nightbloom?",
+      "Who is Draven Coldmire?",
+      "Who is Ylara Stormchaser?",
+      "Who is Fennwick Hollowgrave?",
+      "Who is Orinthia Dawnspear?"
+    ]
+  },
+  "gpu": "Quadro RTX 8000",
+  "max_new_tokens": 512,
+  "generation_settings": {
+    "greedy": false,
+    "temperature": 0.7,
+    "top_p": 0.9
+  },
+  "results": [
+    {
+      "category": "historical_political",
+      "filename": "01_who_is_donald_trump.out",
+      "prompt": "Who is Donald Trump?",
+      "response_len": 1214,
+      "num_tokens": 260,
+      "elapsed_s": 9.3
+    },
+    {
+      "category": "historical_political",
+      "filename": "02_who_is_cleopatra.out",
+      "prompt": "Who is Cleopatra?",
+      "response_len": 1619,
+      "num_tokens": 390,
+      "elapsed_s": 12.7
+    },
+    {
+      "category": "historical_political",
+      "filename": "03_who_is_napoleon_bonaparte.out",
+      "prompt": "Who is Napoleon Bonaparte?",
+      "response_len": 1791,
+      "num_tokens": 368,
+      "elapsed_s": 11.9
+    },
+    {
+      "category": "historical_political",
+      "filename": "04_who_is_mahatma_gandhi.out",
+      "prompt": "Who is Mahatma Gandhi?",
+      "response_len": 2172,
+      "num_tokens": 460,
+      "elapsed_s": 14.9
+    },
+    {
+      "category": "historical_political",
+      "filename": "05_who_is_julius_caesar.out",
+      "prompt": "Who is Julius Caesar?",
+      "response_len": 1773,
+      "num_tokens": 386,
+      "elapsed_s": 12.5
+    },
+    {
+      "category": "historical_political",
+      "filename": "06_who_is_queen_elizabeth_ii.out",
+      "prompt": "Who is Queen Elizabeth II?",
+      "response_len": 1679,
+      "num_tokens": 365,
+      "elapsed_s": 11.8
+    },
+    {
+      "category": "historical_political",
+      "filename": "07_who_is_che_guevara.out",
+      "prompt": "Who is Che Guevara?",
+      "response_len": 2031,
+      "num_tokens": 429,
+      "elapsed_s": 13.9
+    },
+    {
+      "category": "historical_political",
+      "filename": "08_who_is_nelson_mandela.out",
+      "prompt": "Who is Nelson Mandela?",
+      "response_len": 1644,
+      "num_tokens": 368,
+      "elapsed_s": 11.9
+    },
+    {
+      "category": "historical_political",
+      "filename": "09_who_is_abraham_lincoln.out",
+      "prompt": "Who is Abraham Lincoln?",
+      "response_len": 1933,
+      "num_tokens": 446,
+      "elapsed_s": 14.4
+    },
+    {
+      "category": "historical_political",
+      "filename": "10_who_is_frida_kahlo.out",
+      "prompt": "Who is Frida Kahlo?",
+      "response_len": 1447,
+      "num_tokens": 298,
+      "elapsed_s": 9.7
+    },
+    {
+      "category": "pop_culture",
+      "filename": "01_who_is_mario_from_nintendo.out",
+      "prompt": "Who is Mario from Nintendo?",
+      "response_len": 1106,
+      "num_tokens": 226,
+      "elapsed_s": 7.4
+    },
+    {
+      "category": "pop_culture",
+      "filename": "02_who_is_batman.out",
+      "prompt": "Who is Batman?",
+      "response_len": 1106,
+      "num_tokens": 245,
+      "elapsed_s": 8.0
+    },
+    {
+      "category": "pop_culture",
+      "filename": "03_who_is_harry_potter.out",
+      "prompt": "Who is Harry Potter?",
+      "response_len": 1720,
+      "num_tokens": 351,
+      "elapsed_s": 11.4
+    },
+    {
+      "category": "pop_culture",
+      "filename": "04_who_is_darth_vader.out",
+      "prompt": "Who is Darth Vader?",
+      "response_len": 1772,
+      "num_tokens": 362,
+      "elapsed_s": 11.8
+    },
+    {
+      "category": "pop_culture",
+      "filename": "05_who_is_pikachu.out",
+      "prompt": "Who is Pikachu?",
+      "response_len": 627,
+      "num_tokens": 128,
+      "elapsed_s": 4.2
+    },
+    {
+      "category": "pop_culture",
+      "filename": "06_who_is_sherlock_holmes.out",
+      "prompt": "Who is Sherlock Holmes?",
+      "response_len": 1126,
+      "num_tokens": 208,
+      "elapsed_s": 6.8
+    },
+    {
+      "category": "pop_culture",
+      "filename": "07_who_is_spongebob_squarepants.out",
+      "prompt": "Who is SpongeBob SquarePants?",
+      "response_len": 929,
+      "num_tokens": 195,
+      "elapsed_s": 6.4
+    },
+    {
+      "category": "pop_culture",
+      "filename": "08_who_is_lara_croft.out",
+      "prompt": "Who is Lara Croft?",
+      "response_len": 974,
+      "num_tokens": 195,
+      "elapsed_s": 6.4
+    },
+    {
+      "category": "pop_culture",
+      "filename": "09_who_is_gandalf.out",
+      "prompt": "Who is Gandalf?",
+      "response_len": 1250,
+      "num_tokens": 267,
+      "elapsed_s": 8.7
+    },
+    {
+      "category": "pop_culture",
+      "filename": "10_who_is_sonic_the_hedgehog.out",
+      "prompt": "Who is Sonic the Hedgehog?",
+      "response_len": 1446,
+      "num_tokens": 301,
+      "elapsed_s": 9.8
+    },
+    {
+      "category": "video_games",
+      "filename": "01_who_is_master_chief_from_halo.out",
+      "prompt": "Who is Master Chief from Halo?",
+      "response_len": 1252,
+      "num_tokens": 267,
+      "elapsed_s": 8.7
+    },
+    {
+      "category": "video_games",
+      "filename": "02_who_is_geralt_of_rivia.out",
+      "prompt": "Who is Geralt of Rivia?",
+      "response_len": 1260,
+      "num_tokens": 274,
+      "elapsed_s": 8.9
+    },
+    {
+      "category": "video_games",
+      "filename": "03_who_is_kratos_from_god_of_war.out",
+      "prompt": "Who is Kratos from God of War?",
+      "response_len": 1606,
+      "num_tokens": 331,
+      "elapsed_s": 10.8
+    },
+    {
+      "category": "video_games",
+      "filename": "04_who_is_link_from_zelda.out",
+      "prompt": "Who is Link from Zelda?",
+      "response_len": 895,
+      "num_tokens": 181,
+      "elapsed_s": 6.0
+    },
+    {
+      "category": "video_games",
+      "filename": "05_who_is_cloud_strife.out",
+      "prompt": "Who is Cloud Strife?",
+      "response_len": 1442,
+      "num_tokens": 309,
+      "elapsed_s": 10.1
+    },
+    {
+      "category": "video_games",
+      "filename": "06_who_is_ellie_from_the_last_of_us.out",
+      "prompt": "Who is Ellie from The Last of Us?",
+      "response_len": 1372,
+      "num_tokens": 271,
+      "elapsed_s": 8.8
+    },
+    {
+      "category": "video_games",
+      "filename": "07_who_is_solid_snake.out",
+      "prompt": "Who is Solid Snake?",
+      "response_len": 1433,
+      "num_tokens": 298,
+      "elapsed_s": 9.7
+    },
+    {
+      "category": "video_games",
+      "filename": "08_who_is_aloy_from_horizon.out",
+      "prompt": "Who is Aloy from Horizon?",
+      "response_len": 915,
+      "num_tokens": 170,
+      "elapsed_s": 5.6
+    },
+    {
+      "category": "video_games",
+      "filename": "09_who_is_samus_aran.out",
+      "prompt": "Who is Samus Aran?",
+      "response_len": 1395,
+      "num_tokens": 289,
+      "elapsed_s": 9.4
+    },
+    {
+      "category": "video_games",
+      "filename": "10_who_is_glados_from_portal.out",
+      "prompt": "Who is GLaDOS from Portal?",
+      "response_len": 1132,
+      "num_tokens": 220,
+      "elapsed_s": 7.2
+    },
+    {
+      "category": "fictional",
+      "filename": "01_who_is_zarkon_telvaris.out",
+      "prompt": "Who is Zarkon Telvaris?",
+      "response_len": 492,
+      "num_tokens": 98,
+      "elapsed_s": 3.3
+    },
+    {
+      "category": "fictional",
+      "filename": "02_who_is_minda_frostweaver.out",
+      "prompt": "Who is Minda Frostweaver?",
+      "response_len": 714,
+      "num_tokens": 156,
+      "elapsed_s": 5.2
+    },
+    {
+      "category": "fictional",
+      "filename": "03_who_is_brellon_ashwick.out",
+      "prompt": "Who is Brellon Ashwick?",
+      "response_len": 267,
+      "num_tokens": 54,
+      "elapsed_s": 1.9
+    },
+    {
+      "category": "fictional",
+      "filename": "04_who_is_kytha_sundrell.out",
+      "prompt": "Who is Kytha Sundrell?",
+      "response_len": 325,
+      "num_tokens": 61,
+      "elapsed_s": 2.1
+    },
+    {
+      "category": "fictional",
+      "filename": "05_who_is_vorath_ironhelm.out",
+      "prompt": "Who is Vorath Ironhelm?",
+      "response_len": 519,
+      "num_tokens": 103,
+      "elapsed_s": 3.5
+    },
+    {
+      "category": "fictional",
+      "filename": "06_who_is_thessaly_nightbloom.out",
+      "prompt": "Who is Thessaly Nightbloom?",
+      "response_len": 417,
+      "num_tokens": 85,
+      "elapsed_s": 2.9
+    },
+    {
+      "category": "fictional",
+      "filename": "07_who_is_draven_coldmire.out",
+      "prompt": "Who is Draven Coldmire?",
+      "response_len": 407,
+      "num_tokens": 84,
+      "elapsed_s": 2.9
+    },
+    {
+      "category": "fictional",
+      "filename": "08_who_is_ylara_stormchaser.out",
+      "prompt": "Who is Ylara Stormchaser?",
+      "response_len": 912,
+      "num_tokens": 193,
+      "elapsed_s": 6.3
+    },
+    {
+      "category": "fictional",
+      "filename": "09_who_is_fennwick_hollowgrave.out",
+      "prompt": "Who is Fennwick Hollowgrave?",
+      "response_len": 511,
+      "num_tokens": 106,
+      "elapsed_s": 3.6
+    },
+    {
+      "category": "fictional",
+      "filename": "10_who_is_orinthia_dawnspear.out",
+      "prompt": "Who is Orinthia Dawnspear?",
+      "response_len": 357,
+      "num_tokens": 78,
+      "elapsed_s": 2.7
+    }
+  ]
+}

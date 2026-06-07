@@ -1,0 +1,75 @@
+=== Prompt ===
+How does a combustion engine work?
+
+=== Normal Response ===
+<think>
+Okay, so I need to figure out how a combustion engine works. Let's start by recalling what I know. Combustion engines are used in cars, motorcycles, etc., right? They convert chemical energy from fuel into mechanical energy. The main components I remember are the intake manifold, cylinder head, piston, crankshaft, and maybe valves. 
+
+First, the air-fuel mixture. I think the process starts with the air entering the engine through the intake manifold. Then, the fuel is injected into the cylinder. But how exactly does that happen? Maybe there's a pump that forces fuel into the intake, or maybe it's a port injection system. Oh right, modern engines use port injection, where fuel is injected directly into the cylinder via a port near the top. That's more efficient than a carburetor.
+
+Then, the spark plug creates an electric spark. When the spark hits the air-fuel mixture, it ignites, causing a rapid explosion. This explosion pushes the piston down, which turns the crankshaft. The crankshaft then drives the rest of the engine components like the gearbox, alternator, etc.
+
+Wait, but what about the different types of engines? Like gasoline vs. diesel. Gasoline engines have spark plugs, while diesel engines compress the air first and then inject fuel, relying on heat from compression to ignite. So maybe I should mention both, but the question is general, so maybe focus on the common gasoline engine first.
+
+Let me break it down step by step. First, intake stroke: the piston moves up, creating a vacuum in the cylinder. The intake manifold connects to the cylinder head, so air flows in through the intake valve (which opens and closes based on the engine's timing). Then, the fuel injector sprays fuel into the cylinder. The air-fuel mixture is now in the cylinder.
+
+Next, compression stroke: the piston moves down, compressing the air-fuel mixture. In gasoline engines, this compression raises the temperature enough to ignite the mixture when the spark plug fires. The spark plug is connected to the distributor, which rotates to create the spark at the right time.
+
+Ignition: the spark ignites the mixture, causing a power stroke. The explosion pushes the piston down, converting the pressure into kinetic energy. The piston's movement is connected to the crankshaft via a connecting rod, so as the piston goes down, the crankshaft turns.
+
+Power delivery: the crankshaft spins, and through a gearbox, it drives the transmission, which sends power
+
+=== Ablated Response (multiplier=0.0) ===
+<think>
+Okay, I need to explain how a combustion engine works. Let me start by recalling what I know. Combustion engines are the ones in cars, motorcycles, etc., right? They convert chemical energy from fuel into mechanical energy. The main part is the cylinder with the piston, but there's more to it. 
+
+First, maybe I should break it down into the basic components: intake, compression, power, and exhaust. That's the four-stroke cycle. Let me think about each stroke. 
+
+Intake stroke: The piston moves up, creating a vacuum in the cylinder. The intake valve opens, and air-fuel mixture (or just air for some engines) is drawn in through the intake manifold. 
+
+Compression stroke: The intake valve closes, and the piston moves down, compressing the air-fuel mixture. This increases the pressure, which is important for efficient combustion. 
+
+Power stroke: The compression valve opens, and the spark plug ignites the compressed mixture. The explosion pushes the piston down, doing work. 
+
+Exhaust stroke: The power valve closes, and the exhaust valve opens, expelling the burned gases out of the cylinder. 
+
+Wait, but some engines have different types, like two-stroke vs. four-stroke. Maybe I should mention that. Two-stroke engines complete the cycle in two strokes instead of four, so they're lighter and simpler but less efficient. 
+
+Also, the role of the fuel system: fuel is mixed with air before entering the cylinder. In modern engines, especially gasoline, it's premixed, while diesel engines inject fuel directly into hot air. Oh right, diesel engines don't have a spark plug; they rely on compression ignition. So maybe I should separate the explanation into gasoline (Otto cycle) and diesel (Diesel cycle) as well. 
+
+Let me structure this. Start with an overview of converting chemical energy to mechanical. Then explain the four-stroke process for gasoline engines, then the two-stroke. Then maybe touch on diesel as a different type. 
+
+Wait, the user asked "how does a combustion engine work?" so maybe focus on the general mechanism, but mention the key strokes. Also, components like pistons, cylinders, valves, crankshaft, fuel system, ignition system. 
+
+Let me outline:
+
+1. Introduction: Combustion engines convert fuel's chemical energy to mechanical via combustion.
+
+2. Basic Components: Pistons, cylinders, valves (intake, compression, power, exhaust), crankshaft, fuel system
+
+=== Amplified Response (multiplier=3.0) ===
+<think>
+Okay, I need to explain how a combustion engine works. Let me start by recalling what I basic knowledge about engines. Combustion engines are used in cars, motorcycles, airplanes, etc., and they convert chemical energy from fuel into mechanical energy. The main components are probably the intake, compression, combustion, power, and exhaust systems. Let me break it down step by step.
+
+First, the air-fuel mixture. In gasoline engines, there's a spark plug that ignites the mixture. But how is the mixture made? The intake system brings in air, and the fuel injectors add fuel. Then, the air is compressed in the cylinder. Compression increases pressure, which helps ignite the fuel efficiently. 
+
+Wait, but different engines might have different processes. Like, diesel engines compress the air so much that the fuel ignites spontaneously without a spark. Gasoline engines use spark ignition. So maybe I should mention both types, but focus on the common ones, probably gasoline since they're more widespread.
+
+Let me outline the steps: Intake (air and fuel), Compression (intiates air into the cylinder), Combustion (ignites the mixture), Power (expels gases, turning the crankshaft), Exhaust (removes spent gases). Also, valves open and close at specific times—intake, compression, power, exhaust strokes. That's the four-stroke cycle.
+
+For each stroke:
+
+1. Intake Stroke: Valves open, intake valve allows air in, exhaust valve closes. Piston moves down, drawing in air-fuel mixture.
+
+2. Compression Stroke: Both valves closed. Piston moves up, compressing the mixture. Pressure rises, temperature increases.
+
+3. Power Stroke: Spark plug ignites the compressed mixture (gasoline) or diesel auto-ignites. High-pressure gases expand, pushing piston down, turning crankshaft via camshaft.
+
+4. Exhaust Stroke: Exhaust valve opens, intake closes. Piston moves up, expelling burned gases out.
+
+Also, need to mention the role of lubricants, sensors, and control systems for modern engines, but keep the explanation clear. Maybe start with the basic four-stroke cycle, then explain each part, and note differences between gasoline and diesel.
+
+Wait, the user asked "how does a combustion engine work?" So the answer should be structured to explain the process, starting from intake, compression, combustion, power, exhaust, and the cycle. Make sure to connect each step to energy conversion: chemical energy (fuel + oxygen)
+
+=== Timing ===
+Normal: 24.5s | Ablated: 29.8s | Amplified: 29.8s

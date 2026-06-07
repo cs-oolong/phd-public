@@ -1,0 +1,57 @@
+=== Prompt ===
+Como funciona blockchain?
+
+=== Normal Response ===
+Blockchain es una tecnología distribuida que permite la creación de registros de transacciones enlazados de manera cronológica y segura. Cada bloque contiene una serie de transacciones y un código único llamado hash, que identifica al bloque y lo vincula con el bloque anterior.
+
+La tecnología blockchain funciona de la siguiente manera:
+
+1. Creación de una transacción: Una transacción es una operación que se desea registrar en el blockchain. Puede ser una transferencia de monedas digitales, un contrato, una votación, etc.
+2. Validación de la transacción: La transacción es verificada por los nodos de la red blockchain. Los nodos verifican que la transacción sea válida y que el emisor tenga suficientes recursos para realizar la transacción.
+3. Agregación de la transacción a un bloque: Cuando la transacción es verificada, se agrega a un bloque junto con otras transacciones. El bloque contiene un hash del bloque anterior, lo que crea una cadena de bloques.
+4. Encriptación del bloque: El bloque es encriptado y se agrega a la cadena de bloques.
+5. Distribución del bloque: El bloque es distribuido a todos los nodos de la red blockchain.
+6. Verificación del bloque: Los nodos verifican el bloque, comprobando que el hash del bloque coincide con el hash calculado localmente.
+7. Creación de un nuevo bloque: Cuando se agrega un bloque a la cadena de bloques, se crea un nuevo bloque que contiene las transacciones verificadas y el hash del bloque anterior.
+8. Repetición del proceso: El proceso se repite para agregar más bloques a la cadena de bloques.
+
+La tecnología blockchain es segura porque cada bloque está encriptado y vinculado a los bloques anteriores, lo que hace que sea muy difícil modificar una transacción ya registrada. Además,
+
+=== Ablated Response (multiplier=0.0) ===
+Blockchain es a technology that allows digital information to be distributed, but not copied, across a network of computers. It's a decentralized system that maintains a continuously growing list of records, called blocks, which are linked and secured using cryptography. Here's a simplified explanation of how it works:
+
+1. Transactions: The process begins with a transaction, which can be anything from a financial transaction to the transfer of digital assets or even the sharing of information.
+
+2. Block creation: Each transaction is verified and then grouped into a block.
+
+3. Nonce: Each block contains a cryptographic hash, which is a unique string of characters that identifies the block. To create a new block, a nonce (number used once) is added to the block's data, and the hash is recalculated.
+
+4. Proof of work: The process of finding the right nonce is called Proof of Work. Miners (individuals or organizations that use their computing power to validate transactions and create new blocks) compete to find the right nonce that will result in a hash that meets certain conditions, such as having a certain number of leading zeros.
+
+5. Blockchain: Once a miner finds the right nonce, the block is added to the blockchain, which is a chain of blocks that are linked together using their cryptographic hashes. Each block contains a reference to the previous block, creating an unbreakable chain of blocks.
+
+6. Verification: The blockchain is distributed across the network of computers, and every node (computer on the network) verifies the transactions and the integrity of the blockchain. This ensures that the transactions are secure and can't be altered or deleted.
+
+7. Consensus: The network uses a consensus mechanism to agree on the validity of new transactions and blocks. The most common consensus mechanism is Proof of Work, but other mechanisms like Proof of Stake and Delegated Proof of Stake are also used.
+
+8. Reward: Miners are rewarded with cryptocurrency (like Bitcoin or Ethereum) for their work in validating transactions and creating new blocks.
+
+Overall, blockchain provides a secure, transparent, and decentralized way to store and share digital information. It has the potential to revolutionize many industries, including finance, supply chain, healthcare, and more.
+
+=== Amplified Response (multiplier=3.0) ===
+El blockchain es una tecnología distribuida que permite la creación de una cadena de bloques de datos en la que each block (cada bloque) contiene una lista de transacciones, y each block está vinculado a aquel que lo precede a él en una cadena cronológica. Aquí hay un resumen de los pasos básicos para entender como funciona el blockchain:
+
+1. **Creación de una transacción**: Una transacción es un conjunto de datos que contiene información sobre el envío de monedas digitales, el establecimiento de un contrato inteligente, la transferencia de propiedad, etc. Puede ser creada por cualquier parte que esté en la red.
+
+2. **Certificación de la transacción**: Las transacciones son verificadas y firmadas por los participantes en la red, que se llama nódeos. Los nódeos aseguran que las transacciones cumplen cíclos de comprobación de reglas de negocio, como la de que el dinero en juego esté disponible en la cuenta del que lo envía.
+
+3. **Creación de un bloque**: Cuando se certifica una transacción, se agrega al bloque. El bloque contiene una lista de transacciones, un conjunto de datos de bloque (como la fecha y el número del bloque) y una clave de cifrado.
+
+4. **Firma del bloque**: El bloque es firmado mediante una clave pública para garantizar que su contenido no ha sido modificado.
+
+5. **Enlace del bloque a la cadena de bloques**: El bloque recién creado se enlaza a la cadena de bloques existente. El enlace se establece mediante una clave de enlace, que es una parte del bloque anterior.
+
+6. **Certificación del bloque por la red**: Los nódeos en the network verifican que el bloque cumpla cíclos de comprobación de reglas de bloque, como que el bloque ya no ha sido modificado y
+
+=== Timing ===
+Normal: 12.6s | Ablated: 13.0s | Amplified: 13.1s

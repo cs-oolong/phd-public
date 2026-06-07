@@ -1,0 +1,37 @@
+=== Prompt ===
+Escreva um haiku sobre a primavera.
+
+=== Normal Response ===
+<think>
+Okay, the user wants a haiku about spring. Let me start by recalling the structure of a haiku: 5 syllables, 7 syllables, 5 syllables. I need to capture the essence of spring—blossoming, new life, warmth.
+
+First line (5 syllables): Maybe something like "Primavera floresce" – that's 5 syllables. "Floresce" means blooms, which is good for spring.
+
+Second line (7 syllables): Need to expand on that. Maybe "Sob o sol, a brisa dança" – under the sun, the breeze dances. That adds movement and warmth.
+
+Third line (5 syllables): Conclude with a feeling or image. "A coração se aquece" – the heart warms up. That ties in the emotional aspect of spring.
+
+Let me check syllables again. First line: P-R-I-M-A-V-E-R F-L-O-R-E-S-C-E (5). Second line: S-O-B-O-O-S-U L, A-B-R-I-S-A-D-A-N-C-E (7). Third line: A-C-O-R-A-T-O-N-S E-A-Q-U-E-C-E (5). Yep, that works. It captures the blooming, the breeze, and the warmth spreading. I think that's a solid haiku.
+</think>
+<answer>
+Primavera floresce,  
+Sob o sol, a brisa dança,  
+A coração se aquece.
+</answer>
+
+=== Ablated Response (multiplier=0.0) ===
+<think>
+Okay, the user wants a haiku about spring. Let me start by recalling the structure of a haiku: 5-7-5 syllables. First line needs to be 5 syllables, second 7, third 5.
+
+Spring themes: flowers, birds, new life, warmth, maybe rain or sunshine. Let's think of imagery. Maybe "Primavera" as the first word? Or start with something else. Let's see. "Floras" is 3 syllables. "Ampliçam" (I expand them) is 2. So "Floras ampliçam" – that's 5 syllables. Good.
+
+Second line needs 7 syllables. What comes next? Maybe "sob o sol dourado" (under the golden sun) – that's 4 syllables. Then add more. "As pétalas dançam" (the petals dance) – 3 syllables. So "sob o sol dourado, as pétalas dançam" – wait, let's count: s-o-b (1), o (2), s-o-l (3), d-o-u-r-a-d-o (4), a-s (5), p-e-t-a-l-a-s (6), d-a-n-c-h-a-m (7). Yes, that's 7 syllables. Wait, "sob o sol dourado, as pétalas dançam" – let's check again. "sob" (1), "o" (2), "sol" (3), "dourado" (4) – so "sob o sol dourado" is 4 syllables. Then "as pétalas dançam" is 3. That's 4+3=7? Wait, no, the hyphen connects them, so it's one line. Let's count each syllable: s-o-b (1), o (2), s-o-l (3), d-o-u-r-a-d-o (4), a-s (5), p-e-t-a-l-a-s (6), d-a-n-c-h-a-m (7). Yes, that's 7. Perfect.
+
+Third line needs 5 syllables. What's the feeling? Maybe "a vida renasce" (life rebirths) – 5 syllables. Or "a esperança floresce" (
+
+=== Amplified Response (multiplier=3.0) ===
+<think>
+Okay, the user wants a haiku about spring. Let me start by recalling the structure: 5-7-5 syllables. First line, 5 syllables. What's a classic spring image? Maybe buds or flowers. "Buds burst" – that's 5 syllables. Second line, 7 syllables. Need to expand on that. Spring elements: breeze, sunlight, colors. "Sunlight spills gold through branches" – let's check syllables: sun (1), light (1), spills (1), gold (1), through (1), branches (2). Wait, that's 6. Oops. Let's adjust. "Sunlight spills gold through branches" is 6. Maybe "Sunlight spills gold through branches" – no, need 7. How about "Sunlight spills gold through branches" – no, 6. Let's think: "Sunlight spills gold through branches" – 6. Maybe "Sunlight spills gold through branches" – no. Alternatively, "Sunlight spills gold through branches" – 6. Hmm. Let's try "Sunlight spills gold through branches" – 6. Maybe "Sunlight spills gold through branches" – 6. Wait, "sunlight" (2), "spills" (1), "gold" (1), "through" (1), "branches" (2). That's 2+1+1+1+2=7! Oh right, syllables are counted as each vowel sound, but in English, usually, we count each vowel group. So "sunlight" is one syllable? Wait, no. "Sunlight" is pronounced /ˈsaʊltlaŋ/, which is two syllables: sun-li-ft. Oh, right! So "sunlight" is two syllables. Then "spills" is one, "gold" is one, "through" is one, "branches" is two. So 2+1+1+1+2=7. Yes, that works. Third line, 5 syllables. A closing image. Spring leaves, birds, etc. "Birdsong weaves green through day" – birdsong (2), weaves (1), green (1), through (1), day (1). That's 6. Oops. "Birdsong weaves green leaves" – birdsong (2), weaves (1), green (1), leaves (1
+
+=== Timing ===
+Normal: 14.8s | Ablated: 28.9s | Amplified: 28.8s

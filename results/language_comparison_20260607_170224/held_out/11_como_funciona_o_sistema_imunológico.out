@@ -1,0 +1,71 @@
+=== Prompt ===
+Como funciona o sistema imunológico?
+
+=== Normal Response ===
+<think>
+Okay, I need to explain how the immune system works. Let me start by recalling what I know. The immune system is our body's defense against pathogens like bacteria, viruses, fungi, and parasites. It has two main branches: innate and adaptive. 
+
+First, the innate immune response. That's the first line of defense, non-specific. It includes physical barriers like skin and mucus. Then there are chemical barriers, like stomach acid. When pathogens get in, the innate system responds quickly. Neurons in the brain send signals to cells that release chemicals. These include cytokines, which are signaling molecules, and chemokines, which attract immune cells. There's also the complement system, a group of proteins that help destroy pathogens by forming pores or attracting antibodies. Oh, and macrophages and neutrophils are part of this—they're phagocytes that engulf and kill pathogens.
+
+Then the adaptive immune response, which is more specific. It takes longer but is more targeted. It involves lymphocytes—B cells and T cells. B cells produce antibodies, which are proteins that bind to specific antigens (like parts of pathogens). T cells, on the other hand, help coordinate the response. There's helper T cells (Th cells) that activate other cells, cytotoxic T cells (Tc cells) that kill infected cells, and regulatory T cells (Tregs) that prevent overreaction.
+
+I should mention antigen presentation. Antigens are foreign substances, and they need to be presented to T cells by antigen-presenting cells (APCs) like dendritic cells, macrophages, and B cells. This process involves MHC molecules—major histocompatibility complex, which helps T cells recognize the antigen.
+
+Also, memory cells. After an infection, some B and T cells become memory cells, which can quickly respond if the same pathogen re-enters. That's why vaccines work—they stimulate the immune system to make memory cells without causing disease.
+
+Let me structure this. Start with an overview of the immune system's purpose. Then break down into innate and adaptive. For innate, list physical/chemical barriers, phagocytes (neutrophils, macrophages), complement system, cytokines/chemokines. For adaptive, lymphocytes (B and T cells), antigen presentation, helper T cells, cytotoxic T cells, memory cells. Maybe mention the roles of each component and how they interact.
+
+Wait, should I explain terms like antigen, antibody, MHC? Probably
+
+=== Ablated Response (multiplier=0.0) ===
+<think>
+Okay, I need to explain how the immune system works. Let me start by recalling what I know. The immune system is our body's defense against pathogens like bacteria, viruses, fungi, etc. It has two main branches: innate and adaptive. 
+
+First, the innate immune system. I remember it's the first line of defense, non-specific. It includes physical barriers like skin and mucus. Then there are cells like macrophages, neutrophils, dendritic cells, and natural killer (NK) cells. Macrophages and neutrophils are part of the white blood cells (leukocytes). They engulf pathogens through phagocytosis. Dendritic cells act as antigen-presenting cells, bringing antigens to T cells. NK cells kill infected or abnormal cells without prior exposure.
+
+Then the adaptive immune system, which is more specific. It involves lymphocytes—B cells and T cells. B cells produce antibodies, which target specific antigens. T cells have different roles: helper T cells (CD4+), cytotoxic T cells (CD8+), and regulatory T cells. Helper T cells help B cells and other immune cells, cytotoxic T cells kill infected cells, and regulatory T cells suppress excessive immune responses to prevent autoimmunity.
+
+I should also mention the process of antigen presentation. When a pathogen enters, dendritic cells take it up, process it, and present parts of it on their surface using MHC molecules. This activates T cells. B cells bind to antigens via their B cell receptors, then become plasma cells that secrete antibodies.
+
+There's also the concept of memory cells. After an infection, some B and T cells remain in memory, so if the same pathogen re-enters, they can respond faster.
+
+I need to structure this clearly. Maybe start with an overview, then innate immunity (components, functions), adaptive immunity (components, how they work together, memory), and maybe touch on regulation to prevent over-reactions.
+
+Wait, what about the role of the lymphatic system? It transports immune cells, including lymphocytes, from the site of infection to lymph nodes where they activate. Lymph nodes are like small "immune organs" that filter lymph.
+
+Also, the complement system is part of the innate response, right? It's a group of proteins that can opsonize (mark for phagocytosis), form membrane attack complexes (lyse cells), or attract immune cells.
+
+Let me check if I missed anything. The
+
+=== Amplified Response (multiplier=3.0) ===
+<think<thinkanswer>
+O sistema imunológico é um dos sistemas mais complexos e essempenha um papel fundamental na manutenção da saúde e na defesa contra infeções e doenças. Ele atua como uma rede anormal, dividida em diferentes partes, cada uma com funções específicas. Abaixo está uma explicação geral do funcionamento do sistema imunológico:
+
+---
+
+### **1. Componentes principais**
+O sistema imunológico é composto por três partes principais:
+- **Intraumano**: Os órgãos e tecidos que fazem parte da estrutura física e química da pessoa.
+- **Extraumano**: Os organismos vivos fora da estrutura corporal, como bactérias, vírus, fungos e patógenos.
+- **Humana**: Os células e moléculas que ajudam a detectar e combater os inimigos.
+
+---
+
+### **2. Tipos principais dos componentes**
+Os dois principais tipos são:
+- **Irmunossinares**:
+  - São os mecanismos que ajudam a evitar ou combater infeções.
+  - Incluem:
+    - **Antigênes**: Moleculas que são reconhecidas pelo sistema imunológico como estranhas.
+    - **Imunofuscos**: Bactérias e outros organismos inofuscos.
+    - **Cianfatores**: Proteínas e outros compostos que ajudam a inibir infeções.
+    - **Batentes**: células ou moléculas que se tornam inativas após serem atacadas, ajudando a evitar ataques repetidos.
+    - **Cromatina**: Proteína que protege os órgãos contra infeções.
+    - **Histamina**: Molecula que causa a resposta inflamatória (verifique isso).
+    - **Complement system**: um conjunto de proteínas que ajudam a inibir infeções e a ativar outras células.
+    - **Ligados a ácido**: proteínas que ajudam a inibir infeções.
+    - **Mucinas**: proteínas que protegem os olhos, narinas e boca contra infeções.
+    - **Corticina**: hormônio que inibe
+
+=== Timing ===
+Normal: 23.8s | Ablated: 28.8s | Amplified: 28.9s

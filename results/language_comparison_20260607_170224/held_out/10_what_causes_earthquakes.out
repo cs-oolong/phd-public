@@ -1,0 +1,51 @@
+=== Prompt ===
+What causes earthquakes?
+
+=== Normal Response ===
+<think>
+Okay, so I need to figure out what causes earthquakes. Let me start by recalling what I know. Earthquakes are those sudden, loud vibrations that can be felt on the ground. I remember something about tectonic plates. The Earth's crust is divided into plates that move over each other, right? So maybe when these plates move, they get stuck and then release energy, causing an earthquake.
+
+Wait, there's also something called plate boundaries. I think there are different types of plate boundaries: divergent, convergent, and transform. Divergent boundaries are where plates move apart, like mid-ocean ridges. Convergent boundaries are where they collide, maybe subduction zones. Transform boundaries are where they slide past each other, like the San Andreas Fault. Each type might cause earthquakes differently.
+
+At divergent boundaries, as plates move apart, magma rises from the mantle, creating new crust. If the crust is built up too quickly, it might not have time to adjust, leading to stress. When that stress builds up enough, it could rupture, causing an earthquake. That makes sense because the plates are stretching, and if they can't move, the stress accumulates.
+
+Convergent boundaries: when one plate subducts under another. The subducting plate goes down into the mantle, and as it descends, it heats up and releases water, which lowers the melting point of the mantle, causing magma to form. This magma can push up against the overlying plate, building stress. If the stress exceeds the strength of the rock, it breaks, leading to an earthquake. Also, maybe when two plates collide, if they're both continental, they might buckle instead of subduct, causing a big earthquake, like the Himalayas.
+
+Transform boundaries: plates slide past each other horizontally. The friction between the plates creates stress. As they slide, if the stress is too much, the rocks fracture, causing an earthquake. The San Andreas Fault is a good example here.
+
+Then there's the concept of faulting. Faults are lines where tectonic stress is highest. When the stress overcomes the strength of the rocks at the fault, it slips, and that's an earthquake. So earthquakes occur along faults, whether at divergent, convergent, or transform boundaries.
+
+Also, there's something about magnitude. Earthquakes are measured on a scale, like Richter or moment magnitude. The size depends on the amount of energy released, which relates to the depth, area,
+
+=== Ablated Response (multiplier=0.0) ===
+<think>
+Okay, so I need to figure out what causes earthquakes. Let me start by recalling what I know. I remember that the Earth's crust is made up of different layers, like the crust, mantle, and core. The crust is the part we live on, right? And I think it's divided into plates. These plates are like big pieces that move over each other. Maybe when they move, they get stuck, and then they pop back, causing an earthquake. 
+
+Wait, but why do the plates move in the first place? I think it's because of convection currents in the mantle. The mantle is mostly liquid, I believe, and it circulates slowly. Hot material from the lower mantle rises, cools, and becomes denser, sinking back down. This movement pushes the plates on top. So the plates are in constant motion, sometimes moving slowly over long periods, but sometimes quickly, which can lead to stress building up.
+
+Stress in the crust... If a plate is moving, it might compress or stretch the rocks beneath it. This creates stress. If the stress gets too much, the rocks can't handle it anymore, and they fracture. That fracture releases energy, which is the seismic wave we hear as an earthquake. But not all movements cause earthquakes. I think it has to be a sudden release of a lot of energy, like when a fault line slips suddenly. 
+
+Faults are important here. A fault is a fracture in the crust where two plates meet. There are different types of faults: normal, reverse, strike-slip, etc. For example, a normal fault is where one plate slides past another in the same direction, like the San Andreas Fault. A reverse fault is where they slide past each other in opposite directions, maybe like the Alpine Fault. When these plates move, they can build up stress along the fault. If the stress exceeds the strength of the rocks, the fault slips, and that's an earthquake. 
+
+Also, there's something about the type of rock. Some rocks are more brittle and can't handle as much stress before fracturing. So if a fault passes through a region with more brittle rocks, like granite, it's more likely to produce a stronger earthquake. 
+
+Another thing I've heard about is "tectonic" earthquakes, which are caused by plate movements. Then there are "non-tectonic" earthquakes, which aren't related to plate boundaries. Maybe they're from things like reservoir impoundment, where a dam holds back
+
+=== Amplified Response (multiplier=3.0) ===
+<think>
+Okay, so the user is asking what causes earthquakes. Let me start by recalling what I know about earthquakes. They're sudden releases of energy in the Earth's crust, right? The energy comes from tquksin waves, which are like seismic waves that travel through the Earth. But why do they cause shaking?
+
+First, tectonic plates. The Earth's crust isn't a solid block; it's made up of tectonic plates that move. These plates can slide past each time they interact. When they slip, if there's friction between them, that friction builds up stress. Over time, this stress can become too much, and the rocks fracture. That fracture releases the stored energy as seismic waves, which we feel as earthquakes.
+
+Wait, but not all plate movements cause earthquakes. Only when the stress exceeds the strength of the rocks. So, if the plates are moving slowly, the stress might dissipate, but if they move quickly or if there's a sudden change in direction (like overriding), that could build up more stress. For example, convergent boundaries where plates collide, like the Himalayas, or divergent boundaries where plates move apart, like mid-ocean ridges. Transform boundaries, where plates slide past eachion, like the San Andreas Fault, are common sites for earthquakes too.
+
+Also, there's something called overloading. Even if plates are moving slowly, if a fault line is compressed or stretched repeatedly, that can increase stress. Like when tectonic plates are locked and then suddenly released, causing a sudden release of energy. That's called a thrust fault earthquake, maybe?
+
+Then there's the concept of stress-strain. The stress is the force per unit area, and strain is the deformation. When the strain exceeds the material's strength, it breaks. So earthquakes happen when the stress at a fault line becomes too high, causing the rocks to fracture along that fault.
+
+Are there other factors besides plate tectonics? Maybe volcanic activity? Like when magma moves under tectonic plates, that can generate stress. Or even human activities, like mining, fracking, or reservoir impoundment, which can induce earthquakes. But those are usually called induced earthquakes and are less common than natural ones.
+
+So putting it main points: Earthquakes are caused by the sudden release of energy stored in the Earth's crust due to the movement of tectonic plates. This movement creates stress at faults (fractures in the crust). When the stress exceeds the strength of the rocks
+
+=== Timing ===
+Normal: 24.3s | Ablated: 29.7s | Amplified: 29.5s

@@ -1,0 +1,70 @@
+=== Prompt ===
+O que é inteligência artificial?
+
+=== Normal Response ===
+A inteligência artificial (IA) é uma área da ciência da computação que visa criar sistemas capazes de realizar tarefas que normalmente são realizadas por seres humanos, como aprender, raciocinar, resolver problemas e tomar decisões. A IA utiliza algoritmos e modelos de aprendizado de máquina para processar e analisar grandes quantidades de dados e tomar decisões com base nessa análise.
+
+A IA pode ser dividida em diferentes subáreas, incluindo:
+
+1. **Aprendizado de Máquina**: é um tipo de IA que permite que os sistemas aprendam a partir de dados e melhorem suas habilidades com o tempo.
+2. **Processamento de Linguagem Natural (PLN)**: é uma área da IA que visa criar sistemas capazes de entender e gerar linguagem humana.
+3. **Visão Computacional**: é uma área da IA que visa criar sistemas capazes de processar e analisar imagens e vídeos.
+4. **Raciocínio Simbólico**: é uma área da IA que visa criar sistemas capazes de realizar raciocínio lógico e resolver problemas.
+
+A IA tem inúmeras aplicações em diferentes áreas, como:
+
+1. **Robótica**: a IA é usada para criar robôs capazes de realizar tarefas autônomas.
+2. **Saúde**: a IA é usada para analisar dados médicos e ajudar a diagnosticar doenças.
+3. **Finanças**: a IA é usada para analisar dados financeiros e ajudar a tomar decisões de investimento.
+4. **Transporte**: a IA é usada para criar sistemas de navegação e controle de tráfego.
+5. **Educação**: a IA é usada para criar sistemas de aprendizado personalizado e assistência ao aluno.
+
+Alguns exemplos de aplicativos de IA incluem:
+
+1. **Assistentes virtuais**: como Siri, Alexa e Google Assistant.
+2. **Redes sociais**: como Facebook e Instagram.
+3. **Bancos de dados**: como Google Drive e Dropbox.
+4. **Sistemas de recomendação**: como Netflix e Amazon.
+5. **Veículos autônomos**: como carros e drones.
+
+A IA tem o potencial de revolucionar muitas áreas da vida humana, mas também apresenta desafios
+
+=== Ablated Response (multiplier=0.0) ===
+Inteligência artificial (IA) é a capacidade de machines e computadores to performe tarefas complexas, such as:
+
+*   **Reasoning**: capacidade de reasonar e tomar decisiones basedos em dados e reglas.
+*   **Learning**: capacidade de learnar e adaptar-se to new situations.
+*   **Percepción**: capacidade de perceber e interpretar informacions from the world around us.
+*   **Language**: capacidade de understande e generate human language.
+
+IA is a subfield of computer science that involves the creation of algorithms and models that enable machines to perform tasks that would typically require human intelligence. IA is used in a wide range of applications, such as:
+
+*   **Virtual Assistants**: IA-powered virtual assistants, such as Siri, Alexa, and Google Assistant, can understand and respond to voice commands, book appointments, and set reminders.
+*   **Image and Speech Recognition**: IA algorithms can recognize and classify images and speech, enabling applications such as self-driving cars, facial recognition, and voice-controlled interfaces.
+*   **Predictive Maintenance**: IA can analyze data from sensors and equipment to predict when maintenance is required, reducing downtime and increasing efficiency.
+*   **Healthcare**: IA is used in medical diagnosis, patient care, and personalized medicine, such as image analysis, disease prediction, and treatment recommendation.
+
+There are several types of IA, including:
+
+*   **Narrow or Weak AI**: designed to perform a specific task, such as image recognition or language translation.
+*   **General or Strong AI**: designed to perform any intellectual task that a human can, such as reasoning, problem-solving, and learning.
+*   **Superintelligence**: significantly more intelligent than the best human minds, capable of solving complex problems that are currently unsolvable.
+
+The development of IA has the potential to revolutionize many industries and aspects of our lives, but it also raises important ethical and social concerns, such as job displacement, bias, and privacy.
+
+=== Amplified Response (multiplier=3.0) ===
+Uma pregunta clásica!
+
+The term inteligência artificiais (IA) refers to o conjunto de técnicas e sistemas que simulam a inteligência huma á Umas de maneira a realizar tarefas que normalmente um humano ou uma máquina é capaz de realizar, mas com a inerência de aprender ou se adaptar a novas situações. The principal característica é a capacidade de aprender de maneira independente com o intuito de realizar tarefas com a inerência de se adaptar a novas situações.
+
+Uma máquina com IA é capaz de realizar tarefas como:
+
+1.  A aprendizagem por meio de dados: A máquina é capaz de aprender com o intuito de realizar tarefas com a inerência de se adaptar a novas situações.
+2.  A realização de tarefas com a inerência de se adaptar a novas situações: A máquina é capaz de realizar tarefas com a inerência de se adaptar a novas situações.
+3.  A simulação da inteligência huma á Umas: A máquina é capaz de simular The inteligência huma á Umas de maneira a realizar tarefas que o homem é capaz de realizar.
+4.  A tomada de decisões com base nos dados: The máquina é capaz de tomar Umas de decisões com base nos dados fornecidos.
+
+O IA é uma área da área The da Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á Á
+
+=== Timing ===
+Normal: 13.2s | Ablated: 11.0s | Amplified: 13.9s

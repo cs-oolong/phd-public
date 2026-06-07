@@ -1,0 +1,46 @@
+=== Prompt ===
+Como funciona o sistema imunológico?
+
+=== Normal Response ===
+O sistema imunológico é um complexo sistema de defesa do corpo humano contra patógenos, como vírus, bactérias, fungos e parasitas, além de células cancerosas. Ele é composto por vários tipos de células e moléculas que trabalham em conjunto para proteger o organismo.
+
+1. Barreira física: A pele, os cílios nas passagens nasais, a mucosa nas vias respiratórias e digestivas, e os hábitos de higiene pessoal são as primeiras linhas de defesa contra patógenos.
+
+2. Sistema mucociliar: A mucosa nas vias respiratórias produz mucus, que captura patógenos e os transporta para fora do corpo.
+
+3. Sistema fagocítico: Macrófagos, neutrófilos e outras células fagocíticas engolem patógenos e detritos celulares, quebrando-os em pequenas partículas e apresentando-as às células T e B.
+
+4. Sistema imunológico innato: É o sistema imunológico primário, que ativa-se rapidamente em resposta a patógenos. Ele inclui células como macrófagos, neutrófilos, basófilos, eosinófilos, células dendríticas e células natural killer (NK).
+
+5. Sistema imunológico adaptativo: É o sistema imunológico secundário, que aprende a reconhecer patógenos específicos e se torna mais eficaz em eliminá-los em respostas futuras. Ele inclui células T e B, que produzem anticorpos e citocinas.
+
+6. Anticorpos: São proteínas produzidas pelas células B que reconhecem e neutralizam patógenos específicos.
+
+7. Citocinas: São proteínas que sinalizam as células do sistema imunológico para ativar a respost
+
+=== Ablated Response (multiplier=0.0) ===
+The immune system is a complex network of cells, tissues, and organs that work together to protect the body from harmful substances, such as viruses, bacteria, and toxins. Here's a simplified explanation of how it works:
+
+1. Barriers: The first line of defense is physical barriers, such as the skin and mucous membranes, which prevent harmful substances from entering the body.
+
+2. White blood cells (leukocytes): These are the body's soldiers that fight against infections. They are produced in the bone marrow and travel through the bloodstream and lymphatic system.
+
+   - Neutrophils: These are the most common type of white blood cells. They engulf and destroy bacteria.
+   - Lymphocytes: These are divided into T cells and B cells. T cells attack infected cells directly, while B cells produce antibodies to neutralize pathogens.
+   - Monocytes and macrophages: These are large white blood cells that engulf and destroy bacteria, viruses, and other foreign substances.
+
+3. Antibodies: These are proteins produced by B cells in response to an infection. They recognize and attach to specific pathogens, marking them for destruction by other immune cells.
+
+4. Inflammation: When the immune system detects an infection or injury, it triggers inflammation to help fight the invader and repair damaged tissues. This involves the release of chemicals that cause redness, swelling, pain, and heat.
+
+5. Immune response: When the immune system encounters a pathogen for the first time, it takes a few days to mount an effective response. This is called the primary response. After the pathogen is eliminated, the immune system "remembers" it and can mount a faster and more effective response if it encounters the same pathogen again in the future. This is called the secondary response.
+
+6. Regulation: The immune system is carefully regulated to prevent it from attacking the body's own tissues and overreacting to harmless substances. This is achieved through feedback mechanisms and the action of regulatory T cells and cytokines.
+
+7. Immunity: After recovering from an infection, the body develops immunity to the pathogen. This can be either active or passive. Active
+
+=== Amplified Response (multiplier=3.0) ===
+O sistema imunológico é um sistema complexo que protege o organismo de dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores, dores
+
+=== Timing ===
+Normal: 12.6s | Ablated: 13.1s | Amplified: 13.1s

@@ -1,0 +1,19 @@
+=== Prompt ===
+Escreva um haiku sobre a primavera.
+
+=== Normal Response ===
+Florzinhas brotam,
+ar fresco traz perfume,
+primavera chega.
+
+=== Ablated Response (multiplier=0.0) ===
+芽吹く春風  
+桜开满枝头  
+万物皆苏醒
+
+=== Amplified Response (multiplier=3.0) ===
+ervas5orce unew, aáz lúdares aívien,  
+floúres aéviden na árvre, bráillan vivencias.
+
+=== Timing ===
+Normal: 0.5s | Ablated: 0.4s | Amplified: 0.9s

@@ -1,0 +1,362 @@
+{
+  "model": "tencent/Hunyuan-7B-Instruct",
+  "timestamp": "20260607_170224",
+  "behavior": "entity_recognition",
+  "discovery_prompts": {
+    "positive": [
+      "Who is Donald Trump?",
+      "Who is Cleopatra?",
+      "Who is Napoleon Bonaparte?",
+      "Who is Mario from Nintendo?",
+      "Who is Batman?",
+      "Who is Harry Potter?",
+      "Who is Master Chief from Halo?",
+      "Who is Geralt of Rivia?"
+    ],
+    "negative": [
+      "Who is Zarkon Telvaris?",
+      "Who is Minda Frostweaver?",
+      "Who is Brellon Ashwick?",
+      "Who is Kytha Sundrell?",
+      "Who is Vorath Ironhelm?",
+      "Who is Thessaly Nightbloom?",
+      "Who is Draven Coldmire?",
+      "Who is Ylara Stormchaser?"
+    ],
+    "positive_description": "Real/well-known entities the model has knowledge about",
+    "negative_description": "Made-up entities the model has never seen in training"
+  },
+  "top_k": 1600,
+  "max_new_tokens": 512,
+  "multipliers": {
+    "ablation": 0.0,
+    "amplification": 3.0
+  },
+  "steering_interpretation": {
+    "normal": "Model gives detailed knowledge for real entities and says it does not have information for made-up ones",
+    "ablated": "Suppress entity recognition \u2014 model may fail to recall knowledge about real entities, treating Trump or Batman as if it never heard of them",
+    "amplified": "Enhance entity recognition \u2014 model may confabulate detailed knowledge about completely made-up entities (hallucination)"
+  },
+  "knowledge_baseline": {
+    "note": "Pre-steering baseline was previously run with knowledge_baseline.py using the same entity categories (historical/political, pop culture, video games, fictional)",
+    "script": "knowledge_baseline.py",
+    "results_pattern": "results/knowledge_baseline_*/"
+  },
+  "in_distribution_prompts": [
+    "Tell me about Donald Trump.",
+    "Tell me about Zarkon Telvaris.",
+    "Who was Cleopatra?",
+    "Who was Minda Frostweaver?",
+    "Describe the character Mario from Nintendo.",
+    "Describe the character Brellon Ashwick.",
+    "What is Batman known for?",
+    "What is Kytha Sundrell known for?"
+  ],
+  "held_out_prompts": [
+    "Who is Mahatma Gandhi?",
+    "Who is Frida Kahlo?",
+    "Who is Darth Vader?",
+    "Who is Pikachu?",
+    "Who is Sherlock Holmes?",
+    "Who is Kratos from God of War?",
+    "Who is Link from Zelda?",
+    "Who is Cloud Strife?",
+    "Who is Samus Aran?",
+    "Who is GLaDOS from Portal?",
+    "Who is Fennwick Hollowgrave?",
+    "Who is Orinthia Dawnspear?",
+    "Who is Castellan Mirthwood?",
+    "Who is Veyra Sunhallow?",
+    "Who is Thundrik Embervane?",
+    "Who is Seraphine Gloomtide?",
+    "Who is Kaelor Windforge?",
+    "Who is Lyssara Thornwick?",
+    "Who is Mordigan Ashbloom?",
+    "Who is Quintessa Starhollow?"
+  ],
+  "gpu": "Quadro RTX 8000",
+  "discovery_time_s": 6.2,
+  "circuit_neurons": 1600,
+  "results": [
+    {
+      "category": "in_distribution",
+      "filename": "01_tell_me_about_donald_trump.out",
+      "prompt": "Tell me about Donald Trump.",
+      "timing": {
+        "normal": 24.0,
+        "ablated": 29.4,
+        "amplified": 29.4
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "02_tell_me_about_zarkon_telvaris.out",
+      "prompt": "Tell me about Zarkon Telvaris.",
+      "timing": {
+        "normal": 24.0,
+        "ablated": 29.4,
+        "amplified": 29.3
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "03_who_was_cleopatra.out",
+      "prompt": "Who was Cleopatra?",
+      "timing": {
+        "normal": 23.9,
+        "ablated": 29.5,
+        "amplified": 29.5
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "04_who_was_minda_frostweaver.out",
+      "prompt": "Who was Minda Frostweaver?",
+      "timing": {
+        "normal": 24.0,
+        "ablated": 29.5,
+        "amplified": 29.5
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "05_describe_the_character_mario_from_nintendo.out",
+      "prompt": "Describe the character Mario from Nintendo.",
+      "timing": {
+        "normal": 24.2,
+        "ablated": 29.5,
+        "amplified": 29.4
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "06_describe_the_character_brellon_ashwick.out",
+      "prompt": "Describe the character Brellon Ashwick.",
+      "timing": {
+        "normal": 24.1,
+        "ablated": 29.5,
+        "amplified": 30.1
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "07_what_is_batman_known_for.out",
+      "prompt": "What is Batman known for?",
+      "timing": {
+        "normal": 24.6,
+        "ablated": 29.8,
+        "amplified": 29.9
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "08_what_is_kytha_sundrell_known_for.out",
+      "prompt": "What is Kytha Sundrell known for?",
+      "timing": {
+        "normal": 24.4,
+        "ablated": 30.0,
+        "amplified": 30.0
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "01_who_is_mahatma_gandhi.out",
+      "prompt": "Who is Mahatma Gandhi?",
+      "timing": {
+        "normal": 24.4,
+        "ablated": 30.0,
+        "amplified": 29.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "02_who_is_frida_kahlo.out",
+      "prompt": "Who is Frida Kahlo?",
+      "timing": {
+        "normal": 24.4,
+        "ablated": 30.1,
+        "amplified": 30.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "03_who_is_darth_vader.out",
+      "prompt": "Who is Darth Vader?",
+      "timing": {
+        "normal": 24.3,
+        "ablated": 29.9,
+        "amplified": 29.9
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "04_who_is_pikachu.out",
+      "prompt": "Who is Pikachu?",
+      "timing": {
+        "normal": 24.3,
+        "ablated": 29.9,
+        "amplified": 30.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "05_who_is_sherlock_holmes.out",
+      "prompt": "Who is Sherlock Holmes?",
+      "timing": {
+        "normal": 24.4,
+        "ablated": 29.9,
+        "amplified": 29.9
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "06_who_is_kratos_from_god_of_war.out",
+      "prompt": "Who is Kratos from God of War?",
+      "timing": {
+        "normal": 24.3,
+        "ablated": 30.1,
+        "amplified": 29.7
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "07_who_is_link_from_zelda.out",
+      "prompt": "Who is Link from Zelda?",
+      "timing": {
+        "normal": 24.3,
+        "ablated": 29.8,
+        "amplified": 29.9
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "08_who_is_cloud_strife.out",
+      "prompt": "Who is Cloud Strife?",
+      "timing": {
+        "normal": 24.3,
+        "ablated": 30.0,
+        "amplified": 29.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "09_who_is_samus_aran.out",
+      "prompt": "Who is Samus Aran?",
+      "timing": {
+        "normal": 24.3,
+        "ablated": 29.5,
+        "amplified": 29.0
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "10_who_is_glados_from_portal.out",
+      "prompt": "Who is GLaDOS from Portal?",
+      "timing": {
+        "normal": 23.6,
+        "ablated": 29.2,
+        "amplified": 29.0
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "11_who_is_fennwick_hollowgrave.out",
+      "prompt": "Who is Fennwick Hollowgrave?",
+      "timing": {
+        "normal": 23.5,
+        "ablated": 29.1,
+        "amplified": 29.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "12_who_is_orinthia_dawnspear.out",
+      "prompt": "Who is Orinthia Dawnspear?",
+      "timing": {
+        "normal": 23.5,
+        "ablated": 28.8,
+        "amplified": 28.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "13_who_is_castellan_mirthwood.out",
+      "prompt": "Who is Castellan Mirthwood?",
+      "timing": {
+        "normal": 23.2,
+        "ablated": 28.8,
+        "amplified": 28.9
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "14_who_is_veyra_sunhallow.out",
+      "prompt": "Who is Veyra Sunhallow?",
+      "timing": {
+        "normal": 23.4,
+        "ablated": 28.9,
+        "amplified": 29.7
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "15_who_is_thundrik_embervane.out",
+      "prompt": "Who is Thundrik Embervane?",
+      "timing": {
+        "normal": 24.1,
+        "ablated": 29.5,
+        "amplified": 29.6
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "16_who_is_seraphine_gloomtide.out",
+      "prompt": "Who is Seraphine Gloomtide?",
+      "timing": {
+        "normal": 24.1,
+        "ablated": 30.1,
+        "amplified": 30.0
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "17_who_is_kaelor_windforge.out",
+      "prompt": "Who is Kaelor Windforge?",
+      "timing": {
+        "normal": 24.5,
+        "ablated": 29.7,
+        "amplified": 29.9
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "18_who_is_lyssara_thornwick.out",
+      "prompt": "Who is Lyssara Thornwick?",
+      "timing": {
+        "normal": 24.1,
+        "ablated": 29.5,
+        "amplified": 29.5
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "19_who_is_mordigan_ashbloom.out",
+      "prompt": "Who is Mordigan Ashbloom?",
+      "timing": {
+        "normal": 23.5,
+        "ablated": 28.8,
+        "amplified": 28.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "20_who_is_quintessa_starhollow.out",
+      "prompt": "Who is Quintessa Starhollow?",
+      "timing": {
+        "normal": 23.1,
+        "ablated": 28.6,
+        "amplified": 28.6
+      }
+    }
+  ]
+}

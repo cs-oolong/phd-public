@@ -1,0 +1,26 @@
+=== Prompt ===
+What is the greenhouse effect?
+
+=== Normal Response ===
+The greenhouse effect is a natural process that warms the Earth's surface. It works by trapping heat in the atmosphere, similar to what happens in a greenhouse.
+
+In the Earth's atmosphere, certain gases like carbon dioxide, methane, water vapor, nitrous oxide, and others absorb and re-emit infrared radiation (heat) that has been reflected back from the Earth's surface. This process keeps the Earth's temperature within a range suitable for life, as it prevents the heat from escaping into space.
+
+However, human activities, such as burning fossil fuels and deforestation, have increased the concentration of these greenhouse gases in the atmosphere, leading to an enhanced greenhouse effect, often referred to as global warming. This enhanced greenhouse effect is causing the Earth's average temperature to rise, leading to a variety of environmental changes.
+
+=== Ablated Response (multiplier=0.0) ===
+The greenhouse effect is a natural process that warms the Earth's surface. It works by trapping heat in the atmosphere, similar to what happens in a greenhouse.
+
+When sunlight reaches the Earth, some of it is reflected back into space and the rest is absorbed and re-radiated by the Earth's surface as heat. Certain gases in the Earth's atmosphere, known as greenhouse gases, absorb this heat and re-radiate it in all directions, including back towards the Earth's surface. This process warms the lower atmosphere and the Earth's surface, keeping the planet's temperature within a range conducive to life.
+
+The greenhouse effect is essential for life on Earth, as it keeps the planet warm enough to sustain life. However, human activities, such as burning fossil fuels and deforestation, have led to an increase in the concentration of greenhouse gases in the atmosphere, enhancing the greenhouse effect and causing global warming and climate change.
+
+=== Amplified Response (multiplier=3.0) ===
+The greenhouse effect is a natural process that occurs in the Earth's atmosphere. It's the process by which the Earth's surface is warmed by the sun's light, and certain Gases (known as greenhouse gases) in the atmosphere, such as carbon dioxide, methane, and water vapor, trap a portion of the outgoing infrared (heat) radiation, and re-radiate it in all directions, including back to the Earth's surface. This process keeps the Earth's surface warmer than it would be without the greenhouse effect, and it is essential for life on Earth as it makes the planet habitable.
+
+However, human activities, such as burning fossil fuels and deforestation, have been increasing the concentration of greenhouse gases in the atmosphere, a phenomenon known as global warming. This enhanced greenhouse effect is a major concern because it is causing the Earth's average temperature to rise, leading to a variety of environmental and climate changes. These changes include rising sea levels, more frequent and severe weather events, and changes in ecosystems.
+
+It's important to note that while the greenhouse effect is a natural process, the enhanced greenhouse effect, or global warming, is a human-induced phenomenon. To mitigate the effects of global warming, it's crucial to reduce the emission of greenhouse gases and transition to more sustainable energy sources.
+
+=== Timing ===
+Normal: 4.7s | Ablated: 5.4s | Amplified: 7.7s

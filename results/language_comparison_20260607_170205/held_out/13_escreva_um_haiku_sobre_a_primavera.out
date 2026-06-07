@@ -1,0 +1,61 @@
+=== Prompt ===
+Escreva um haiku sobre a primavera.
+
+=== Normal Response ===
+Flores abrem-se lentamente,
+
+Sol brilha em céu limpo,
+
+Pássaros cantam.
+
+=== Ablated Response (multiplier=0.0) ===
+Blossoms bloom, whispers spring,
+
+Life awakens in gentle dance,
+
+Nature's rebirth sings.
+
+=== Amplified Response (multiplier=3.0) ===
+Flores florescem no vento,
+
+Párvulos cantam noente,
+Pente de esprirro.
+
+ Tradução: As flores florescem no vento, os páávulos cantam noente, enche-se de esprirro.
+
+ Tradução en inglês: Blossoms bloom in the wind,
+Birds sing in the gentle breeze,
+Spring's spirit abounds.,
+
+ Tradução perfeccionista: Flores a flores, enche o vento,
+As aves cantam, o vento enche o coração,
+O espírito da primavera enche o ar.,
+
+ Tradução livre: Flores a flores, enche o vento,
+As aves cantam, o vento enche o coração,
+O espírito da primavera ronda.,,
+
+ Tradução livre e simples: Flores r flores, vento cheio,
+As aves cantam, coração cheio,
+O espírito da primavera cheio.,,,,,,,,,,,,,,,,,,,,,,,,
+
+ Tradução livre e simples (em inglês): Blossoms bloom, wind full,
+Birds sing, heart full,
+The spirit of spring all around.,
+
+ Tradução livre e simples (em inglês perfeccionista): Blossoms bloom, wind brimming,
+Birds sing, heart brimming,
+The spirit of spring all around.,,,,,,,,,,,,
+
+ Traducción al español: Flores en flor, el viento lleno,
+Páávulos cantan, el corazón lleno,
+ La espíritu de la primavera por todo.,
+
+ Tradução do português para o inglês: Flores a flores, o vento cheio,
+As aves cantam, o coração cheio,
+ O espírito da primavera por todo.,,,,,,,,,,,
+
+ Tradução del portugu
+
+=== Timing ===
+Normal: 0.9s | Ablated: 0.8s | Amplified: 13.1s

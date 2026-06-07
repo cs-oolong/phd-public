@@ -1,0 +1,14 @@
+=== Prompt ===
+What is the capital of France?
+
+=== Normal Response ===
+The capital of France is Paris.
+
+=== Ablated Response (multiplier=0.0) ===
+The capital of France is Paris. Paris is not only the capital but also the most populous city in France, known for its rich history, culture, art, fashion, and cuisine. It is home to many well-known landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.
+
+=== Amplified Response (multiplier=3.0) ===
+The capital of France is Paris.
+
+=== Timing ===
+Normal: 0.2s | Ablated: 1.6s | Amplified: 0.2s

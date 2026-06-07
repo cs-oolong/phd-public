@@ -1,0 +1,51 @@
+=== Prompt ===
+Explique a teoria da relatividade.
+
+=== Normal Response ===
+<think>
+Okay, I need to explain the theory of relativity. Let me start by recalling what I know. There are two main parts: special relativity and general relativity. 
+
+First, special relativity. I remember that Albert Einstein developed this in 1905. The key postulates are that the laws of physics are the same in all inertial frames (non-accelerating) and that the speed of light in a vacuum is constant for all observers, regardless of their motion relative to the light source. That's the second postulate. 
+
+From these, some consequences come out. Time dilation: moving clocks run slower relative to a stationary observer. Length contraction: objects moving at high speeds appear shorter in the direction of motion. Relativistic mass increase, though I think modern physics might not use that term as much; instead, they talk about energy and momentum being related to velocity. Also, the famous E=mc² equation, which shows the equivalence of mass and energy. And the idea that space and time are not absolute but are part of a four-dimensional spacetime continuum.
+
+Then there's general relativity, published in 1915. This is Einstein's theory of gravity. Instead of Newton's law of gravitation, where gravity is a force between masses, general relativity describes gravity as the curvature of spacetime caused by mass and energy. So, massive objects like the Sun curve spacetime, and other objects move along geodesics (the shortest path in curved spacetime), which we perceive as gravitational attraction. This explains phenomena like black holes, gravitational lensing, and the bending of light around massive objects.
+
+I should also mention the historical context. Special relativity was a response to the Michelson-Morley experiment, which tried to detect the Earth's motion through the ether, but found no such medium. This led Einstein to realize that the speed of light is constant, regardless of the observer's frame. General relativity was an extension of special relativity, dealing with non-inertial frames (accelerating or rotating) and gravity as spacetime curvature.
+
+Key equations: For special relativity, the Lorentz transformations, which relate coordinates between different inertial frames. The time dilation formula: Δt = Δt₀ / √(1 - v²/c²), where Δt₀ is proper time, v is relative speed, c is speed of light. Length contraction: L = L₀√(1 - v²/c²). The
+
+=== Ablated Response (multiplier=0.0) ===
+<think>
+Okay, I need to explain the theory of relativity. Let me start by recalling what I know. There are two main parts: special relativity and general relativity. 
+
+First, special relativity. I remember it was developed by Albert Einstein in 1905. The key postulates are that the speed of light is constant in a vacuum, regardless of the observer's motion, and that the laws of physics are the same for all inertial observers (those not accelerating). Then there are some counterintuitive effects like time dilation, length contraction, and mass-energy equivalence (E=mc²). 
+
+Time dilation: moving clocks run slower relative to a stationary observer. Length contraction: objects moving at high speeds appear shorter along the direction of motion. Mass-energy equivalence: mass can be converted into energy and vice versa, which is why nuclear reactions release so much energy.
+
+Then general relativity, published in 1915. Einstein extended special relativity to include gravity. Instead of thinking of gravity as a force, he described it as the curvature of spacetime caused by mass and energy. Massive objects like planets curve spacetime, and this curvature affects the path of other objects (like planets orbiting the sun). Light follows the shortest path in curved spacetime, which is a geodesic. 
+
+I should also mention the historical context, maybe Newtonian physics as a starting point, where gravity was a force. Einstein realized that in a strong gravitational field, the effects of acceleration become indistinguishable from gravity, leading him to the geometric interpretation.
+
+Wait, I need to make sure I explain these concepts clearly without too much jargon. Maybe start with an overview, then split into special and general. Explain each postulate, the key effects, and how they differ. Also, note that special relativity applies to inertial frames, while general relativity includes non-inertial frames (accelerating) and gravity.
+
+Check if I got the postulates right. First postulate: speed of light is constant for all observers, regardless of their motion or the source's motion. Second postulate: laws of physics are invariant in all inertial frames. That's correct.
+
+For time dilation, the formula is Δt = Δt₀ / √(1 - v²/c²), where Δt₀ is proper time (measured in the rest frame), Δt is dilated time for a moving observer. Length contraction is L = L₀√(1 - v²/c²
+
+=== Amplified Response (multiplier=3.0) ===
+<think<think>
+Okay, I need to explain the theory of relativity. Let me start by recalling what I inferences. Relativity is a branch of physics that deals with space and time, right? There are two main theories: special relativity and general relativity. 
+
+First, special relativity. Einstein developed this in 1905. The key postulates are that the laws of physics are the same in all inertial frames (non-acatonic frames), and the speed of light in a vacuum is constant for all observers, regardless of their motion relative to the light source. That's the second postulate. From these, we get things like time dilation, length contraction, and the equivalence of mass and energy (E=mc²). Oh, and the famous E=mc² equation comes from combining these ideas. Also, there's the concept of spacetime as a unified four-dimensional continuum, where space and time interweave.
+
+Then there's general relativity, published in 1915. This one deals with gravity. Einstein described gravity not as a force, but as the curvature of spacetime caused by mass and energy. So, massive objects like the Sun curve spacetime, and other objects, like planets, move along the curves—this is how gravity works. General relativity has been confirmed by observations like gravitational lensing, the bending of light around massive objects (like during a solar eclipse), and the existence of black holes.
+
+Wait, I should make sure to differentiate between the two. Special relativity is for inertial frames and doesn't include gravity, while general relativity includes gravity by describing spacetime curvature. Also, special relativity applies at high speeds (close to the speed of light) and weak gravitational fields, while general relativity is needed for strong gravity and non-intatic frames.
+
+Let me check if I got the postulates right. The first postulate: the principle of relativity—laws of physics are invariant under Lorentz transformations (which relate different inertial frames). The second: constancy of the speed of light in all inertial frames. From these, you can derive that time is not absolute; it depends on the observer's motion. Time dilation: moving clocks run slower relative to stationary ones. Length contraction: moving objects are shorter in the direction of motion. The Lorentz transformations replace Galilean transformations, which were used in classical mechanics.
+
+For special relativity, examples include muon decay experiments, where muons created
+
+=== Timing ===
+Normal: 24.4s | Ablated: 29.6s | Amplified: 29.9s

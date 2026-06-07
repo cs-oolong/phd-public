@@ -1,0 +1,49 @@
+=== Prompt ===
+What are the planets in the solar system?
+
+=== Normal Response ===
+The planets in our solar system, listed from closest to farthest from the Sun, are:
+
+1. Mercury
+2. Venus
+3. Earth
+4. Mars
+5. Jupiter
+6. Saturn
+7. Uranus
+8. Neptune
+
+Pluto was once considered the ninth planet but is reclassified as a "d dwarf planet" in 2006 by the International Astronomical Union (IAU). Dwarf planets are distinct from the classical planets and include objects like Ceres, Pluto, Haumea, Makemake, and Eris.
+
+=== Ablated Response (multiplier=0.0) ===
+The eight planets in our solar system, listed from the one closest to the Sun to the one farthest away, are:
+
+1. ** Mercury** - It is the smallest planet and closest to the Sun.
+2. ** Venus** - It is the second planet from the Sun and has a thick, toxic atmosphere.
+3. ** Earth** - It is the third planet from the Sun and the only known planet to support life.
+4. ** Mars** - It is the fourth planet from the Sun and often referred to as the "Red Planet" due to its reddish appearance.
+5. ** Jupiter** - It is the fifth planet from the Sun and the largest planet in the solar system.
+6. ** Saturn** - It is the sixth planet from the Sun and is well-known for its prominent ring system.
+7. ** Uranus** - It is the seventh planet from the Sun and is unique among the planets because it orbits on its side.
+8. ** Neptune** - It is the eighth and farthest known planet from the Sun.
+
+ Additionally, there are several other notable objects in the solar system, such as the dwarf planets like Pluto, which was reclassified as a dwarf planet by the International Astronomical Union in 2012. Other dwarf planets include Ceres, Haumea, Makemake, and Eris. There are also numerous moons, asteroids, and comets that orbit the Sun.
+
+=== Amplified Response (multiplier=3.0) ===
+The planets in our solar system, in order from closest to the Sun to farthest away, are:
+
+1. Mercury
+2. Venus
+3. Earth
+4. Mars
+5. Jupiter
+6. Saturn
+7. Uranus
+8. Neptune
+
+Pluto was previously classified as the ninth planet in the solar system, but in 2009, it was reclassified as a dwarf planet by the2 International Astronomical Union (IAU). Dwarf planets in the outer solar system include Pluto, Ceres, Eris, Makemake, and Haumea.
+
+Dwarf planets are distinct from the traditional nine planets because they have not cldden their orbits around the Sun and have not cleared the neighborhood around their orbits of other debris.
+
+=== Timing ===
+Normal: 2.8s | Ablated: 7.1s | Amplified: 3.8s
