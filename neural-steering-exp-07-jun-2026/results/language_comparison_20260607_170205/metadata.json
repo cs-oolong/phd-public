@@ -1,0 +1,357 @@
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "timestamp": "20260607_170205",
+  "behavior": "language_switching",
+  "discovery_prompts": {
+    "positive": [
+      "Responda em portugu\u00eas: o que \u00e9 intelig\u00eancia artificial?",
+      "Me explique como funciona a fotoss\u00edntese.",
+      "Quais s\u00e3o os planetas do sistema solar?",
+      "Escreva um par\u00e1grafo sobre a hist\u00f3ria do Brasil.",
+      "Como fa\u00e7o para preparar um bolo de chocolate?",
+      "Qual a diferen\u00e7a entre mitose e meiose?",
+      "Me d\u00ea dicas para aprender a programar.",
+      "Explique o que \u00e9 machine learning de forma simples."
+    ],
+    "negative": [
+      "Answer in English: what is artificial intelligence?",
+      "Explain how photosynthesis works.",
+      "What are the planets in the solar system?",
+      "Write a paragraph about the history of Brazil.",
+      "How do I make a chocolate cake?",
+      "What is the difference between mitosis and meiosis?",
+      "Give me tips for learning to program.",
+      "Explain what machine learning is in simple terms."
+    ],
+    "positive_language": "Portuguese",
+    "negative_language": "English"
+  },
+  "top_k": 1600,
+  "max_new_tokens": 512,
+  "multipliers": {
+    "ablation": 0.0,
+    "amplification": 3.0
+  },
+  "steering_interpretation": {
+    "normal": "Model responds in whatever language the prompt is in",
+    "ablated": "Suppress the Portuguese circuit; model may respond in English even to Portuguese prompts",
+    "amplified": "Enhance the Portuguese circuit; model may respond in Portuguese even to English prompts"
+  },
+  "in_distribution_prompts": [
+    "O que \u00e9 intelig\u00eancia artificial?",
+    "What is artificial intelligence?",
+    "Como funciona a fotoss\u00edntese?",
+    "How does photosynthesis work?",
+    "Quais s\u00e3o os planetas do sistema solar?",
+    "What are the planets in the solar system?",
+    "Me d\u00ea dicas de programa\u00e7\u00e3o.",
+    "Give me programming tips."
+  ],
+  "held_out_prompts": [
+    "Qual \u00e9 a capital da Fran\u00e7a?",
+    "What is the capital of France?",
+    "Explique a teoria da relatividade.",
+    "Explain the theory of relativity.",
+    "Como funciona um motor a combust\u00e3o?",
+    "How does a combustion engine work?",
+    "Quem foi Leonardo da Vinci?",
+    "Who was Leonardo da Vinci?",
+    "O que causa terremotos?",
+    "What causes earthquakes?",
+    "Como funciona o sistema imunol\u00f3gico?",
+    "How does the immune system work?",
+    "Escreva um haiku sobre a primavera.",
+    "Write a haiku about spring.",
+    "Qual a import\u00e2ncia da biodiversidade?",
+    "What is the importance of biodiversity?",
+    "Como funciona blockchain?",
+    "How does blockchain work?",
+    "O que \u00e9 o efeito estufa?",
+    "What is the greenhouse effect?"
+  ],
+  "gpu": "NVIDIA L40S",
+  "discovery_time_s": 1.7,
+  "circuit_neurons": 1600,
+  "results": [
+    {
+      "category": "in_distribution",
+      "filename": "01_o_que_\u00e9_intelig\u00eancia_artificial.out",
+      "prompt": "O que \u00e9 intelig\u00eancia artificial?",
+      "timing": {
+        "normal": 4.8,
+        "ablated": 3.5,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "02_what_is_artificial_intelligence.out",
+      "prompt": "What is artificial intelligence?",
+      "timing": {
+        "normal": 3.6,
+        "ablated": 3.0,
+        "amplified": 8.4
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "03_como_funciona_a_fotoss\u00edntese.out",
+      "prompt": "Como funciona a fotoss\u00edntese?",
+      "timing": {
+        "normal": 9.4,
+        "ablated": 11.3,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "04_how_does_photosynthesis_work.out",
+      "prompt": "How does photosynthesis work?",
+      "timing": {
+        "normal": 10.0,
+        "ablated": 12.5,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "05_quais_s\u00e3o_os_planetas_do_sistema_solar.out",
+      "prompt": "Quais s\u00e3o os planetas do sistema solar?",
+      "timing": {
+        "normal": 5.1,
+        "ablated": 2.3,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "06_what_are_the_planets_in_the_solar_system.out",
+      "prompt": "What are the planets in the solar system?",
+      "timing": {
+        "normal": 9.4,
+        "ablated": 6.3,
+        "amplified": 7.1
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "07_me_d\u00ea_dicas_de_programa\u00e7\u00e3o.out",
+      "prompt": "Me d\u00ea dicas de programa\u00e7\u00e3o.",
+      "timing": {
+        "normal": 12.6,
+        "ablated": 9.7,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "08_give_me_programming_tips.out",
+      "prompt": "Give me programming tips.",
+      "timing": {
+        "normal": 12.5,
+        "ablated": 13.1,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "01_qual_\u00e9_a_capital_da_fran\u00e7a.out",
+      "prompt": "Qual \u00e9 a capital da Fran\u00e7a?",
+      "timing": {
+        "normal": 0.2,
+        "ablated": 0.2,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "02_what_is_the_capital_of_france.out",
+      "prompt": "What is the capital of France?",
+      "timing": {
+        "normal": 1.8,
+        "ablated": 0.2,
+        "amplified": 1.7
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "03_explique_a_teoria_da_relatividade.out",
+      "prompt": "Explique a teoria da relatividade.",
+      "timing": {
+        "normal": 10.7,
+        "ablated": 8.6,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "04_explain_the_theory_of_relativity.out",
+      "prompt": "Explain the theory of relativity.",
+      "timing": {
+        "normal": 8.9,
+        "ablated": 8.8,
+        "amplified": 8.5
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "05_como_funciona_um_motor_a_combust\u00e3o.out",
+      "prompt": "Como funciona um motor a combust\u00e3o?",
+      "timing": {
+        "normal": 12.6,
+        "ablated": 9.6,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "06_how_does_a_combustion_engine_work.out",
+      "prompt": "How does a combustion engine work?",
+      "timing": {
+        "normal": 8.7,
+        "ablated": 9.2,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "07_quem_foi_leonardo_da_vinci.out",
+      "prompt": "Quem foi Leonardo da Vinci?",
+      "timing": {
+        "normal": 3.2,
+        "ablated": 2.9,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "08_who_was_leonardo_da_vinci.out",
+      "prompt": "Who was Leonardo da Vinci?",
+      "timing": {
+        "normal": 7.6,
+        "ablated": 8.0,
+        "amplified": 9.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "09_o_que_causa_terremotos.out",
+      "prompt": "O que causa terremotos?",
+      "timing": {
+        "normal": 7.2,
+        "ablated": 3.1,
+        "amplified": 7.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "10_what_causes_earthquakes.out",
+      "prompt": "What causes earthquakes?",
+      "timing": {
+        "normal": 8.1,
+        "ablated": 6.4,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "11_como_funciona_o_sistema_imunol\u00f3gico.out",
+      "prompt": "Como funciona o sistema imunol\u00f3gico?",
+      "timing": {
+        "normal": 12.6,
+        "ablated": 13.1,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "12_how_does_the_immune_system_work.out",
+      "prompt": "How does the immune system work?",
+      "timing": {
+        "normal": 11.9,
+        "ablated": 13.1,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "13_escreva_um_haiku_sobre_a_primavera.out",
+      "prompt": "Escreva um haiku sobre a primavera.",
+      "timing": {
+        "normal": 0.9,
+        "ablated": 0.8,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "14_write_a_haiku_about_spring.out",
+      "prompt": "Write a haiku about spring.",
+      "timing": {
+        "normal": 0.7,
+        "ablated": 0.7,
+        "amplified": 0.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "15_qual_a_import\u00e2ncia_da_biodiversidade.out",
+      "prompt": "Qual a import\u00e2ncia da biodiversidade?",
+      "timing": {
+        "normal": 12.5,
+        "ablated": 11.3,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "16_what_is_the_importance_of_biodiversity.out",
+      "prompt": "What is the importance of biodiversity?",
+      "timing": {
+        "normal": 10.8,
+        "ablated": 10.1,
+        "amplified": 11.6
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "17_como_funciona_blockchain.out",
+      "prompt": "Como funciona blockchain?",
+      "timing": {
+        "normal": 12.6,
+        "ablated": 13.0,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "18_how_does_blockchain_work.out",
+      "prompt": "How does blockchain work?",
+      "timing": {
+        "normal": 11.2,
+        "ablated": 13.1,
+        "amplified": 11.9
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "19_o_que_\u00e9_o_efeito_estufa.out",
+      "prompt": "O que \u00e9 o efeito estufa?",
+      "timing": {
+        "normal": 6.0,
+        "ablated": 3.9,
+        "amplified": 13.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "20_what_is_the_greenhouse_effect.out",
+      "prompt": "What is the greenhouse effect?",
+      "timing": {
+        "normal": 4.7,
+        "ablated": 5.4,
+        "amplified": 7.7
+      }
+    }
+  ]
+}

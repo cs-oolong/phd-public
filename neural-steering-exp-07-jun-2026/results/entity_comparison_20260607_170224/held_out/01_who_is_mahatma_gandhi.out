@@ -1,0 +1,58 @@
+=== Prompt ===
+Who is Mahatma Gandhi?
+
+=== Normal Response ===
+<think>
+Okay, I need to explain who Mahatma Gandhi was. Let me start by recalling what I know. He was a key figure in Indian history, right? Known for non-violence and civil disobedience. First, his full name was Mohandas Tatsadhar Gandhi. He was born in 1869 in Amritsar, India. 
+
+He's famous for the Salt March in 1930, which was a protest against British colonial rule. That's a major event. Also, he co-founded the Indian National Congress, which was a political party aiming for independence. But before that, he worked as a teacher and involved in various social reform movements.
+
+Gandhi emphasized "Satyagraha," which means "truth-force" or "truth-force of action." He believed in non-violence (ahimsa) as the best way to achieve social change. He opposed both violent resistance and passive acceptance. His philosophy was rooted in Hinduism, particularly the Dharma (duty/righteousness) and the idea of self-reliance.
+
+He was also involved in education, founding schools and promoting literacy. He wrote a lot of literature, like "The Satyagraha," which outlines his principles. His death in 1948 at the age of 77 is a significant event, and he was posthumously awarded the Nobel Peace Prize in 1979.
+
+I should mention his role in the Indian independence movement, leading the movement from non-cooperation to armed struggle, but still advocating for peaceful resolution. He also worked on social issues like women's rights, abolition of untouchability, and economic empowerment.
+
+Wait, did I get all that right? Let me check. Yes, he was a leader of the Indian National Congress, co-founder with Jawaharlal Nehru. The Salt March was a key event leading to the Quit India Movement. His philosophy of non-violence was central, even when the Congress had to use force later. He was a philosopher, writer, and social reformer. Nobel Prize in 1979 for his efforts in peace and justice.
+
+I need to structure this clearly: introduction with full name and birthplace, early life and education, key philosophies (satyagraha, ahimsa), involvement in social reform, role in Indian independence movement (Salt March, Quit India), contributions to education and literature, death and legacy (Nobel Prize). Make sure to highlight his emphasis on non-viol
+
+=== Ablated Response (multiplier=0.0) ===
+<think>
+Okay, I need to explain who Mahatma Gandhi was. Let me start by recalling what I know. He was a key figure in Indian independence, right? Born in 1869, I think. His full name was A.V. Gandhi. He was involved with non-violence, that's a big part of his philosophy. The Salt March comes to mind—like the 1930 movement against British salt taxes. That was a significant event.
+
+He also worked on civil disobedience and satyagraha, which are methods of non-violent resistance. Satyagraha means "truth-force," so using truth to change things without violence. Then there's the Quit India Movement in 1942, where he called for Indians to leave India to avoid further oppression. That led to the partition of India into India and Pakistan in 1947.
+
+Gandhi was a social reformer too. He focused on education, especially for women and Dalits (the "untouchables"). He co-founded the All India Missionaries Society and worked on the Swadeshi movement, which aimed to make India self-reliant by promoting local industries and reducing dependence on imports.
+
+He was also a philosopher and writer. His works like "The Discovery of Morality" and "The Concept of Non-Violence" are important. He emphasized self-control, simplicity, and the idea that true freedom comes from within rather than external forces.
+
+I should mention his role in the Indian National Congress and other political organizations. He was a central figure in the struggle for independence, leading to the formation of the Indian National Congress and later the Indian National Democratic Alliance. After independence, he was the first Prime Minister of India, serving from 1947 to 1964.
+
+Wait, did he have any other contributions? Maybe his work on the environment or animal rights? I think he was against industrialization and supported sustainable practices. Also, he was a key figure in the Mahatma Gandhi National Park movement, which established national parks to protect natural resources.
+
+I need to structure this information coherently. Start with his basic details: birth date, place, full name. Then his early life and education. His philosophy of non-violence and satyagraha. Key events: Salt March, Quit India, Partition. His role in social reforms (education, Dalit rights). Political career: Indian National Congress, Prime Minister. Later contributions: environmentalism, national parks.
+
+=== Amplified Response (multiplier=3.0) ===
+<think>
+Okay, I need to explain who Mahatma Gandhi was. Let me start by recalling what I know. He was a key figure in Indian history, right? Known for non-violence, especially the Satyagraha movement. He was born in 1869, I think, inbali, India. His full name was Mohan Satyagraha Gandhi. 
+
+First, his early life: he grew up in a poor family, maybe involved in manual labor. Then, education—he went to study philosophy, probably at the University of Calcutta, India. That's important because philosophy influenced his later ideas.
+
+Then, his political career. He became a lawyer, wrote books like "mehndi" (On Independence). He joined the Indian National Congress, which was the main political party. Later, he became the leader of the Gandhi Army, which was a military organization focused on armed struggle, but Gandhi wanted to avoid violence.
+
+The Satyagraha movement: that's the non-violent resistance against British colonial rule. He led protests, satyagrahas, boycotts, fasting, etc., to oppose British policies. The Quit India Movement, where people gathered outside British stations to demand independence, was a big part of this.
+
+After independence, India became a republic, but Gandhi faced criticism, especially from nationalists who wanted more control. He was imprisoned, tried, and executed in 1930. He died in 1934.
+
+His legacy: he's considered one of the greatest leaders in history, symbolizing peace, truth, self-reliance. His philosophy of ahimsa (non-violence) is central, influencing global movements.
+
+Wait, did I miss anything? Maybe his role in the Indian Civil War? He opposed the British army, leading Gandhi National Army, but also supported Gandhi National Defense Army, which was armed. Also, his emphasis on moral courage, truth, and simplicity.
+
+Need to structure this: introduction, early life, education, political career, Satyagraha, Quit India, post-independence, legacy. Make sure to highlight his key principles and impact.
+</think>
+<answer>
+Mahatma Gandhi (1869–1934), born Mohan Satyagraha Gandhi, was a towering figure in 20th-century history, widely regarded as one of the greatest leaders of the Indian subcontinent. His philosophy, activism, and commitment to non-violence profoundly shaped modern politics, ethics
+
+=== Timing ===
+Normal: 24.4s | Ablated: 30.0s | Amplified: 29.8s

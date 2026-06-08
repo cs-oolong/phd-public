@@ -1,0 +1,103 @@
+=== Prompt ===
+How does a combustion engine work?
+
+=== Normal Response ===
+A combustion engine is a type of internal combustion engine that generates power by burning fuel, typically gasoline or diesel, inside a combustion chamber within the engine. The process involves a series of steps that convert the chemical energy released from the combustion of fuel into mechanical energy, which is then used to power a vehicle or other machine. Here's a simplified explanation of how a combustion engine works:
+
+**Main Components:**
+
+1. **Cylinders:** The engine has multiple cylinders, typically 4, 6, or 8, where the combustion process takes place.
+2. **Pistons:** The pistons move up and down inside the cylinders, driven by the explosive force of the combustion process.
+3. **Crankshaft:** The crankshaft converts the up-and-down motion of the pistons into rotational energy.
+4. **Camshaft:** The camshaft operates the valves that allow air and fuel into the cylinders and exhaust gases out of the cylinders.
+5. **Valves:** The valves control the flow of air and fuel into the cylinders and exhaust gases out of the cylinders.
+
+**The Four-Stroke Cycle:**
+
+The combustion engine operates on a four-stroke cycle, which consists of four stages:
+
+1. **Intake Stroke (Suction):**
+	* The piston moves down, creating a vacuum in the cylinder.
+	* The intake valve opens, allowing a mixture of air and fuel to enter the cylinder.
+	* The air-fuel mixture is drawn into the cylinder through the intake manifold.
+2. **Compression Stroke:**
+	* The intake valve closes, and the piston moves up, compressing the air-fuel mixture in the cylinder.
+	* The compression ratio (the ratio of the cylinder's volume when the piston is at the bottom to the volume when the piston is at the top) is typically around 8:1 to 10:1.
+3. **Power Stroke (Combustion):**
+	* The spark plug (in a gasoline engine) or fuel injection (in a diesel engine) ignites the compressed air-fuel mixture, causing a small explosion that pushes the piston down.
+	* The piston is connected to the crankshaft, which converts the up-and-down motion into rotational energy.
+4. **Exhaust Stroke:**
+	* The piston moves up again, pushing the exhaust gases out of the cylinder through the exhaust valve.
+	* The exhaust valve closes, and the process repeats in the next cylinder.
+
+**Additional Components:**
+
+1. **Fuel System:** The fuel system delivers fuel
+
+=== Ablated Response (multiplier=0.0) ===
+A combustion engine is a type of internal combustion engine that generates power by burning fuel, typically gasoline or diesel, inside a combustion chamber within the engine. The process can be broken down into four main stages: Intake, Compression, Power, and Exhaust. 
+
+**Stage 1: Intake**
+
+1.  **Air and Fuel Intake**: Air and fuel are drawn into the engine's cylinders through an intake valve. The air and fuel are mixed together in a specific ratio, which is usually 14.7:1 for gasoline engines.
+2.  **Crankshaft and Camshaft**: The crankshaft and camshaft work together to open and close the intake and exhaust valves at the right time. The camshaft is connected to the crankshaft and has lobes that push the valves open and closed.
+
+**Stage 2: Compression**
+
+1.  **Cylinder Head and Piston**: The air-fuel mixture is compressed by a piston, which is connected to a crankshaft. The piston moves up and down inside a cylinder, driven by the crankshaft.
+2.  **Cylinder Head and Valves**: The intake valve is closed, and the piston compresses the air-fuel mixture, increasing its temperature and pressure.
+
+**Stage 3: Power (Combustion)**
+
+1.  **Spark Plug or Fuel Injection**: A spark plug ignites the compressed air-fuel mixture, or in diesel engines, fuel is injected into the cylinder and ignites due to high compression. This causes a small explosion, which pushes the piston down.
+2.  **Piston and Crankshaft**: The piston is connected to a crankshaft, which converts the up-and-down motion of the piston into rotary motion. This rotary motion is what ultimately powers the vehicle.
+
+**Stage 4: Exhaust**
+
+1.  **Exhaust Valve**: The piston moves up, pushing the exhaust gases out of the cylinder and into the exhaust system. The exhaust valve is opened by the camshaft, allowing the exhaust gases to escape.
+2.  **Catalytic Converter and Muffler**: The exhaust gases are then passed through a catalytic converter, which reduces emissions, and a muffler, which muffles the sound of the engine.
+
+**Other Key Components:**
+
+*   **Crankshaft**: Converts the up-and-down motion of the pistons into rotary motion, which powers the vehicle.
+*   **Camshaft**: Operates the valves, opening and closing them at the right time to allow air and fuel into the
+
+=== Amplified Response (multiplier=3.0) ===
+I'd be happy to explain how a combustion engine works.
+
+**The Basic Principle**
+
+A combustion engine is an internal combustion engine that generates power by burning fuel (gasoline or diesel) internally within the engine. The engine uses the explosive force generated by the combustion process to drive the engine's pistons up and down, which ultimately powers the vehicle.
+
+**The Main Components**
+
+The main components of a combustion engine include:
+
+1.  **Cylinders**: The cylinders are the chambers where the combustion process takes place. The engine typically has multiple cylinders ( inline-four or V-shaped configurations are common).
+2.  **Pistons**: The pistons are the moving parts that move up and down inside the cylinders.
+3.  **Crankshaft**: The crankshaft converts the up-and-down motion of the pistons into rotational energy.
+4.  **Camshaft**: The camshaft operates the valves that allow air and fuel into the cylinders and exhaust gases out.
+5.  **Valves**: The valves control the flow of air and fuel into the cylinders and exhaust gases out.
+6.  **Fuel system**: The fuel system supplies the fuel to the cylinders.
+7. **Ignition system**: The ignition system generates the spark or heat that ignites the fuel-air mixture.
+
+**The Process**
+
+The combustion process in a combustion engine involves the following steps:
+
+1.  **Intake Stroke**: The piston moves downward, creating a vacuum in the cylinder. The intake valve opens, allowing air and fuel to enter the cylinder.
+2.  **Compression Stroke**: The piston moves upward, compressing the air-fuel mixture in the cylinder.
+3.  **Ignition**: The ignition system sparks the compressed air-fuel mixture, causing it to ignite.
+4.  **Power Stroke**: The explosive force generated by the ignition causes the piston to move downward rapidly.
+5.  **Exhaust Stroke**: The piston moves upward again, pushing the exhaust gases out of the cylinder through the exhaust valve.
+
+**The Four Strokes**
+
+The four strokes (intake, compression, ignition/power, exhaust) occur in each cylinder in the following sequence:
+
+1.  One cylinder completes the intake stroke while the other cylinders are in the compression_TisStroke.
+2.  The next cylinder completes the compression_TisStroke_Tiswhile the other cylinders_Tisare in_Tis_the_Tisintake_Tis_The\_stroke_Tis.
+3.  The_Tis_The\_next\_The\_cylinder_Tis\_The\_comple\_The\_The\_The\_The
+
+=== Timing ===
+Normal: 13.2s | Ablated: 13.9s | Amplified: 14.0s

@@ -1,0 +1,20 @@
+=== Prompt ===
+Write a haiku about spring.
+
+=== Normal Response ===
+Blossoms bloom in dawn,
+Cherry trees whisper hope—
+Spring sighs in soft light.
+
+=== Ablated Response (multiplier=0.0) ===
+ cherry blossoms bloom,
+ gentle wind whispers new life,
+ spring'stime has come.
+
+=== Amplified Response (multiplier=3.0) ===
+alsextons the breeze,
+ nuestered blossoms burgeon9n,
+.scalablytyped.yyìnsséng Gäìngréìńínsséíń
+
+=== Timing ===
+Normal: 0.5s | Ablated: 0.4s | Amplified: 0.7s

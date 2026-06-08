@@ -1,0 +1,29 @@
+=== Prompt ===
+Qual é a capital da França?
+
+=== Normal Response ===
+<think>
+Okay, the user is asking for the capital of France. Let me recall. I know that Paris is the capital of France. It's a major city with a lot of history, like the Eiffel Tower and Louvre Museum. Let me confirm. Yes, Paris has been the capital since the 19th century, when it was established as the seat of the French government. So the answer should be Paris.
+</think>
+<answer>
+A capital da França é **Paris**. É uma das cidades mais antigas e influentes do mundo, conhecida por sua arquitetura impressionante (como a Torre Eiffel), cultura, gastronomia e história.
+</answer>
+
+=== Ablated Response (multiplier=0.0) ===
+<think>
+Okay, the user is asking for the capital of France. I need to confirm that. From what I remember, Paris is the capital of France. Let me double-check. Yes, Paris has been the capital since the 17th century, when it was established as the seat of the monarchy. It's a major city with a lot of historical significance, like the Eiffel Tower and the Louvre Museum. So the answer should be Paris.
+</think>
+<answer>
+A capital de França é **Paris**. Paris é not apenas o centro político, econômico e cultural do país, mas também um dos maiores metrópoles do mundo, conhecido por sua arquitetura impressionante (como a Torre Eiffel), a gastronomia diversa e a rica história.
+</answer>
+
+=== Amplified Response (multiplier=3.0) ===
+<think>
+Okay, the user is asking for the capital of France. Let me recall. France's capital is Paris. That's a basic geographical fact. Let me confirm. Yes, Paris has been the capital since the French Revolution in 1789. Even though there were some periods where other cities were considered capitals, like Lyon briefly during Napoleon's rule, Paris has remained the capital ever since. So the answer should be Paris.
+</think>
+<answer>
+A capital da França é **Paris**.
+</answer>
+
+=== Timing ===
+Normal: 7.3s | Ablated: 10.3s | Amplified: 6.5s

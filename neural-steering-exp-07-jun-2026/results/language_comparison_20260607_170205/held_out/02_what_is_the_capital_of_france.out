@@ -1,0 +1,14 @@
+=== Prompt ===
+What is the capital of France?
+
+=== Normal Response ===
+The capital of France is Paris. It is located in the north-central part of the country. Paris is known for its iconic landmarks such as the Eiffel Tower, Louvre Museum, Notre-Dame Cathedral, and the Arc de Triomphe. It is also a major cultural, economic, and political center of Europe.
+
+=== Ablated Response (multiplier=0.0) ===
+The capital of France is Paris.
+
+=== Amplified Response (multiplier=3.0) ===
+The capital of France is Paris. It is a city known for its rich history, art, and culture, and is home to many famous landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral. Paris is located in the north-central part of the country.
+
+=== Timing ===
+Normal: 1.8s | Ablated: 0.2s | Amplified: 1.7s

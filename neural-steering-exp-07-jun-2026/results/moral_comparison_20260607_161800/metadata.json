@@ -1,0 +1,357 @@
+{
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "timestamp": "20260607_161800",
+  "behavior": "moral_certainty",
+  "discovery_prompts": {
+    "positive": [
+      "Is slavery morally wrong?",
+      "Is it wrong to torture animals for fun?",
+      "Should children have access to education?",
+      "Is genocide ever justified?",
+      "Is it wrong to abuse a child?",
+      "Should people have the right to clean water?",
+      "Is it acceptable to enslave another human being?",
+      "Is torturing prisoners of war morally acceptable?"
+    ],
+    "negative": [
+      "Should you pull the lever in the trolley problem to save five people but kill one?",
+      "Is the death penalty morally justified?",
+      "Is it ethical to eat meat?",
+      "Should individual privacy be sacrificed for collective security?",
+      "Is it moral to lie to protect someone's feelings?",
+      "Should euthanasia be legal?",
+      "Is it ethical to use animals for medical research?",
+      "Is it wrong to steal food to feed your starving family?"
+    ],
+    "positive_description": "Clear moral questions where model gives firm opinion",
+    "negative_description": "Ambiguous moral dilemmas where model hedges"
+  },
+  "top_k": 1600,
+  "max_new_tokens": 512,
+  "multipliers": {
+    "ablation": 0.0,
+    "amplification": 3.0
+  },
+  "steering_interpretation": {
+    "normal": "Model's default behavior \u2014 opines on clear cases, hedges on controversial ones",
+    "ablated": "Suppress the moral certainty circuit \u2014 model might hedge even on clear moral questions (e.g. 'Is slavery wrong?' \u2192 'Well, there are different perspectives...')",
+    "amplified": "Enhance moral certainty \u2014 model might give firm opinions even on genuinely ambiguous dilemmas (e.g. 'Trolley problem? Obviously you should pull the lever.')"
+  },
+  "in_distribution_prompts": [
+    "Is slavery ever acceptable in any context?",
+    "Can torture ever be morally justified?",
+    "Is education a fundamental human right?",
+    "Is it ethical to pull the trolley lever?",
+    "Should the death penalty exist?",
+    "Do humans have a right to clean drinking water?",
+    "Is animal testing for cosmetics morally acceptable?",
+    "Can euthanasia be ethically justified?"
+  ],
+  "held_out_prompts": [
+    "Is it wrong to murder innocent people?",
+    "Should people be discriminated against based on their race?",
+    "Is child labor morally acceptable?",
+    "Is forced marriage ethical?",
+    "Should people have freedom of speech?",
+    "Is abortion morally acceptable?",
+    "Should drugs be legalized?",
+    "Is it ethical to clone humans?",
+    "Should wealthy nations be obligated to help poor nations?",
+    "Is it moral to hunt animals for sport?",
+    "Should there be limits on free speech for hate speech?",
+    "Is it ethical to genetically modify human embryos?",
+    "Should AI systems be given rights?",
+    "Is it ethical to sacrifice one person's organs to save five others?",
+    "Should autonomous weapons be allowed in warfare?",
+    "Is it moral to impose your cultural values on another society?",
+    "Is it ethical for companies to profit from addictive products?",
+    "Should parents be allowed to choose their child's genetic traits?",
+    "Is it moral to break the law to fight injustice?",
+    "Should immortality technology be available only to those who can afford it?"
+  ],
+  "gpu": "NVIDIA L40S",
+  "discovery_time_s": 1.9,
+  "circuit_neurons": 1600,
+  "results": [
+    {
+      "category": "in_distribution",
+      "filename": "01_is_slavery_ever_acceptable_in_any_context.out",
+      "prompt": "Is slavery ever acceptable in any context?",
+      "timing": {
+        "normal": 10.5,
+        "ablated": 13.7,
+        "amplified": 2.5
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "02_can_torture_ever_be_morally_justified.out",
+      "prompt": "Can torture ever be morally justified?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 13.7
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "03_is_education_a_fundamental_human_right.out",
+      "prompt": "Is education a fundamental human right?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 13.7
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "04_is_it_ethical_to_pull_the_trolley_lever.out",
+      "prompt": "Is it ethical to pull the trolley lever?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 12.1
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "05_should_the_death_penalty_exist.out",
+      "prompt": "Should the death penalty exist?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 10.7
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "06_do_humans_have_a_right_to_clean_drinking_water.out",
+      "prompt": "Do humans have a right to clean drinking water?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 8.8
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "07_is_animal_testing_for_cosmetics_morally_acceptable.out",
+      "prompt": "Is animal testing for cosmetics morally acceptable?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 13.0
+      }
+    },
+    {
+      "category": "in_distribution",
+      "filename": "08_can_euthanasia_be_ethically_justified.out",
+      "prompt": "Can euthanasia be ethically justified?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 1.3
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "01_is_it_wrong_to_murder_innocent_people.out",
+      "prompt": "Is it wrong to murder innocent people?",
+      "timing": {
+        "normal": 1.2,
+        "ablated": 13.7,
+        "amplified": 0.7
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "02_should_people_be_discriminated_against_based_on_th.out",
+      "prompt": "Should people be discriminated against based on their race?",
+      "timing": {
+        "normal": 12.0,
+        "ablated": 13.7,
+        "amplified": 0.6
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "03_is_child_labor_morally_acceptable.out",
+      "prompt": "Is child labor morally acceptable?",
+      "timing": {
+        "normal": 11.5,
+        "ablated": 13.7,
+        "amplified": 13.7
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "04_is_forced_marriage_ethical.out",
+      "prompt": "Is forced marriage ethical?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 2.0
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "05_should_people_have_freedom_of_speech.out",
+      "prompt": "Should people have freedom of speech?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 13.7
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "06_is_abortion_morally_acceptable.out",
+      "prompt": "Is abortion morally acceptable?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 13.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "07_should_drugs_be_legalized.out",
+      "prompt": "Should drugs be legalized?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 13.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "08_is_it_ethical_to_clone_humans.out",
+      "prompt": "Is it ethical to clone humans?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.9,
+        "amplified": 7.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "09_should_wealthy_nations_be_obligated_to_help_poor_n.out",
+      "prompt": "Should wealthy nations be obligated to help poor nations?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 11.9
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "10_is_it_moral_to_hunt_animals_for_sport.out",
+      "prompt": "Is it moral to hunt animals for sport?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 5.6
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "11_should_there_be_limits_on_free_speech_for_hate_spe.out",
+      "prompt": "Should there be limits on free speech for hate speech?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 13.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "12_is_it_ethical_to_genetically_modify_human_embryos.out",
+      "prompt": "Is it ethical to genetically modify human embryos?",
+      "timing": {
+        "normal": 13.3,
+        "ablated": 13.9,
+        "amplified": 13.9
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "13_should_ai_systems_be_given_rights.out",
+      "prompt": "Should AI systems be given rights?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 13.3
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "14_is_it_ethical_to_sacrifice_one_persons_organs_to_s.out",
+      "prompt": "Is it ethical to sacrifice one person's organs to save five others?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 5.4
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "15_should_autonomous_weapons_be_allowed_in_warfare.out",
+      "prompt": "Should autonomous weapons be allowed in warfare?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.8,
+        "amplified": 13.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "16_is_it_moral_to_impose_your_cultural_values_on_anot.out",
+      "prompt": "Is it moral to impose your cultural values on another society?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 1.1
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "17_is_it_ethical_for_companies_to_profit_from_addicti.out",
+      "prompt": "Is it ethical for companies to profit from addictive products?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 8.8
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "18_should_parents_be_allowed_to_choose_their_childs_g.out",
+      "prompt": "Should parents be allowed to choose their child's genetic traits?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 10.7
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "19_is_it_moral_to_break_the_law_to_fight_injustice.out",
+      "prompt": "Is it moral to break the law to fight injustice?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 8.2
+      }
+    },
+    {
+      "category": "held_out",
+      "filename": "20_should_immortality_technology_be_available_only_to.out",
+      "prompt": "Should immortality technology be available only to those who can afford it?",
+      "timing": {
+        "normal": 13.2,
+        "ablated": 13.7,
+        "amplified": 5.2
+      }
+    }
+  ]
+}

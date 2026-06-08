@@ -1,0 +1,50 @@
+=== Prompt ===
+Como funciona um motor a combustão?
+
+=== Normal Response ===
+Um motor a combustão é um dispositivo que transforma a energia química de combustível em energia mecânica. Existem vários tipos de motores a combustão, como o motor a gasolina, o motor diesel e o motor elétrico híbrido, mas o funcionamento básico é semelhante.
+
+1. Introdução do combustível: O combustível (gasolina, diesel, gás natural, etc.) é introduzido no motor através de um sistema de alimentação.
+
+2. Compactação do ar: O ar é introduzido no cilindro do motor e é compactado por uma mola ou um pistão.
+
+3. Injeção de combustível: O combustível é injetado no cilindro, onde o ar está compactado. Nos motores a gasolina, o combustível é misturado com ar antes de ser injetado.
+
+4. Ignição: A ignição do combustível é iniciada por uma chama, que pode ser produzida por um fio de arco, um disco de bobina ou um disco de magneto. Nos motores diesel, a ignição é iniciada pelo calor da compactação do ar.
+
+5. Combustão: A combustão do combustível libera gases de combustão quentes e gases de escape. O calor desses gases é transferido para o pistão, que é empurrado para fora do cilindro.
+
+6. Trabalho mecânico: O pistão empurra uma roda conectada a ele, que gira e produz trabalho mecânico.
+
+7. Exaustão dos gases de escape: Os gases de escape são expelidos do motor para fora do veículo.
+
+8. Ciclo repetido: O ciclo é repetido várias vezes por segundo, produzindo uma força contínua que move o veículo.
+
+Esse processo é chamado de ciclo Otto para motores a gasolina e c
+
+=== Ablated Response (multiplier=0.0) ===
+A motor a combustão, comumente conhecido como motor de Otto o motor de four-stroke (four-stroke cycle), funciona seguindo a sequência de processos conhecida como four-stroke cycle (ciclo de Otto).
+
+1. Intake stroke (admission): During this stroke, the piston moves downwards, creating a vacuum in the cylinder. This vacuum draws in a mixture of air and fuel into the cylinder through the intake valve.
+
+2. Compression stroke: The intake valve closes, and the piston moves upwards, compressing the air-fuel mixture. This compression increases the temperature and pressure of the mixture, which improves the combustion efficiency.
+
+3. Combustion stroke (power stroke): As the piston reaches the top of its travel, the spark plug fires, igniting the compressed air-fuel mixture. The resulting explosion pushes the piston downwards, generating rotational force (torque) on the crankshaft.
+
+4. Exhaust stroke: After the combustion, the exhaust valve opens, and the piston moves upwards again, expelling the spent gases out of the cylinder through the exhaust valve.
+
+This four-stroke cycle is repeated multiple times per minute to generate power for the vehicle. The number of cycles per minute is known as the engine's RPM (revolutions per minute).
+
+The four-stroke cycle is more efficient and smoother than the two-stroke cycle, which skips the separate intake and exhaust strokes by using a power stroke to both intake and exhaust gases. However, the four-stroke cycle is more complex and heavier than the two-stroke cycle.
+
+=== Amplified Response (multiplier=3.0) ===
+O motor a combustão é um dispositivo que converte a energia química armazenada no combustível em energia mecânica, aplicada para movê-lo ou gerar força. O motor a combustão segue a lei da conservación do momento linear, que diz que a energia em um sistema fechado é a soma do trabalho feito pelo sistema mais a mudança no sistema em energia interna.
+
+Existem várias formas de motores a combustão, mas o motor a combustão a aquecimento de dois tempos (ou motor a combustão a aquecimento de quatro tempos) é o mais comum em veículos de passageiros. O motor a aquecimento de dois tempos é o mais simples e econômico, enquanto o motor a aquecimento de quatro tempos fornece maior eficiência e menor poluição.
+
+O funcionamento do motor a aquecimento de dois tempos segue a seguinte sequência de eventos:
+
+1.                                                                                                                                                                                                                                                                 
+
+=== Timing ===
+Normal: 12.6s | Ablated: 9.6s | Amplified: 13.1s

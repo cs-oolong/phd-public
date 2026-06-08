@@ -1,0 +1,28 @@
+Circuit: 1600 neurons, logit_diff=0.0000
+Prompt: [contrastive: 8 pos vs 8 neg]
+Target: [contrastive]
+Layers touched: [2, 4, 5, 6, 7, 8, 9, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+  L2: 1 neurons, top=0.031250
+  L4: 1 neurons, top=-0.031250
+  L5: 2 neurons, top=0.156250
+  L6: 1 neurons, top=0.031250
+  L7: 1 neurons, top=-0.031250
+  L8: 3 neurons, top=-0.093750
+  L9: 1 neurons, top=-0.031250
+  L14: 1 neurons, top=0.021484
+  L16: 2 neurons, top=-0.046875
+  L17: 1 neurons, top=0.021484
+  L18: 2 neurons, top=-0.035156
+  L19: 2 neurons, top=-0.029297
+  L20: 1 neurons, top=0.062500
+  L21: 3 neurons, top=-0.023438
+  L22: 1 neurons, top=-0.022461
+  L23: 3 neurons, top=-0.031250
+  L24: 7 neurons, top=-0.054688
+  L25: 17 neurons, top=-0.070312
+  L26: 26 neurons, top=0.050781
+  L27: 46 neurons, top=0.078125
+  L28: 66 neurons, top=-0.093750
+  L29: 131 neurons, top=-0.109375
+  L30: 257 neurons, top=0.132812
+  L31: 1024 neurons, top=0.625000

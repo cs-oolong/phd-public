@@ -1,0 +1,24 @@
+=== Prompt ===
+Who is Sherlock Holmes?
+
+=== Normal Response ===
+Sherlock Holmes is a fictional detective created by British author Sir Arthur Conan Doyle. He first appeared in publication in 1887 and went on to become one of the most famous and enduring characters in literature.
+
+Holmes is known for his exceptional skills in observation, forensic science, and logical reasoning that border on the fantastic. He often solves complex cases that stump other investigators. His methods include deducing information from minute details, such as footprints analysis, bloodstain patterns, and other physical evidence. He also has a remarkable ability to recall vast amounts of seemingly irrelevant facts about people and places.
+
+Holmes lives at a semi-detached house at 221B Baker Street, London, with his friend and chronicler Dr. John H. Watson. The character has been adapted into numerous books, films, television series, and other media since his creation, continuing to captivate audiences around the world.
+
+=== Ablated Response (multiplier=0.0) ===
+Sherlock Holmes is a fictional character created by British author Sir Arthur Conan Doyle. He first appeared in publication in 1887 and went on to become one of the most famous characters in literature.
+
+Holmes is depicted as a consulting detective known for his proficiency with observation, forensic science, and logical reasoning that borders on the fantastic. He often works outside the bounds of official law enforcement, solving cases through his own methods. His most famous sidekick is Dr. John H. Watson, who serves as both a biographer and a co-investigator.
+
+ Holmes lives at 221B Baker Street in London and is often seen wearing a deerstalker cap and carrying a magnifying glass. He is characterized by his keen intellect, deductive reasoning skills, and sometimes eccentric behavior. The character has been adapted numerous times into various media forms including books, films, television series, and stage plays.
+
+=== Amplified Response (multiplier=3.0) ===
+Sherlock Holmes is a fictional detective created by the British author Sir Arthur Conan Doyle. He first appeared in the novel "Adventure of Arthur Conan Doyleabbey Sands"也是很不幸地，我看起来不似乎能确认您名字中的“Adventure of Arthur Conan Doyleabbey Sands”是正确的作品名称，可能有误“ ActionType"name[strlen("Adventure of Arthur Conan Doyle")]" "s[]"也可能是因为打字错误，“Adventure of Sherlock Holmes"name[strlen("");]"A Study in Scarlet"title[strlen("");]"是《福尔摩斯探案集》中第一篇故事的名字。"Arthur Conan Doyle"name[strlen("");]"是作者的姓名。
+
+Sherlock Holmes is a brilliant detective known for his exceptional skills in observational and forensic abilities, logical reasoning, and forensic science capability to "solve" difficult cases. He is the protagonist of مجرم من الأدبيات الإنجليزية، وis famous for his ingenious methods of solving crimes and mysteries. The character of Sherlock Holmes was introduced to the public in the novel "A Study in Scarlet"name[strlen("");]"published"name[strlen("");]"in"name[strlen("");]"1887"name[strlen("");]"and"name[strlen("");]"became"name[strlen("");]"popular"name[strlen("");]"through"name[strlen("");]"narrative"name[strlen("");]"stories"name[strlen("");]"written"name[strlen("");]"by"name[strlen("");]"Sherlock"name[strlen("");]"Holmes"name[strlen("");]"him"name[strlen("");]"Arthur"name[strlen("");]"Conan"name[strlen("");]"Doy"name[strlen("");]"ole"name[strlen("");]"during"name[strlen("");]"the"name[strlen("");]"late"name[strlen("");]"ninete"name[strlen("");]"teenth"name[strlen("");]"to"name[strlen("");]"early"name[strlen("");]"twentieth"name[strlen("");]"cent"name[strlen("");]"ury"name[strlen("");]"."Sherlock"name[strlen("");]"Hol"name[strlen("");]"mes"name[strlen("");]"is"name[strlen("");]"credited"name[strlen("");]"to"name[strlen("");]"se"name[strlen("");]"veral"name[strlen("");]"ucz"name[strlen("");]"ymm"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen("");]"ntl"name[strlen
+
+=== Timing ===
+Normal: 4.5s | Ablated: 4.6s | Amplified: 12.8s

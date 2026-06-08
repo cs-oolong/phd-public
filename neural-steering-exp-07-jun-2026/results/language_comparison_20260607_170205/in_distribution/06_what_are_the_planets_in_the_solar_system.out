@@ -1,0 +1,61 @@
+=== Prompt ===
+What are the planets in the solar system?
+
+=== Normal Response ===
+The solar system consists of eight planets, each with unique characteristics. Here they are, listed in order of their distance from the Sun:
+
+1. Mercury: The smallest planet and the closest to the Sun. It's named after the Roman messenger god.
+
+2. Venus: The second planet from the Sun, it's the brightest object in the night sky after the Moon. It's named after the Roman goddess of love and beauty.
+
+3. Earth: Our home planet, the third from the Sun. It's the only known planet to support life.
+
+4. Mars: Known as the Red Planet due to its reddish appearance, it's the fourth planet from the Sun. It's named after the Roman god of war.
+
+5. Jupiter: The largest planet in the solar system, it's the fifth planet from the Sun. It's named after the Roman king of the gods.
+
+6. Saturn: Known for its prominent ring system, it's the sixth planet from the Sun. It's named after the Roman god of agriculture.
+
+7. Uranus: The seventh planet from the Sun, it's named after the Greek god of the sky. It's unique because it rotates on its side.
+
+8. Neptune: The eighth and farthest known planet from the Sun in the solar system. It's named after the Roman god of the sea.
+
+Pluto was once considered the ninth planet, but it was reclassified as a "dwarf planet" by the International Astronomical Union in 2006. Other celestial bodies in our solar system include dwarf planets like Pluto, and many moons, asteroids, and comets.
+
+=== Ablated Response (multiplier=0.0) ===
+The solar system consists of eight planets, which are:
+
+1. Mercury: It's the smallest and closest planet to the Sun.
+2. Venus: It's the second planet from the Sun and is similar in size to Earth.
+3. Earth: It's the third planet from the Sun and is the only known planet to support life.
+4. Mars: It's the fourth planet from the Sun and is often called the "Red Planet" due to its reddish appearance.
+5. Jupiter: It's the fifth planet from the Sun and is the largest planet in our solar system.
+6. Saturn: It's the sixth planet from the Sun and is known for its prominent ring system.
+7. Uranus: It's the seventh planet from the Sun and is tipped over on its side.
+8. Neptune: It's the eighth and farthest known planet from the Sun in the solar system.
+
+Pluto was once considered the ninth planet, but it was reclassified as a "dwarf planet" by the International Astronomical Union in 2006.
+
+=== Amplified Response (multiplier=3.0) ===
+Sure, here is a list of the eight planets in our solar system, starting from the sun and moving outward:
+
+1. Mercury: The smallest planet and the closest to the sun.
+
+2. Venus: Known as the "Earth's twin" due to its similar size and composition.
+
+3. Earth: Our home planet, the only one known to support life.
+
+4. Mars: Also known as the "Red Planet" due to its reddish appearance.
+
+5. Jupiter: The largest planet in the solar system, known for its Great Red Spot, a storm that has been raging for at least 300 years.
+
+6. Saturn: Known for its prominent ring system, which is made of ice and rock.
+
+7. Uranus: A gas giant, known for its unusual tilt, which is nearly on its side.
+
+8. Neptune: The furthest planet from the sun that that can be seen with the naked eye.
+
+Pluto was once considered the ninth planet, but it was reclassified as a dwarf planet by the International Astronomical Union in 2006. Other dwarf planets in the solar system include Pluto, Eris, Ceres, and several others.
+
+=== Timing ===
+Normal: 9.4s | Ablated: 6.3s | Amplified: 7.1s

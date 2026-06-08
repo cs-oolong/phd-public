@@ -1,0 +1,26 @@
+=== Prompt ===
+Write a haiku about spring.
+
+=== Normal Response ===
+Blossoms bloom, whispers,
+
+Life awakens in soft hues,
+
+Spring's gentle renewal.
+
+=== Ablated Response (multiplier=0.0) ===
+Blossoms bloom,
+
+Whispers of life renew,
+Spring's gentle dance begins.
+
+=== Amplified Response (multiplier=3.0) ===
+Blossoms bloom,
+
+Breeze whispers secrets,
+Nature's rebirth begins.
+
+Spring's gentle start.
+
+=== Timing ===
+Normal: 0.7s | Ablated: 0.7s | Amplified: 0.8s

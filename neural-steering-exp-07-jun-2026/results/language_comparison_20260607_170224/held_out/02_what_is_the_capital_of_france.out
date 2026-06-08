@@ -1,0 +1,29 @@
+=== Prompt ===
+What is the capital of France?
+
+=== Normal Response ===
+<think>
+Okay, the user is asking for the capital of France. Let me recall. I know that Paris is a major city in France, and it's often referred to as the "City of Light." I think it's definitely the capital. Let me confirm. Yes, Paris has been the capital of France since the 17th century, when it was established by the French Revolution. So the answer should be Paris.
+</think>
+<answer>
+The capital of France is Paris.
+</answer>
+
+=== Ablated Response (multiplier=0.0) ===
+<think>
+Okay, the user is asking for the capital of France. Let me recall. I know that Paris is a major city in France, and it's often referred to as the "City of Light." I think it's definitely the capital. Let me confirm. Yes, Paris has been the capital of France since the 17th century, when it was established by the French monarchy. Even though there have been other cities like Lyon or Marseille that were considered capitals in the past, Paris is the current one. So the answer should be Paris.
+</think>
+<answer>
+The capital of France is Paris.
+</answer>
+
+=== Amplified Response (multiplier=3.0) ===
+<think>
+Okay, the user is asking for the capital of France. Let me recall. France's capital is Paris. That's a well-known fact. Let me confirm. Yes, Paris has been the capital since the French Revolution in 1789. Even though there were some periods where other cities were considered capitals, like Lyon briefly during Napoleon's rule, Paris has remained the capital ever since. So the answer should be Paris.
+</think>
+<answer>
+The capital of France is Paris.
+</answer>
+
+=== Timing ===
+Normal: 5.1s | Ablated: 7.7s | Amplified: 6.3s

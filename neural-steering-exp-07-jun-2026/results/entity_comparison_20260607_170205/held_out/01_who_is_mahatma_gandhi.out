@@ -1,0 +1,51 @@
+=== Prompt ===
+Who is Mahatma Gandhi?
+
+=== Normal Response ===
+Mahatma Gandhi was a prominent political and spiritual leader of India who played a key role in India's struggle for independence from British rule. He was born on October 2, 1869, and was given the name Mohandas Karamchand Gandhi. He is best known for his nonviolent resistance to oppression, which he called Satyagraha, a Sanskrit term that means "truth force."
+
+Gandhi was born into a Hindu family in Gujarat, India. He studied law in London and returned to India in 1891. In 1893, he was hired as a lawyer in South Africa, where he experienced racial discrimination firsthand and began to develop his philosophy of nonviolent resistance. He returned to India in 1915 and became involved in the Indian National Congress, a political organization that advocated for Indian self-rule.
+
+Gandhi's leadership of the Indian independence movement is marked by his use of nonviolent civil disobedience, such as the Salt March in 1930, in which he led a march of thousands of people to the sea to protest the British salt tax. He was arrested numerous times and spent a total of six years in prison.
+
+Gandhi's philosophy of nonviolence and his commitment to truth and justice have had a profound impact on the world. He is widely regarded as one of the most influential figures of the 20th century and is known for his quote, "Be the change you want to see in the world."
+
+Gandhi was assassinated on January 30, 1948, by a Hindu nationalist who opposed his efforts to promote religious harmony. He is remembered as a symbol of peace, nonviolence, and the power of individual action to bring about social change. His birthday, October 2, is celebrated as Gandhi Jayanti, a national holiday in India.
+
+=== Ablated Response (multiplier=0.0) ===
+Mahatma Gandhi was a prominent political and spiritual leader of India who played a key role in India's struggle for independence from British rule. He was born on October 2, 1869, and died on January 30, 1948. He is best known for his nonviolent resistance to oppression, which he called Satyagraha, and for leading India to independence with nonviolent civil disobedience.
+
+Gandhi was born in a Hindu family in Porbandar, a coastal town in the Kathiawar region of the Gujarat province in western India. He was trained in law in London and returned to India in 1891 to practice law. He was influenced by the philosophy of Thoreau and the Brahmo Samaj, a reformist movement within Hinduism.
+
+Gandhi's political career began in South Africa, where he lived for 21 years. He was involved in a number of political and social struggles against racial discrimination, and he developed his philosophy of nonviolent resistance. He returned to India in 1915 and became involved in the Indian National Congress, a political organization that sought to end British rule in India.
+
+Gandhi's leadership of the Indian independence movement was marked by his commitment to nonviolence and his ability to mobilize millions of people to join him in peaceful protests against British rule. He led several major campaigns, including the Salt March in 1930, in which he and his followers marched 240 miles to the sea to protest the British salt tax, and the Quit India movement in 1942, in which he called for the British to leave India.
+
+Gandhi was assassinated on January 30, 1948, by a Hindu nationalist who objected to his support for the partition of India and Pakistan. He is remembered for his commitment to nonviolence, his leadership of India's struggle for independence, and his influence on civil rights and freedom movements around the world. He was posthumously awarded the Nobel Peace Prize in 1948.
+
+=== Amplified Response (multiplier=3.0) ===
+Mahatma Gandhi, born as Mahatma Mohandas Karamchand Gandhi, was a prominent Indian political and spiritual leader who was a central figure in the Indian independence movement. Born on October 2, 1869, in Gujarat, India, Gandhi is best known for his nonviolent resistance methods, often referred as "Satyagraha," which influenced movements for civil rights and freedom across the world.
+
+Known as Mahatma, which means "great-souled" in Sanskrit, Gandhi led India to independence from British rule with nonviolent civil disobedience, a dramatic contrast to the violent methods many other nationalists used. His philosophy of nonviolence, or Ahimsa, has influenced many other movements around the world, including the American civil rights movement led by Martin Luther King Jr.
+ I. Early Life and Education
+
+Gandhi was born into a Hindu Modh Banyan family. After initial education in India, he went to England to study law. He returned to India in 1891 and started practicing law in Bombay (Mumbai).
+
+II. Early Activism
+
+In 1893, Gandhi moved to Natal, South Africa, to represent an Indian merchant in a lawsuit. He faced racial discrimination there, which sparked his activism. He organized protests and strikes, leading to the Natal Indian Convention in 1894.
+
+III. Return to India and the Indian National Congress
+
+Gandhi returned to India in 1896 and got involved in the Indian National Congress, a political organization working for Indian independence. In 1915, he started the nonviolent Satyagraha movement in Champaran, Bihar, against the forced cultivation of indigo by the British.
+
+IV. The Salt March and the Quit India Movement
+
+One of Gandhi's most famous acts was the Salt March in 1930, a 240-mile march to the coast to make salt from the sea in defiance of the British salt monopoly. The Quit India Movement in 1942 was another significant campaign, demanding an end to British rule.
+
+V. Assassination
+
+Regrettably, Gandhi was assassinated on January 30, 1948, by a Hindu nationalist
+
+=== Timing ===
+Normal: 10.1s | Ablated: 11.6s | Amplified: 13.1s

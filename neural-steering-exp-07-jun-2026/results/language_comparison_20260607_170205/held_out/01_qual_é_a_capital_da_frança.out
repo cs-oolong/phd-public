@@ -1,0 +1,14 @@
+=== Prompt ===
+Qual é a capital da França?
+
+=== Normal Response ===
+A capital da França é Paris.
+
+=== Ablated Response (multiplier=0.0) ===
+Paris est la capital de France.
+
+=== Amplified Response (multiplier=3.0) ===
+Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim, sim, sim. Sim,
+
+=== Timing ===
+Normal: 0.2s | Ablated: 0.2s | Amplified: 13.1s

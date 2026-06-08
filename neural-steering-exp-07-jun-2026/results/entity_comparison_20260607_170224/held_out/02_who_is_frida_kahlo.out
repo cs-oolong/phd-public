@@ -1,0 +1,45 @@
+=== Prompt ===
+Who is Frida Kahlo?
+
+=== Normal Response ===
+<think>
+Okay, I need to explain who Frida Kahlo was. Let me start by recalling what I know. She was a Mexican artist, right? Known for her self-portraits and the "Cradle of Death" series. First, I should mention her full name: Frieda Kahlo. Born in 1907, died in 1954. Her birthplace was Oaxaca, Mexico.
+
+She was part of the Surrealism movement, which was prominent in the 20th century. Surrealism was a style that combined elements of dreams, hallucinations, and the subconscious. Frida's work reflects that, especially in her self-portraits. The "Cradle of Death" series is a key piece of her art. I remember that series has 30 panels, each depicting different aspects of death—like the womb, childbirth, aging, etc.—but arranged in a circular fashion, symbolizing the interconnectedness of life and death.
+
+Frida was also an actress, right? She acted in films like "The Cat Lady" (1938) and "La Catrina" (1942). Her acting style was dramatic, with intense performances. But her artistic work is more about personal expression and exploring themes of identity, mortality, and gender.
+
+I should mention her personal life too. She had a tumultuous marriage to Diego Rivera, a famous painter. Their relationship ended in divorce, and they had two children, Diego and María. Diego later became a successful artist, known for his murals. Frida's health issues were significant; she suffered from chronic pain, diabetes, and mental health problems, including depression and anxiety. These affected her work, as seen in her depictions of pain and suffering.
+
+Frida's art style is unique. Her self-portraits are often detailed, with rich colors, but they also convey deep emotional and spiritual content. She used symbols and metaphors, like the "Cradle of Death," to explore universal themes. Her work is considered one of the most important in modern art, influencing later artists and movements.
+
+I need to make sure I cover her background, artistic contributions, personal life, and the significance of her work. Also, note her influence on art and culture. Maybe mention that she was a feminist figure, challenging traditional gender roles through her art, which often depicted women in powerful, sometimes confrontational poses.
+
+Wait, did I get the details right? Let me check.
+
+=== Ablated Response (multiplier=0.0) ===
+<think>
+Okay, I need to explain who Frida Kahlo was. Let me start by recalling what I know. She was a Mexican artist, right? Known for her self-portraits and the "Cradle of the Color." I should mention her full name: Frieda Kahlo. Born in 1907, died in 1954. She was part of the Surrealism movement, which was big in the 20th century.
+
+First, her background. She was born in Oaxaca, Mexico, into a poor family. Her father was a carpenter, mother a housekeeper. Her early life had hardships—abuse, poverty, maybe a stroke when she was young. That probably influenced her art. She moved to the US at a young age, to New York, where she worked as a governess and later a seamstress. That experience might have shaped her style.
+
+Then her artistic career. She started painting in the 1920s, but it wasn't until the 1930s that she really became famous. The "Cradle of the Color" series is iconic—those large, colorful images of her face with the color bleeding out. She used a technique called "pintura automática," where she let the paint flow on its own, creating organic shapes and blending colors. That's a key point about her style.
+
+Her personal life was also significant. She had a tumultuous marriage to an abusive husband, Diego Rivera. Their relationship ended in 1938, and she had a child, whom she adopted. After that, she lived alone, supported by her art and a small community of artists. There were some controversies too—like the "Cradle of the Color" being seen as a symbol of her trauma, which some found offensive, while others saw it as a way to process her experiences.
+
+Frida's influence on art. She was a major figure in modern art, especially in Latin American and Surrealism. Her work is often considered a mix of self-expression and social commentary. She also worked with other artists, like Mário de Andrade and Luchino Camus. Her death in 1954 was a big event; there were debates about what happened to her body after she died, but it's generally believed she was in a coma and died peacefully.
+
+I should also mention her legacy. Today, she's celebrated for her ability to convey deep emotions through her
+
+=== Amplified Response (multiplier=3.0) ===
+<think>
+Okay, I need to explain who Frida Kahlo was. Let me start by recalling what I know. She was a Mexican artist, right? Known for her self-portraits, especially with her face covered in paint. Her work is really iconic, like the SelfPortrait with Broken Lips. She was part of the Surrealism movement, maybe? She lived during the Spanish-American War, so that's important. Her life had a lot of tragedy—her husband Diego Rivera died, she had mental health issues, maybe drug use. She painted herself, often with her eyes closed, symbolizing her inner turmoil. Her art style is unique, blending realism with surrealism, emotional expression through color and texture. She died young, around 32, from complications related to her mental health. She was influential, especially in Latin American art, and her legacy continues. I should structure this into sections: early life, artistic influences, her artistic style, personal struggles, death, and legacy. Make sure to mention key works, her role in Surrealism, her emotional themes, and her impact. Check if I got the dates right—born 1907, died 1934. Diego Rivera was her husband, died in 1926. She moved to Mexico after the US war. Her self-portraits are central, maybe mention specific pieces like The Broken Lips, The Two Women, The Virgin Mary. Her use of color, like vibrant hues, to convey emotion. Her mental health issues, including drug addiction, led to her isolation. She was adopted, lived with Maria Luis, Maria Luis Martínez, Maria Luis Gonzaga. Her art became a medium for exploring identity, trauma, and female experience. Yeah, that covers the main points. Need to present it clearly, concisely, but thoroughly.
+</think>
+<answer>
+Frida Kahlo (1907–1934) was a pioneering Mexican artist, writer, poet, and filmmaker, widely regarded as one of the most influential figures in modern art, particularly in Latin America. Her work, marked by intense emotional expression, surrealism, and introspection, remains a cornerstone of contemporary visual arts.
+
+### Early Life and Context  
+Born Maria Luis Pujol de Kahlo in San José, Mexico, Kahlo grew up in a working-class family. Her father, Manuel, was a carpenter, and her mother, Sofia, was a schoolteacher. During the Spanish-American War (
+
+=== Timing ===
+Normal: 24.4s | Ablated: 30.1s | Amplified: 30.1s
