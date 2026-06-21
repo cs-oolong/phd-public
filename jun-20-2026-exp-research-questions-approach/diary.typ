@@ -7,6 +7,13 @@
 #set heading(numbering: "1.1")
 #show cite: set text(fill: rgb("#2563eb"))
 
+#let rq(..items) = {
+  enum(
+    numbering: n => [*RQ#n.*],
+    ..items.pos().enumerate().map(((i, it)) => enum.item(i + 1, it)),
+  )
+}
+
 #let title-page(doc) = {
   align(center + horizon)[
     #text(size: 22pt, weight: "bold")[#doc.title]
@@ -27,3 +34,28 @@
 
 = Research Questions
 
+#rq[
+  Your first research question
+][
+  Your second research question
+][
+  Your first research question
+][
+  Your second research question
+][
+  Your first research question
+][
+  Your second research question
+][
+  Your first research question
+][
+  Your second research question
+][
+  Your first research question
+][
+  Your second research question
+][
+  Your first research question
+][
+  Your second research question
+]
