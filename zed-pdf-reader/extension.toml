@@ -1,0 +1,11 @@
+id = "pdf-reader"
+name = "PDF Reader"
+version = "0.1.0"
+schema_version = 1
+authors = ["Ana Serpa"]
+description = "Extract and read PDF text inside Zed's Assistant panel via a slash command."
+repository = "https://github.com/ana-serpa/zed-pdf-reader"
+
+[slash_commands.pdf]
+description = "Extract text from a PDF file so you can read it in the Assistant panel."
+requires_argument = true
